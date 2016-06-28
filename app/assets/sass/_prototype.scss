@@ -1,6 +1,15 @@
 
 /* Non-production styling for prototype only */
 
+
+/* Change answer link */
+
+.change-answer {
+  font-weight: 700;
+  text-align: right;
+  padding-right: 0;
+}
+
 /* _overview-table */
 
 .overview-table {
@@ -17,9 +26,8 @@
       }
     }
   }
-  .change-value {
+  .change-answer {
     display: inline-block;
-    text-align: right;
     width:30%;
     .link {
       cursor: pointer;
