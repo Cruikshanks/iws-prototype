@@ -1,0 +1,915 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+      <div class="phase-banner">
+          <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="https://prsd.sfwltd.co.uk/iws/feedback">feedback</a> will help us to improve it.</span></p>
+      </div>
+      <div class="top-content-box font-xsmall">
+          <div id="homepage-link-container"></div>
+          <div id="top-content-box-container">
+              <section class="noti-switch">
+                  <div>
+                      <form action="/iws/notification-switch/switch" method="post">
+                          <input name="__RequestVerificationToken" type="hidden" value="7acGAXexoO9cP0Mzga4MphB4s3Xsib-LEBXgxG3G7Aq_US49rkM0mP2yqNI8PF09FhCLQKKu9i3sLaMfMkCShJYJllTwyAqHvjmnwJmzAYscIGiLXRvksOvO89xuur-LNAqkK5qhsQ4GO8lPnLFQEg2"> <input id="OriginalNumber" name="OriginalNumber" type="hidden" value="GB 0001 006003"> <span>You're working on</span> <input class="noti-number" id="Number" name="Number" title="Click and type a new notification number" type="text" value="GB 0001 006003"> <i class="fa fa-exchange"></i> <button class="button switch" type="submit">Change notification</button>
+                      </form>
+                  </div>
+              </section>
+              <ul>
+                  <li>
+                      <div class="text-secondary">
+                          Signed in as: <span class="username-format">Jeremy Gillies</span>
+                      </div>
+                  </li>
+                  <li>
+                      <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+                          <input name="__RequestVerificationToken" type="hidden" value="ThJgQ_rRibUwAWKGzlrsNFSF4fM3V0NGd9L-XVNH_B03fOPYuHTbGRb09FEaKxpjidm_2LDKlWn2jR3ZtoWofL_YDz7idDytzU-i0YBBED6lWxrqWIXQfmdRw92cpirt96o39Un6W3pkex7AtTZ9Aw2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+                      </form>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="grid-row">
+          <aside class="column-third">
+              <div class="accordion-export" id="accordion">
+                  <p class="bold-medium">&nbsp;GB 0001 006003</p>
+                  <ul>
+                      <li class="active">
+                          <h3 class="current"><span></span>Notification assessment</h3>
+                          <ul>
+                              <li class="active">
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/overview">Notification overview</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/key-dates">Key dates</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/decision">Assessment decision</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/assign-area">Assign an area</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/mark-as-interim">Mark notification as interim or non-interim</a>
+                              </li>
+                              <li><a href="financial-guarantee-assessment">Financial guarantee assessment</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Shipments</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604">Shipment summary</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604/capture-movement">Record shipment data</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604/cancel">Cancel shipments</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Finance</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/account-management">Account management</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/payment-details">Payment details</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/refund-details">Refund details</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Reporting</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/export-stats">Export stats</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/missing-shipments">Missing shipments</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/export-notifications">Data Export Notifications</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/finance">Finance report</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/rdf-srf-wood">FOI report</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Account services</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin/user-administration/manage-new-users">Manage new users</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin/entry-or-exit-point">New ports or border crossings</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Change owner</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/change-notification-owner">Change owner</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </aside>
+          <div class="column-two-thirds">
+              <div id="submit-overview-area">
+                  <header class="hgroup">
+                      <h1 class="heading-large">Notification overview</h1>
+                  </header>
+                  <hr />
+                  <div>
+                      <table class="overview-table">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">
+                                      <h2 class="heading-medium">Organisations involved</h2>
+                                  </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      Exporter
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              NH
+                                              <br/> 1 A Street, Warrington WA1 1 AD, United Kingdom
+                                          </div>
+                                          <div class="overview-block-element">
+                                              Organisation type: Sole trader
+                                              <br/> Company registration: CB123456
+                                          </div>
+                                          <div class="overview-block-element">
+                                              <dl>
+                                                  <dd>Contact: Nigel Homer</dd>
+                                                  <dd>
+                                                      Tel: +44 7768006176
+                                                  </dd>
+                                                  <dd>Email: <a href="mailto:nigel@yahoo.co.uk">nigel@yahoo.co.uk</a>
+                                                  </dd>
+                                              </dl>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Producers
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              Oakwood Fuels Ltd
+                                              <br/> Brailwood Rd, Bilsthorpe NG22 8UA, United Kingdom
+                                          </div>
+                                          <div class="overview-block-element">
+                                              Organisation type: Limited company
+                                              <br /> Company registration: 03328035
+                                          </div>
+                                          <div class="overview-block-element">
+                                              <dl>
+                                                  <dd>Contact: Garry Oaks</dd>
+                                                  <dd>
+                                                      Tel: +44 1623871964
+                                                  </dd>
+                                                  <dd>
+                                                      Fax: +44 1623871905
+                                                  </dd>
+                                                  <dd>Email: <a href="mailto:g.oakes@oakwoodgroup.uk.co">g.oakes@oakwoodgroup.uk.co</a>
+                                                  </dd>
+                                              </dl>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Site of export
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              Oakwood Fuels Ltd
+                                              <br/> Brailwood Rd, Bilsthorpe NG22 8UA, United Kingdom
+                                          </div>
+                                          <div class="overview-block-element">
+                                              Organisation type: Limited company
+                                              <br /> Company registration: 03328035
+                                          </div>
+                                          <div class="overview-block-element">
+                                              <dl>
+                                                  <dd>Contact: Garry Oaks</dd>
+                                                  <dd>
+                                                      Tel: +44 1623871964
+                                                  </dd>
+                                                  <dd>
+                                                      Fax: +44 1623871905
+                                                  </dd>
+                                                  <dd>Email: <a href="mailto:g.oakes@oakwoodgroup.uk.co">g.oakes@oakwoodgroup.uk.co</a>
+                                                  </dd>
+                                              </dl>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Importer
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              STR Techoil OY
+                                              <br /> Aleksan 46 C 48, HELSINKI, , Finland
+                                          </div>
+                                          <div class="overview-block-element">
+                                              Organisation type: Other
+                                              <br /> Company registration: na
+                                          </div>
+                                          <div class="overview-block-element">
+                                              <dl>
+                                                  <dd>Contact: Fred Flintstone</dd>
+                                                  <dd>
+                                                      Tel: +66 666666
+                                                  </dd>
+                                                  <dd>Email: <a href="mailto:fflinstone@rock.com">fflinstone@rock.com</a>
+                                                  </dd>
+                                              </dl>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Recovery facilities
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              STR Tecoil oy
+                                              <br /> Aleksan 46 C , Helsinki , Finland
+                                          </div>
+                                          <div class="overview-block-element">
+                                              Organisation type: Limited company
+                                              <br /> Company registration: 2557440-6
+                                          </div>
+                                          <div class="overview-block-element">
+                                              <dl>
+                                                  <dd>Contact: Pekko Kohonen</dd>
+                                                  <dd>
+                                                      Tel: +35 8975152100
+                                                  </dd>
+                                                  <dd>Email: <a href="mailto:navicon@navicon.fi">navicon@navicon.fi</a>
+                                                  </dd>
+                                              </dl>
+                                          </div>
+                                          <hr />
+                                          <div class="overview-block-element">
+                                              STR Tecoil oy
+                                              <br /> Paksun 15 - 17, HAMINA , Finland
+                                          </div>
+                                          <div class="overview-block-element">
+                                              Organisation type: Limited company
+                                              <br /> Company registration: 2557440-6
+                                          </div>
+                                          <div class="overview-block-element">
+                                              <dl>
+                                                  <dd>Contact: Janne Peltola</dd>
+                                                  <dd>
+                                                      Tel: +35 8504320819
+                                                  </dd>
+                                                  <dd>Email: <a href="mailto:janne.peltola@tecoil.fi">janne.peltola@tecoil.fi</a>
+                                                  </dd>
+                                              </dl>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Recovery site
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              STR Tecoil oy
+                                              <br /> Paksun 15 - 17, HAMINA , Finland
+                                          </div>
+                                          <div class="overview-block-element">
+                                              Organisation type: Limited company
+                                              <br /> Company registration: 2557440-6
+                                          </div>
+                                          <div class="overview-block-element">
+                                              <dl>
+                                                  <dd>Contact: Janne Peltola</dd>
+                                                  <dd>
+                                                      Tel: +35 8504320819
+                                                  </dd>
+                                                  <dd>Email: <a href="mailto:janne.peltola@tecoil.fi">janne.peltola@tecoil.fi</a>
+                                                  </dd>
+                                              </dl>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="overview-table">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">
+                                      <h2 class="heading-medium">Recovery operation</h2>
+                                  </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      Recovery codes
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              R1 </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Pre-consented facility
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              No </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Recovery technology
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="overview-block-element">
+                                                  Burning
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Reason for export
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              Economics </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="overview-table">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">
+                                      <h2 class="heading-medium">Transportation</h2>
+                                  </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      Intended carriers
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              Navicon Shipping Ltd
+                                              <br /> Laivastokatu 1 b A, Helsinki , Finland
+                                          </div>
+                                          <div class="overview-block-element">
+                                              Organisation type: Other
+                                              <br /> Company registration: FI-26890048
+                                          </div>
+                                          <div class="overview-block-element">
+                                              <dl>
+                                                  <dd>Contact: Trevor Transport</dd>
+                                                  <dd>
+                                                      Tel: +35 8975152100
+                                                  </dd>
+                                                  <dd>Email: <a href="mailto:navicon@navicon.fi">navicon@navicon.fi</a>
+                                                  </dd>
+                                              </dl>
+                                          </div>
+                                          <hr />
+                                          <div class="overview-block-element">
+                                              1
+                                              <br /> 1, 3 WA1 AWD, United Kingdom
+                                          </div>
+                                          <div class="overview-block-element">
+                                              Organisation type: Sole trader
+                                              <br /> Company registration: qwerty123
+                                          </div>
+                                          <div class="overview-block-element">
+                                              <dl>
+                                                  <dd>Contact: 1 2</dd>
+                                                  <dd>
+                                                      Tel: +44 123456789
+                                                  </dd>
+                                                  <dd>Email: <a href="mailto:1@2.co.uk">1@2.co.uk</a>
+                                                  </dd>
+                                              </dl>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Means of transport
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              Road &#8594; Sea &#8594; Road </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Packaging types
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <ul>
+                                                  <li>1 - Drum</li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Special handling requirements
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              No special handling required </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="overview-table">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">
+                                      <h2 class="heading-medium">The journey</h2>
+                                  </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      Export route
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="grid-row">
+                                                  <div class="column-half">
+                                                      Exit point:
+                                                  </div>
+                                                  <div class="column-half">
+                                                      Felixstowe, United Kingdom
+                                                  </div>
+                                              </div>
+                                              <div class="grid-row">
+                                                  <div class="column-half">
+                                                      Competent authority:
+                                                  </div>
+                                                  <div class="column-half">
+                                                      GB01 - Environment Agency
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Import route
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="grid-row">
+                                                  <div class="column-half">
+                                                      Entry point:
+                                                  </div>
+                                                  <div class="column-half">
+                                                      Hamina, Finland
+                                                  </div>
+                                              </div>
+                                              <div class="grid-row">
+                                                  <div class="column-half">
+                                                      Competent authority:
+                                                  </div>
+                                                  <div class="column-half">
+                                                      FIN - Finnish Environment Institute
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Transits
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              There are no transit states
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Customs office
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">Not applicable</div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="overview-table">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">
+                                      <h2 class="heading-medium">Amounts and dates</h2>
+                                  </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      Intended&nbsp;total&nbsp;shipments
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="value">15</div><div class="change-value"><a href="amounts-and-dates">Change</a></div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Intended&nbsp;total&nbsp;quantity
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              400 t </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Intended&nbsp;dates&nbsp;of&nbsp;departure
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              23 March 2016 to 22 March 2017 </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="overview-table">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">
+                                      <h2 class="heading-medium">Waste classification</h2>
+                                  </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      Chemical composition
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element grid-row">
+                                              <div class="column-third">Type:</div>
+                                              <div class="column-two-thirds">Other</div>
+                                          </div>
+                                          <div class="overview-block-element grid-row">
+                                              <div class="column-third">Name:</div>
+                                              <div class="column-two-thirds">Paint Sludge</div>
+                                          </div>
+                                          <div class="overview-block-element grid-row">
+                                              <div class="column-third">Description:</div>
+                                              <div class="column-two-thirds">Resin 50%, Solvent 10%, Water 405</div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Process of generation
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              The details will be provided in a separate document </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Physical characteristics
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <span>Solid, Sludgy, Viscous/paste</span>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="overview-table">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">
+                                      <h2 class="heading-medium">Waste codes</h2>
+                                  </th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      Basel code
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="grid-row">
+                                                  <div class="column-third">Code:</div>
+                                                  <div class="column-two-thirds">A4010</div>
+                                              </div>
+                                              <div class="grid-row">
+                                                  <div class="column-third">Description:</div>
+                                                  <div class="column-two-thirds">Wastes from the production, preparation and use of pharmaceutical products but excluding such wastes specified on list B</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      EWC code
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="grid-row">
+                                                  <div class="column-third">Code:</div>
+                                                  <div class="column-two-thirds">19 01 11*</div>
+                                              </div>
+                                              <div class="grid-row">
+                                                  <div class="column-third">Description:</div>
+                                                  <div class="column-two-thirds">bottom ash and slag containing hazardous substances</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Y code
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="grid-row">
+                                                  <div class="column-third">Code:</div>
+                                                  <div class="column-two-thirds">Y10</div>
+                                              </div>
+                                              <div class="grid-row">
+                                                  <div class="column-third">Description:</div>
+                                                  <div class="column-two-thirds">Waste substances and articles containing or contaminated with polychlorinated biphenyls (PCBs) and/or polychlorinated terphenyls (PCTs) and/or polybrominated biphenyls (PBBs)</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      H or HP code
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="grid-row">
+                                                  <div class="column-third">Code:</div>
+                                                  <div class="column-two-thirds">H3</div>
+                                              </div>
+                                              <div class="grid-row">
+                                                  <div class="column-third">Description:</div>
+                                                  <div class="column-two-thirds">Flammable liquids</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      UN class
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="grid-row">
+                                                  <div class="column-third">Code:</div>
+                                                  <div class="column-two-thirds">2.2</div>
+                                              </div>
+                                              <div class="grid-row">
+                                                  <div class="column-third">Description:</div>
+                                                  <div class="column-two-thirds">Non-flammable, non-toxic gas</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      UN number
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              <div class="grid-row">
+                                                  <div class="column-third">Code:</div>
+                                                  <div class="column-two-thirds">UN 0005 </div>
+                                              </div>
+                                              <div class="grid-row">
+                                                  <div class="column-third">Description:</div>
+                                                  <div class="column-two-thirds">Cartridges for weapons, with bursting charge</div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Other codes
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element grid-row">
+                                              <div class="column-third">Other code:</div>
+                                              <div class="column-two-thirds">
+                                                  Not applicable
+                                              </div>
+                                          </div>
+                                          <div class="overview-block-element grid-row">
+                                              <div class="column-third">National code in country&nbsp;of&nbsp;export:</div>
+                                              <div class="column-two-thirds">
+                                                  Not applicable
+                                              </div>
+                                          </div>
+                                          <div class="overview-block-element grid-row">
+                                              <div class="column-third">National code in country&nbsp;of&nbsp;import:</div>
+                                              <div class="column-two-thirds">
+                                                  Not applicable
+                                              </div>
+                                          </div>
+                                          <div class="overview-block-element grid-row">
+                                              <div class="column-third non-breaking">Customs code(s):</div>
+                                              <div class="column-two-thirds">
+                                                  Not applicable
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </td>
+
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="overview-table">
+                          <thead>
+                              <tr>
+                                  <th colspan="2">
+                                      <h2 class="heading-medium">Waste recovery</h2>
+                                  </th>
+                              </tr>
+                          </thead>
+
+                          <tbody>
+                              <tr>
+                                  <td>
+                                      Details provided by importer
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              No </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Recoverable percentage
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              100.00%
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Estimated&nbsp;value&nbsp;of&nbsp;recoverable material (per tonne)
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              &pound;0.00
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td>
+                                      Recovery cost (per tonne)
+                                  </td>
+                                  <td>
+                                      <div class="overview-block">
+                                          <div class="overview-block-element">
+                                              &pound;20.00
+                                          </div>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
+{% endblock %}
