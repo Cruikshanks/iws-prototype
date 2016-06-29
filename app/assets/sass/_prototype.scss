@@ -38,26 +38,29 @@
   }
 }
 
-.total-intended-shipments {
-  width:30%;
+.fg-approved {
+  th {
+    width:60%;
+  }
+  td {
+    width:40%;
+  }
 }
-
-/* Status */
-.status {
-  border-width:1px;
-  border-style: solid;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 2px 4px 0;
-  &.pending {
-    border-color:$orange;
-    background-color:$orange-25;
-    color:$orange;
+.fg-header {
+  h1 {
+    display:inline-block;
+    width:60%;
+  }
+  p {
+    display:inline-block;
+    width:40%;
   }
 }
 
+
+.total-intended-shipments {
+  width:30%;
+}
 
 /* Accordian styling */
 .accordion-export {

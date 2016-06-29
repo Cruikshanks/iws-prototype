@@ -133,55 +133,46 @@ GOV.UK prototype kit
               </div>
           </aside>
           <div class="column-two-thirds">
-            <h1 class="heading-large">Financial guarantee assessment</h1>
-              <div class="form-group">
-              <div class="fg-header">
-                <h1 class="heading-medium">Financial guarantee decision</h1><p class="change-answer"><a href="financial-guarantee-decision">Change</a></p>
-              </div>
-              <table class="fg-approved">
-                <tr>
-                  <th>Status</th>
-                  <td>Approved</td>
-                </tr>
-                <tr>
-                  <th>Date decision made</th>
-                  <td>25/03/2016</td>
-                </tr>
-                <tr>
-                  <th>Is this a blanket bond?</th>
-                  <td>No</td>
-                </tr>
-                <tr>
-                  <th>Valid from</th>
-                  <td>25/04/2016</td>
-                </tr>
-                <tr>
-                  <th>Valid to</th>
-                  <td>23/05/2016</td>
-                </tr>
-                <tr>
-                  <th>Reference number</th>
-                  <td>1525489</td>
-                </tr>
-                <tr>
-                  <th>Active loads permitted</th>
-                  <td>12</td>
-                </tr>
-              </table>
-            </div>
-            <div class="form-group">
-              <a class="button" href="financial-guarantee-assessment-new">Record a new financial guarantee</a>
-            </div>
-              <hr>
-              <h2 class="heading-medium">Financial guarantee history</h2>
-                <div class="form-group">
-                <table>
-                  <tr>
-                    <td>Approved</td>
-                    <td>25/03/2016</td>
-                    <td class="change-answer"><a href="#">View details</a></td>
-                  </tr>
-                </table>
+              <h1 class="heading-large">Record new financial guarantee</h1>
+              <form action="/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/financial-guarantee/dates" method="post">
+                  <div class="error-summary-valid" data-valmsg-summary="true">
+                      <ul class="error-summary-list">
+                          <li style="display: none"></li>
+                      </ul>
+                  </div><input name="__RequestVerificationToken" type="hidden" value="ymCrBRGeo5E5QJt42ylVKbEKzor9pcfi3NxwIDiKIbsrlBtYAEvmely621Vk_FUBdF-0NvuWtH-SYTsCJiyFd9oS2tCw5sBgSnzGnJkh1hZYK9TKVjLX_kTPnefTUyYd0lEm15fwQabqu5c8tVsZMw2"> <input id="Status" name="Status" type="hidden" value="Approved"> <input id="IsRequiredEntryComplete" name="IsRequiredEntryComplete" type="hidden" value="True">
+                  <div class="form-group">
+                      <label class="form-label" for="Received_Day">Guarantee received</label>
+                      <p class="form-hint">For example, 20 3 2015</p>
+                      <div class="form-date">
+                          <input id="Received_IsAutoTabEnabled" name="Received.IsAutoTabEnabled" type="hidden" value="True"> <input id="Received_AllowPastDates" name="Received.AllowPastDates" type="hidden" value="False">
+                          <div class="form-group form-group-day">
+                              <label class="form-label" for="Received_Day">Day</label> <input class="form-control" data-type="date" id="Received_Day" max="31" min="1" name="Received.Day" type="number" value="">
+                          </div>
+                          <div class="form-group form-group-month">
+                              <label class="form-label" for="Received_Month">Month</label> <input class="form-control" data-type="date" id="Received_Month" max="12" min="1" name="Received.Month" type="number" value="">
+                          </div>
+                          <div class="form-group form-group-year">
+                              <label class="form-label" for="Received_Year">Year</label> <input class="form-control" id="Received_Year" min="2015" name="Received.Year" type="number" value="">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label class="form-label" for="Completed_Day">Guarantee completed</label>
+                      <div class="form-date">
+                          <input id="Completed_IsAutoTabEnabled" name="Completed.IsAutoTabEnabled" type="hidden" value="True"> <input id="Completed_AllowPastDates" name="Completed.AllowPastDates" type="hidden" value="False">
+                          <div class="form-group form-group-day">
+                              <label class="form-label" for="Completed_Day">Day</label> <input class="form-control" data-type="date" id="Completed_Day" max="31" min="1" name="Completed.Day" type="number" value="">
+                          </div>
+                          <div class="form-group form-group-month">
+                              <label class="form-label" for="Completed_Month">Month</label> <input class="form-control" data-type="date" id="Completed_Month" max="12" min="1" name="Completed.Month" type="number" value="">
+                          </div>
+                          <div class="form-group form-group-year">
+                              <label class="form-label" for="Completed_Year">Year</label> <input class="form-control" id="Completed_Year" min="2015" name="Completed.Year" type="number" value="">
+                          </div>
+                      </div>
+                  </div>
+                  <a class="button" href="financial-guarantee-assessment-refused-new-added">Save and continue</a>
+              </form>
               </div>
           </div>
       </div>

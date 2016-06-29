@@ -138,12 +138,13 @@ GOV.UK prototype kit
                    <input name="__RequestVerificationToken" type="hidden" value="b8bAPJUzp1BDOXzNjNeLZGfVqwJll62oiiroRPpL4OeseQ7PoEa12qWWJl_ESwGHvP5HiWQh4b_oqwxW29bSq5AM7pWqMUA9s8leASfiePTp5yh-TV6PSG_bP6OrN1pyCLE2bD2W2BTihnHy0Xu9LA2">
                    <div class="error-summary-valid" data-valmsg-summary="true">
                        <ul class="error-summary-list">
-                           <li style="DISPLAY: none"></li>
+                           <li style="display: none"></li>
                        </ul>
                    </div><input id="Status" name="Status" type="hidden" value="Approved"> <input id="IsApplicationCompleted" name="IsApplicationCompleted" type="hidden" value="True"> <input id="CompletedDate" name="CompletedDate" type="hidden" value="24/03/2016 00:00:00"> <input id="ReceivedDate" name="ReceivedDate" type="hidden" value="24/03/2016 00:00:00">
                    <div class="form-group">
-                       <label class="form-label" for="Decision">Decision</label> <select class="form-control" id="decision-select" name="Decision">
-                           <option value="">
+                       <label class="form-label" for="Decision">Decision</label>
+                       <select class="form-control" id="decision-select" name="Decision">
+                           <option value="" id="focus-me">
                                </option>
                            <option value="Refused">
                                Refuse
@@ -235,9 +236,16 @@ GOV.UK prototype kit
                        <div class="js-hidden guarantee-decision" id="statusReleased"></div>
                    </div>
                    <div class="form-group">
-                       <button class="button" name="submit" type="submit" value="decision">Save and continue</button>
+                      <button class="button" onclick="goBack()">Save and return</button>
+                       <button name="submit" type="submit" value="decision"></button>
                    </div>
                </form>
            </div>
   </main>
+
+   <script>
+     function goBack() {
+         window.history.back();
+     }
+   </script>
 {% endblock %}
