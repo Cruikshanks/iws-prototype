@@ -1,0 +1,245 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+      <div class="phase-banner">
+          <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="https://prsd.sfwltd.co.uk/iws/feedback">feedback</a> will help us to improve it.</span></p>
+      </div>
+      <div class="top-content-box font-xsmall">
+          <div id="homepage-link-container"></div>
+          <div id="top-content-box-container">
+              <section class="noti-switch">
+                  <div>
+                      <form action="/iws/notification-switch/switch" method="post">
+                          <input name="__RequestVerificationToken" type="hidden" value="7acGAXexoO9cP0Mzga4MphB4s3Xsib-LEBXgxG3G7Aq_US49rkM0mP2yqNI8PF09FhCLQKKu9i3sLaMfMkCShJYJllTwyAqHvjmnwJmzAYscIGiLXRvksOvO89xuur-LNAqkK5qhsQ4GO8lPnLFQEg2"> <input id="OriginalNumber" name="OriginalNumber" type="hidden" value="GB 0001 006003"> <span>You're working on</span> <input class="noti-number" id="Number" name="Number" title="Click and type a new notification number" type="text" value="GB 0001 006003"> <i class="fa fa-exchange"></i> <button class="button switch" type="submit">Change notification</button>
+                      </form>
+                  </div>
+              </section>
+              <ul>
+                  <li>
+                      <div class="text-secondary">
+                          Signed in as: <span class="username-format">Jeremy Gillies</span>
+                      </div>
+                  </li>
+                  <li>
+                      <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+                          <input name="__RequestVerificationToken" type="hidden" value="ThJgQ_rRibUwAWKGzlrsNFSF4fM3V0NGd9L-XVNH_B03fOPYuHTbGRb09FEaKxpjidm_2LDKlWn2jR3ZtoWofL_YDz7idDytzU-i0YBBED6lWxrqWIXQfmdRw92cpirt96o39Un6W3pkex7AtTZ9Aw2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+                      </form>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="grid-row">
+          <aside class="column-third">
+              <div class="accordion-export" id="accordion">
+                  <p class="bold-medium">&nbsp;GB 0001 006003</p>
+                  <ul>
+                      <li class="active">
+                          <h3 class="current"><span></span>Notification assessment</h3>
+                          <ul>
+                              <li>
+                                  <a href="index">Notification overview</a>
+                              </li>
+                              <li>
+                                  <a href="#">Key dates</a>
+                              </li>
+                              <li>
+                                  <a href="#">Assessment decision</a>
+                              </li>
+                              <li>
+                                  <a href="#">Assign an area</a>
+                              </li>
+                              <li>
+                                  <a href="#">Mark notification as interim or non-interim</a>
+                              </li>
+                              <li class="active"><a href="financial-guarantee-assessment">Financial guarantee assessment</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Shipments</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604">Shipment summary</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604/capture-movement">Record shipment data</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604/cancel">Cancel shipments</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Finance</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/account-management">Account management</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/payment-details">Payment details</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/refund-details">Refund details</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Reporting</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/export-stats">Export stats</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/missing-shipments">Missing shipments</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/export-notifications">Data Export Notifications</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/finance">Finance report</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/rdf-srf-wood">FOI report</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Account services</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin/user-administration/manage-new-users">Manage new users</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin/entry-or-exit-point">New ports or border crossings</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Change owner</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/change-notification-owner">Change owner</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </aside>
+          <div class="column-two-thirds">
+              <h2 class="heading-large">Financial guarantee decision</h2>
+              <form action="/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/financial-guarantee/decision" method="post">
+                  <input name="__RequestVerificationToken" type="hidden" value="b8bAPJUzp1BDOXzNjNeLZGfVqwJll62oiiroRPpL4OeseQ7PoEa12qWWJl_ESwGHvP5HiWQh4b_oqwxW29bSq5AM7pWqMUA9s8leASfiePTp5yh-TV6PSG_bP6OrN1pyCLE2bD2W2BTihnHy0Xu9LA2">
+                  <div class="error-summary-valid" data-valmsg-summary="true">
+                      <ul class="error-summary-list">
+                          <li style="DISPLAY: none"></li>
+                      </ul>
+                  </div><input id="Status" name="Status" type="hidden" value="Approved"> <input id="IsApplicationCompleted" name="IsApplicationCompleted" type="hidden" value="True"> <input id="CompletedDate" name="CompletedDate" type="hidden" value="24/03/2016 00:00:00"> <input id="ReceivedDate" name="ReceivedDate" type="hidden" value="24/03/2016 00:00:00">
+                  <div class="form-group">
+                      <label class="form-label" for="Decision">Decision</label> <select class="form-control" id="decision-select" name="Decision">
+                          <option selected value="">
+                              </option>
+                          <option value="Refused">
+                              Refuse
+                          </option>
+                          <option value="Approved">
+                              Approve
+                          </option>
+                          <option value="Released">
+                              Release
+                          </option>
+                      </select>
+                  </div>
+                  <div class="js-hidden" id="status">
+                      <div class="form-group">
+                          <label class="form-label" for="DecisionMadeDate">Date decision made</label>
+                          <div class="form-date">
+                              <input id="DecisionMadeDate_IsAutoTabEnabled" name="DecisionMadeDate.IsAutoTabEnabled" type="hidden" value="True"> <input id="DecisionMadeDate_AllowPastDates" name="DecisionMadeDate.AllowPastDates" type="hidden" value="False">
+                              <div class="form-group form-group-day">
+                                  <label class="form-label" for="DecisionMadeDate_Day">Day</label> <input class="form-control" data-type="date" id="DecisionMadeDate_Day" max="31" min="1" name="DecisionMadeDate.Day" type="number" value="24">
+                              </div>
+                              <div class="form-group form-group-month">
+                                  <label class="form-label" for="DecisionMadeDate_Month">Month</label> <input class="form-control" data-type="date" id="DecisionMadeDate_Month" max="12" min="1" name="DecisionMadeDate.Month" type="number" value="3">
+                              </div>
+                              <div class="form-group form-group-year">
+                                  <label class="form-label" for="DecisionMadeDate_Year">Year</label> <input class="form-control" id="DecisionMadeDate_Year" min="2015" name="DecisionMadeDate.Year" type="number" value="2016">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="js-hidden guarantee-decision" id="statusApproved">
+                          <div class="form-group">
+                              <div>
+                                  Is this a blanket bond?
+                              </div>
+                              <div class="form-group">
+                                  <label class="block-label" data-target="validToDate" for="rdoNo"><input checked id="rdoNo" name="IsBlanketBond" type="radio" value="False">No</label> <label class="block-label" for="rdoYes"><input id="rdoYes" name="IsBlanketBond" type="radio" value="True">Yes</label>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="form-label" for="ValidFrom">Valid from</label>
+                              <div class="form-date">
+                                  <input id="ValidFrom_IsAutoTabEnabled" name="ValidFrom.IsAutoTabEnabled" type="hidden" value="True"> <input id="ValidFrom_AllowPastDates" name="ValidFrom.AllowPastDates" type="hidden" value="False">
+                                  <div class="form-group form-group-day">
+                                      <label class="form-label" for="ValidFrom_Day">Day</label> <input class="form-control" data-type="date" id="ValidFrom_Day" max="31" min="1" name="ValidFrom.Day" type="number" value="24">
+                                  </div>
+                                  <div class="form-group form-group-month">
+                                      <label class="form-label" for="ValidFrom_Month">Month</label> <input class="form-control" data-type="date" id="ValidFrom_Month" max="12" min="1" name="ValidFrom.Month" type="number" value="3">
+                                  </div>
+                                  <div class="form-group form-group-year">
+                                      <label class="form-label" for="ValidFrom_Year">Year</label> <input class="form-control" id="ValidFrom_Year" min="2015" name="ValidFrom.Year" type="number" value="2016">
+                                  </div>
+                              </div>
+                          </div>
+                          <div id="validToDate">
+                              <div class="form-group">
+                                  <label class="form-label" for="ValidTo">Valid to</label>
+                                  <div class="form-date">
+                                      <input id="ValidTo_IsAutoTabEnabled" name="ValidTo.IsAutoTabEnabled" type="hidden" value="True"> <input id="ValidTo_AllowPastDates" name="ValidTo.AllowPastDates" type="hidden" value="False">
+                                      <div class="form-group form-group-day">
+                                          <label class="form-label" for="ValidTo_Day">Day</label> <input class="form-control" data-type="date" id="ValidTo_Day" max="31" min="1" name="ValidTo.Day" type="number" value="23">
+                                      </div>
+                                      <div class="form-group form-group-month">
+                                          <label class="form-label" for="ValidTo_Month">Month</label> <input class="form-control" data-type="date" id="ValidTo_Month" max="12" min="1" name="ValidTo.Month" type="number" value="3">
+                                      </div>
+                                      <div class="form-group form-group-year">
+                                          <label class="form-label" for="ValidTo_Year">Year</label> <input class="form-control" id="ValidTo_Year" min="2015" name="ValidTo.Year" type="number" value="2017">
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div>
+                              <div class="form-group">
+                                  <div id="referenceNumber">
+                                      Reference number
+                                  </div>
+                                  <div class="js-hidden" id="blanketBondReference">
+                                      Blanket bond reference number
+                                  </div><input class="form-control" id="ReferenceNumber" maxlength="70" name="ReferenceNumber" type="text" value="1525489">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="form-label" for="ActiveLoadsPermitted">Active loads permitted</label> <input class="form-control" id="ActiveLoadsPermitted" min="1" name="ActiveLoadsPermitted" pattern="[0-9]*" step="1" type="number" value="12">
+                          </div>
+                      </div>
+                      <div class="js-hidden guarantee-decision" id="statusRefused">
+                          <div class="form-group">
+                              <label class="form-label" for="ReasonForRefusal">Reason for refusal</label> <input class="form-control" id="ReasonForRefusal" name="ReasonForRefusal" type="text">
+                          </div>
+                      </div>
+                      <div class="js-hidden guarantee-decision" id="statusReleased"></div>
+                  </div>
+                  <div class="form-group">
+                      <a class="button" href="financial-guarantee-assessment-new-approved">Save and continue</a>
+                  </div>
+              </form>
+              </div>
+          </div>
+      </div>
+  </main>
+{% endblock %}

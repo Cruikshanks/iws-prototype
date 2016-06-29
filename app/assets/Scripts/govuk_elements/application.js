@@ -1,6 +1,7 @@
 function ShowHideContent() {
   var self = this;
 
+
   self.escapeElementName = function(str) {
     result = str.replace('[', '\\[').replace(']', '\\]')
     return(result);
@@ -33,14 +34,14 @@ function ShowHideContent() {
             var $groupDataTarget = $('#' + groupDataTarget);
 
             // Hide toggled content
-            $groupDataTarget.addClass('js-hidden');
+            $groupDataTarget.hide();
             // Set aria-expanded and aria-hidden for hidden content
             $this.attr('aria-expanded', 'false');
             $groupDataTarget.attr('aria-hidden', 'true');
           });
 
           var $dataTarget = $('#' + dataTarget);
-          $dataTarget.removeClass('js-hidden');
+          $dataTarget.show();
           // Set aria-expanded and aria-hidden for clicked radio
           $radio.attr('aria-expanded', 'true');
           $dataTarget.attr('aria-hidden', 'false');
@@ -60,7 +61,7 @@ function ShowHideContent() {
             var $groupDataTarget = $('#' + groupDataTarget);
 
             // Hide toggled content
-            $groupDataTarget.addClass('js-hidden');
+            $groupDataTarget.hide();
             // Set aria-expanded and aria-hidden for hidden content
             $(this).attr('aria-expanded', 'false');
             $groupDataTarget.attr('aria-hidden', 'true');
@@ -98,7 +99,7 @@ function ShowHideContent() {
           var state = $(this).attr('aria-expanded') === 'false' ? true : false;
 
           // Toggle hidden content
-          $('#'+$dataTarget).toggleClass('js-hidden');
+          $('#'+$dataTarget).toggle();
 
           // Update aria-expanded and aria-hidden attributes
           $(this).attr('aria-expanded', state);
@@ -113,31 +114,44 @@ function ShowHideContent() {
 
 $(document).ready(function() {
 
+  // Turn off jQuery animation
+  jQuery.fx.off = true;
+
   // Use GOV.UK selection-buttons.js to set selected
   // and focused states for block labels
   var $blockLabels = $(".block-label input[type='radio'], .block-label input[type='checkbox']");
   new GOVUK.SelectionButtons($blockLabels);
 
-  // Show and hide toggled content
+  // Details/summary polyfill
+  // See /javascripts/vendor/details.polyfill.js
+
   // Where .block-label uses the data-target attribute
+  // to toggle hidden content
   var toggleContent = new ShowHideContent();
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
 
 });
 
+$(window).load(function() {
 
+  // Only set focus for the error example pages
+  if ($(".js-error-example").length) {
 
-// Prototype only
-$(".change-value a.link").click(function(){
-    $(".initial").hide();
-    $(".editable").show();
-    $(".editable-wrap").addClass('edit');
-    $(".total-intended-shipments").focus().select();
+    // If there is an error summary, set focus to the summary
+    if ($(".error-summary").length) {
+      $(".error-summary").focus();
+      $(".error-summary a").click(function(e) {
+        e.preventDefault();
+        var href = $(this).attr("href");
+        $(href).focus();
+      });
+    }
+    // Otherwise, set focus to the field with the error
+    else {
+      $(".error input:first").focus();
+    }
+  }
+
 });
 
-$("input.save").click(function(){
-    $(".initial").show();
-    $(".editable").hide();
-    $(".editable-wrap").removeClass('edit');
-});
