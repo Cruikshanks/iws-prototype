@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_beta.html" %}
+    <div class="top-content-box font-xsmall">
+        <div id="homepage-link-container">
+        </div>
+        <div id="top-content-box-container">
+            <section class="noti-switch" id="">
+                <div>
+                    <form action="/iws/notification-switch/switch" method="post">
+                        <input name="__RequestVerificationToken" type="hidden" value="rtUN7bsGUi7Id-v54pBnP8BTXQAInEkY0mY05j8gF9DZnvhPOR3Itb_kkGB2D6nLOKRVA5jWe49cwVV6ycnRgDSj6nbexe2A8qjTSm8okoydSnksnMVG5BxdUtJ6Uv4UQgEiSw5k0bcKy3obEoG1GA2" />
+                        <input id="OriginalNumber" name="OriginalNumber" type="hidden" value="GB&#32;0001&#32;006009" /> <span>You're working on</span>
+                        <input class="noti-number" id="Number" name="Number" title="Click&#32;and&#32;type&#32;a&#32;new&#32;notification&#32;number" type="text" value="GB&#32;0001&#32;006009" /> <i class="fa fa-exchange"></i>
+                        <button class="button switch" type="submit">Change notification</button>
+                    </form>
+                </div>
+            </section>
+            <ul>
+                <li>
+                    <div class="text-secondary">Signed in as: <span class="username-format">Jeremy Gillies </span>
+                    </div>
+                </li>
+                <li>
+                    <form action="/iws/account/log-off" id="logoutForm" method="post">
+                        <input name="__RequestVerificationToken" type="hidden" value="knq4L9a1x4WwOudLQtERhZHYjXoJaEC0Ulwu58hCgzlL5vtDTP8zbabnjA5U8lvk0pxhwG6eXB1ThTp1u3QTgBA65-f3McKW0U0a8HFIbmuka0ae4nY0f8LnUST5bR6vT0wb42ZUnQYy26XY5kgJ_w2" />
+                        <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid-row">
+        <aside class="column-third">
+            <div id="accordion" class="accordion-export">
+                <p class="bold-medium">&nbsp;GB 0001 006009</p>
+                <ul>
+                    <li class="active">
+                        <h3 class="current">
+                            <span></span>
+                            Notification assessment
+                        </h3>
+                        <ul>
+                            <li class="active">
+                                <a href="index">Notification overview</a>
+                            </li>
+                            <li>
+                                <a href="#">Key dates</a>
+                            </li>
+                            <li>
+                                <a href="#">Assessment decision</a>
+                            </li>
+                            <li>
+                                <a href="#">Assign an area</a>
+                            </li>
+                            <li>
+                                <a href="#">Mark notification as interim or non-interim</a>
+                            </li>
+                            <li>
+                              <a href="#">Financial guarantee assessment</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <h3 class="">
+                            <span></span>
+                            Finance
+                        </h3>
+                        <ul>
+                            <li><a href="/iws/admin-export-assessment/b42ba3e7-ccc9-4481-beb0-a5d20090795e/account-management">Account management</a>
+                            </li>
+                            <li><a href="/iws/admin-export-assessment/b42ba3e7-ccc9-4481-beb0-a5d20090795e/payment-details">Payment details</a>
+                            </li>
+                            <li><a href="/iws/admin-export-assessment/b42ba3e7-ccc9-4481-beb0-a5d20090795e/refund-details">Refund details</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <h3 class="">
+                            <span></span>
+                            Reporting
+                        </h3>
+                        <ul>
+                            <li><a href="/iws/reports/export-stats">Export stats</a>
+                            </li>
+                            <li><a href="/iws/reports/missing-shipments">Missing shipments</a>
+                            </li>
+                            <li><a href="/iws/reports/export-notifications">Data Export Notifications</a>
+                            </li>
+                            <li><a href="/iws/reports/finance">Finance report</a>
+                            </li>
+                            <li><a href="/iws/reports/rdf-srf-wood">FOI report</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <h3 class="">
+                            <span></span>
+                            Account services
+                        </h3>
+                        <ul>
+                            <li><a href="/iws/admin/user-administration/manage-new-users">Manage new users</a>
+                            </li>
+                            <li><a href="/iws/admin/entry-or-exit-point">New ports or border crossings</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <h3 class="">
+                            <span></span>
+                            Change owner
+                        </h3>
+                        <ul>
+                            <li><a href="/iws/admin-export-assessment/b42ba3e7-ccc9-4481-beb0-a5d20090795e/change-notification-owner">Change owner</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="column-two-thirds">
+            <div id="submit-overview-area">
+                <header class="hgroup">
+                    <h1 class="heading-large">Request to change intended&nbsp;total&nbsp;shipments</h1>
+                </header>
+                <hr />
+                <p>You are about to increase the number of shipments for this notification to 10.</p>
+                <p>Once the request has been received by the IWS Team they will issue approval.</p>
+                <p>The IWS Team will be in touch in due course.</p>
+                <p>Do you wish to proceed?</p>
+                <form action="index2" method="get">
+                  <input class="button save" type="submit" value="Send request and return">
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
