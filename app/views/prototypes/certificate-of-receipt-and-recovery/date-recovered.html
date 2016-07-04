@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+    <main id="content">
+        <div class="phase-banner">
+            <p>
+                <strong class="phase-tag">BETA</strong>
+                <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span>
+            </p>
+        </div>
+        <div class="top-content-box font-xsmall">
+            <div id="homepage-link-container">
+                <a href="/iws/applicant/home">Go to your homepage</a> </div>
+            <div id="top-content-box-container">
+
+                <ul>
+                    <li>
+                        <div class="text-secondary">Signed in as: <span class="username-format">Jeremy Gillies </span></div>
+                    </li>
+                    <li>
+                        <form action="/iws/account/log-off" id="logoutForm" method="post">
+                            <input name="__RequestVerificationToken" type="hidden" value="acDJ3C-lOwWheNykYcp2o0g_lEqGi2e_UmWXTf1KH13_mFWxV5g-GRJ_NMnNC2XUXom4QUHY4DNxJy36EnNcLna6VBNC6zft35lULTvYGjAAoRGVCZHT137gLfa_Bevo0BznDgWDuWATit-ZSLF8lw2" />
+                            <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="grid-row">
+            <aside id="form-menu" class="column-third form-status">
+                <p>
+                    <span>GB 0001 006003</span>
+                </p>
+
+                <ul class="summary-list">
+                    <li><span class="grey-text">Shipment number:</span> 35</li>
+                    <li> <span class="grey-text">Total number of shipments:</span> 44</li>
+                    <li><span class="grey-text">Active loads permitted:</span> 12</li>
+                    <li><span class="grey-text">Current active loads:</span> 1</li>
+                    <li><span class="grey-text">Total quantity received:</span> 631&nbsp;t
+                    </li>
+                    <li><span class="grey-text">Total quantity remaining:</span> 369&nbsp;t
+                    </li>
+                </ul>
+
+            </aside>
+
+            <div class="column-two-thirds">
+
+
+                <header class="hgroup">
+                    <h1 class="heading-large">When was the waste recovered?</h1>
+                </header>
+
+                <form action="/iws/export-movement/e043efc5-7bd7-4d4d-aafb-a6110103b202/complete/date" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="655SVx2tl48RkWqYGsuaYTaJw87ODZjufL_4I_LjGnUbag6QJrtZRT4nWfej0RH05FxAT38-rVX66klqGPNQS2cUkpQ3SCd8NWhxa55OoTvtEqyHlV7Bp7gNmEDEzSLubErSiWJW2UT921qnrldlVw2" />
+                    <div class='error-summary-valid' data-valmsg-summary='true'>
+                        <ul class='error-summary-list'>
+                            <li style='display:none'></li>
+                        </ul>
+                    </div>
+                    <input id="NotificationType" name="NotificationType" type="hidden" value="Recovery" />
+                    <input id="ReceiptDate" name="ReceiptDate" type="hidden" value="12/06/2016&#32;00:00:00" />
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>
+                                <span class="form-label">Date</span>
+                            </legend>
+                            <div class="form-date">
+                                <p class="form-hint">For example, 31 3 2016</p>
+                                <div class="form-group form-group-day">
+                                    <label class="form-label" for="Day">Day </label>
+                                    <input class="form-control" id="Day" max="31" min="1" name="Day" type="number" value="" />
+                                </div>
+                                <div class="form-group form-group-month">
+                                    <label class="form-label" for="Month">Month </label>
+                                    <input class="form-control" id="Month" max="12" min="1" name="Month" type="number" value="" />
+                                </div>
+                                <div class="form-group form-group-year">
+                                    <label class="form-label" for="Year">Year </label>
+                                    <input class="form-control" id="Year" min="2015" name="Year" type="number" value="" />
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group">
+                      <a class="button" href="send-receipt">Continue</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    {% endblock %}
