@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">IWS prototypes</h1>
+      <h2 class="heading-medium">Multiple prenotifications of shipment</h2>
+      <ul class="list list-bullet">
+        <li><a href="01-Notification-options">01-Notification-options</a></li>
+        <li><a href="02-Shipment-date">02-Shipment-date</a></li>
+        <li><a href="03-Actual-quantity">03-Actual-quantity</a></li>
+        <li><a href="04-Packaging-types">04-Packaging-types</a></li>
+        <li><a href="05-Download-your-prenotification">05-Download-your-prenotification</a></li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

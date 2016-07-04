@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+    <div class="phase-banner">
+      <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+    </div>
+    <div class="top-content-box font-xsmall">
+      <div id="homepage-link-container">
+        <a href="/iws/applicant/home">Go to your homepage</a>
+      </div>
+      <div id="top-content-box-container">
+        <ul>
+          <li>
+            <div class="text-secondary">
+              Signed in as: <span class="username-format">Jeremy Gillies</span>
+            </div>
+          </li>
+          <li>
+            <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+              <input name="__RequestVerificationToken" type="hidden" value="KV_-N6kQbGYAafULFLl_0QV8N2l5ss3xGBdwV6eEoBADktwcLiqag1ACR-ooW29ZHP4PGBsM3DMiG-l7NFkkBALm7LNKSCyAcp2EU1ISulXWzOPftUL4hilZzp53w_J24-yes-Zr-m7s2Ueu6wtrkQ2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-row">
+      <aside class="column-third form-status" id="form-menu">
+        <p><span>GB 0001 006003</span></p>
+        <ul class="summary-list">
+          <li><span class="grey-text">Shipment number:</span> 45</li>
+          <li><span class="grey-text">Total number of shipments:</span> 44</li>
+          <li><span class="grey-text">Active loads permitted:</span> 12</li>
+          <li><span class="grey-text">Current active loads:</span> 0</li>
+          <li><span class="grey-text">Total quantity received:</span> 631 t</li>
+          <li><span class="grey-text">Total quantity remaining:</span> 369 t</li>
+        </ul>
+      </aside>
+      <div class="column-two-thirds">
+        <header class="hgroup">
+          <h1 class="heading-large">What packaging types will be used?</h1>
+          <p>Select all the types of packaging that will be used for this shipment.</p>
+        </header>
+        <form action="/iws/notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604/create/packaging-types" method="post">
+          <input name="__RequestVerificationToken" type="hidden" value="TuSoeWCY51A_R66KU-JcAYaVqnfTjHf3MXMX7m6zNrL7LzkIE-a1vgJWT83mPj_JdFdXA8FUY7Ou66JxHjARiXEQyf0tf-FqvKWMVy57qrXsBNZk77bD9NsQ9bx7NM_Qm31kfL6x7_1Em9lkQPcBVA2">
+          <div class='error-summary-valid' data-valmsg-summary='true'>
+            <ul class='error-summary-list'>
+              <li style='display:none'></li>
+            </ul>
+          </div><input id="MovementNumber" name="MovementNumber" type="hidden" value="45"><input id="PackagingTypes_ShowEnumValue" name="PackagingTypes.ShowEnumValue" type="hidden" value="True">
+          <div class="form-group">
+            <fieldset>
+              <label class="block-label" for="PackagingTypes.PossibleValues[0]"><input id="PackagingTypes.PossibleValues[0]" name="PackagingTypes.PossibleValues[0].Selected" type="checkbox" value="true"><input name="PackagingTypes.PossibleValues[0].Selected" type="hidden" value="false"> <input id="PackagingTypes_PossibleValues_0__Text" name="PackagingTypes.PossibleValues[0].Text" type="hidden" value="Jerrican"> <input id="PackagingTypes_PossibleValues_0__Value" name="PackagingTypes.PossibleValues[0].Value" type="hidden" value="3"> 3 - Jerrican</label> <label class="block-label" for="PackagingTypes.PossibleValues[1]"><input id="PackagingTypes.PossibleValues[1]" name="PackagingTypes.PossibleValues[1].Selected" type="checkbox" value="true"><input name="PackagingTypes.PossibleValues[1].Selected" type="hidden" value="false"> <input id="PackagingTypes_PossibleValues_1__Text" name="PackagingTypes.PossibleValues[1].Text" type="hidden" value="Bag"> <input id="PackagingTypes_PossibleValues_1__Value" name="PackagingTypes.PossibleValues[1].Value" type="hidden" value="5"> 5 - Bag</label>
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <a class="button" href="05-Add-another">Save and continue</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  {% endblock %}

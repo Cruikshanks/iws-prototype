@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+    <main id="content">
+        <div class="phase-banner">
+            <p>
+                <strong class="phase-tag">BETA</strong>
+                <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span>
+            </p>
+        </div>
+        <div class="top-content-box font-xsmall">
+            <div id="homepage-link-container">
+                <a href="/iws/applicant/home">Go to your homepage</a> </div>
+            <div id="top-content-box-container">
+
+                <ul>
+                    <li>
+                        <div class="text-secondary">Signed in as: <span class="username-format">Jeremy Gillies </span></div>
+                    </li>
+                    <li>
+                        <form action="/iws/account/log-off" id="logoutForm" method="post">
+                            <input name="__RequestVerificationToken" type="hidden" value="IhpVWEsl0WE_Ech_DlZ2CvGqNz-1VIR9TC5-lUrF-ugEhn2B-GHcSC3Q_Le_y9Ptk2Fz_NjgFLYaJNy_jg5MnngeV42Cj3wE9zMNGr16CAGi3TZIuJa5pAZwEWJgHEL5KqBsfiRB6V1yz4qJkLoOoQ2" />
+                            <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="grid-row">
+            <aside id="form-menu" class="column-third form-status">
+                <p>
+                    <span>GB 0001 006003</span>
+                </p>
+
+                <ul class="summary-list">
+                    <li><span class="grey-text">Shipment number:</span> 35</li>
+                    <li> <span class="grey-text">Total number of shipments:</span> 44</li>
+                    <li><span class="grey-text">Active loads permitted:</span> 12</li>
+                    <li><span class="grey-text">Current active loads:</span> 1</li>
+                    <li><span class="grey-text">Total quantity received:</span> 611&nbsp;t
+                    </li>
+                    <li><span class="grey-text">Total quantity remaining:</span> 389&nbsp;t
+                    </li>
+                </ul>
+
+            </aside>
+
+            <div class="column-two-thirds">
+
+
+                <header class="hgroup">
+                    <h1 class="heading-large">How much waste has been received?</h1>
+                    <p>Enter the quantity of waste received as a number. You can add decimal figures if necessary.</p>
+                </header>
+
+                <form action="/iws/export-movement/e043efc5-7bd7-4d4d-aafb-a6110103b202/quantity-received" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="rrqAsl2yOxF6T5zZKyFmIcMcfO_6qCQCkO8Pd_O0jAvuji1aJ8gEC3CCY4xlnH0RUdXXKvjA3dnfvF4jX9E9ZwfPxSxCeeJ4TY0dpHjh_OOkwLD2lsoHOrFGfRO5B5nnaJK5lVMqdR_nn0yT64Re4Q2" />
+                    <div class='error-summary-valid' data-valmsg-summary='true'>
+                        <ul class='error-summary-list'>
+                            <li style='display:none'></li>
+                        </ul>
+                    </div>
+                    <input id="Unit" name="Unit" type="hidden" value="Tonnes" />
+                    <input id="DateReceived" name="DateReceived" type="hidden" value="12/06/2016&#32;00:00:00" />
+                    <div class="form-group">
+                        <label class="form-label" for="Quantity">Quantity received in tonnes (t)</label>
+
+                        <input class="form-control" id="Quantity" name="Quantity" type="text" value="" />
+                    </div>
+                    <button class="button" type="submit">Save and continue</button>
+                </form>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    {% endblock %}

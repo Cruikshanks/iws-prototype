@@ -10,6 +10,12 @@
   padding-right: 0;
 }
 
+/* Change answer link */
+
+.remove {
+  text-align: right;
+}
+
 /* _overview-table */
 
 .overview-table {
@@ -57,6 +63,12 @@
   }
 }
 
+/* Change consent dates - table */
+.key-dates {
+  td {
+    vertical-align: top;
+  }
+}
 
 .total-intended-shipments {
   width:30%;
