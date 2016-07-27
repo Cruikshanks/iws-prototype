@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+  <main id="content">
+    <div class="phase-banner">
+      <p> <strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span> </p>
+    </div>
+    <div class="top-content-box font-xsmall">
+      <div id="homepage-link-container"> <a href="/iws/applicant/home">Go to your homepage</a> </div>
+      <div id="top-content-box-container">
+        <ul>
+          <li>
+            <div class="text-secondary">Signed in as: <span class="username-format">Phil Baird </span></div>
+          </li>
+          <li>
+            <form action="/iws/account/log-off" id="logoutForm" method="post">
+              <input name="__RequestVerificationToken" type="hidden" value="fRsCfkwao6V9zPdhNWCsPOQ5HzD8ruJpxOujQCWAXaLJVjq5Jkn-3VjZztzY_qwKcrdzqr8TML_LchjIe3hSmKKV6KF49NYiysLrra1-0nRKFQ-Sb9TQfyeZj44_utHoiJU7T2jfnnrm7ZpQcCTYog2" />
+              <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <header>
+      <h1 class="heading-large">Your address book</h1>
+      <p class="subtitle">Manage your address book</p>
+    </header>
+    <nav class="tabbed-nav"> <a class="tabbed-tab" href="/iws/address-book?type=Producer">Producers</a> <a class="tabbed-tab&#32;active" href="/iws/address-book?type=Carrier">Carriers</a> <a class="tabbed-tab" href="/iws/address-book?type=Facility">Facilities</a> </nav>
+    <div
+      class="form-group table-container">
+      <table title="Address book records">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Add Intended Carrier</td>
+            <td> Address line 1, Address line 2, Cityortown, ZZ1 2ZZ </td>
+            <td><a href="/iws/address-book/delete/index/001e0f53-24e9-47bc-89c2-a64f00c1461f?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Big Carrier</td>
+            <td> 1 New Road, Old Town, NN1 O00 </td>
+            <td><a href="/iws/address-book/delete/index/ec72f1a8-3356-41b7-8bec-a53e00980d8d?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>C&amp;C</td>
+            <td> Line 1, Address, Cityville, CV1 1CV </td>
+            <td><a href="/iws/address-book/delete/index/daf4736b-2015-49f6-a1a2-a5fd00b83f13?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Capricorn One</td>
+            <td> 99 The Street, Capricorn, CP1 3TN </td>
+            <td><a href="/iws/address-book/delete/index/588d386e-5d2c-4732-be91-a53000fec77b?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Carrier Pidgeon</td>
+            <td> 1 Carrier Road, Pidgeon Town, PT1 2CP </td>
+            <td><a href="/iws/address-book/delete/index/8d2d9f7a-8bf9-4ddb-86bf-a52b009ce78e?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Carrier Pidgeon</td>
+            <td> Address, Town, TT1 1TT </td>
+            <td><a href="/iws/address-book/delete/index/808efc63-0a1d-40e5-bbaf-a61000a85370?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Colin Carrier</td>
+            <td> 1 Street, Big Town Place, BTP1 2TP </td>
+            <td><a href="/iws/address-book/delete/index/4314a4d2-216f-492c-9991-a57700ad018b?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Ergo</td>
+            <td> Street, City, CC1 1TT </td>
+            <td><a href="/iws/address-book/delete/index/accaf6c0-9b86-4e5d-86c5-a61000a8ef07?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Holden Ute</td>
+            <td> Line 1, Fremantle, </td>
+            <td><a href="/iws/address-book/delete/index/0dc79aa1-3eec-4773-b44c-a61e00ffc7bf?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Intended Carrier</td>
+            <td> Line 1, Townorcity, TT1 1TT </td>
+            <td><a href="/iws/address-book/delete/index/0396782a-a841-40bb-b742-a61300986d9e?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Mr Transport</td>
+            <td> Address line 1, Townorcity, TT1 5TT </td>
+            <td><a href="/iws/address-book/delete/index/690119aa-fcdb-408f-8e6e-a5f000f32655?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Super Carriers</td>
+            <td> Address line 1, Townorcityvillestadt, C1 9TT </td>
+            <td><a href="/iws/address-book/delete/index/fa80a7a6-7483-4992-b965-a61300945ac8?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>This new carrier that needs to save this time</td>
+            <td> Address line 1, Street 4, Rue de ville, Strasse 123, The district, in that area, in some new region, overthere, somewhere, with the trucks, TrucksvillecitytownstadtHGVplacethereburgh, UU1 1UU </td>
+            <td><a href="/iws/address-book/delete/index/b4869d0f-c9e9-4235-8385-a63400a052bc?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Try Again</td>
+            <td> Line 1, Or, OO1 2OO </td>
+            <td><a href="/iws/address-book/delete/index/8ede8671-32ec-48cf-9f54-a61000aa1b68?type=Carrier">Delete</a></td>
+          </tr>
+          <tr>
+            <td>VSD</td>
+            <td> Address line 1, Townorcity, TT1 1TT </td>
+            <td><a href="/iws/address-book/delete/index/9aca5e96-2348-46a4-85b3-a61000a7e48e?type=Carrier">Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <form action="/iws/address-book?type=Carrier" method="post">
+        <input name="__RequestVerificationToken" type="hidden" value="QsBYK7t7mL_AEs9SCxh6b0s8S6gq9r_R9kaTz_aa1QR8Mbm3H1aSk5WcTJzr7QWoL4ks1Yo4UvDQoUSiENVaNSDCMYqGgNTq7cq3bncUzRXkkOnmVsrbjsIvhzGH78wLU318zV2Gt7DIndiTFE9zww2" />
+        <div class="form-group">
+          <button class="button" type="submit">Continue</button>
+        </div>
+      </form>
+  </main>
+
+  {% endblock %}
