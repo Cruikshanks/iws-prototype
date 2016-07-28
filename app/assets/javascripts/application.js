@@ -132,9 +132,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('.searchable').multiSelect({
-  keepOrder: true, 
+  keepOrder: true,
   selectableHeader: "<input type='text' class='search-input' autocomplete='off' placeholder='Start typing to search address book'>",
-  selectionHeader: "<h2 class='heading-medium'>Your chosen carriers</h2>",
+  selectionHeader: "<h2 class='heading-medium visuallyhidden'>Your chosen carriers</h2>",
   afterInit: function(ms){
     var that = this,
         $selectableSearch = that.$selectableUl.prev(),
@@ -161,6 +161,8 @@ $(document).ready(function() {
   afterSelect: function(){
     this.qs1.cache();
     this.qs2.cache();
+    $( "h2" ).removeClass( "visuallyhidden" );
+    $( "p.intro" ).addClass( "visuallyhidden" );
   },
   afterDeselect: function(){
     this.qs1.cache();
