@@ -92,23 +92,26 @@ strong {
 
 /* Multiselect */
 .ms-container{
-  background: transparent url('/public/images/switch.png') no-repeat 50% 100px;
+  background:none;
 }
 
-.ms-container .ms-selectable, .ms-container .ms-selection{
+.ms-container .ms-selectable, .ms-container .ms-selection {
   color: $black;
+  width:100%;
+}
+
+.ms-container .ms-selection {
+  float:none;
+  margin-bottom: 30px;
 }
 
 .ms-selectable .search-input {
-  width:100%;
+  width:50%;
   margin-bottom:15px;
   font-size: 16px;
   color:$black;
 }
 
-.ms-selection .search-input {
-  display:none;
-}
 
 .ms-container .ms-selectable li.ms-elem-selectable,
 .ms-container .ms-selection li.ms-elem-selection{
@@ -117,9 +120,9 @@ strong {
   color: $black;
   font-size: 16px;
 }
-
-.ms-container .ms-selection .ms-list{
-  margin-top:32px;
+.ms-container .ms-selection li.ms-elem-selection {
+  padding: 10px 0 8px;
+  font-size: 19px;
 }
 
 .ms-container .ms-list {

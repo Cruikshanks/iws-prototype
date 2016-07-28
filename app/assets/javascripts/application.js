@@ -132,8 +132,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $('.searchable').multiSelect({
-  selectableHeader: "<input type='text' class='search-input' autocomplete='off' placeholder='Start typing to filter'>",
-  selectionHeader: "<input type='text' class='search-input' autocomplete='off' placeholder='try \"4\"'>",
+  keepOrder: true, 
+  selectableHeader: "<input type='text' class='search-input' autocomplete='off' placeholder='Start typing to search address book'>",
+  selectionHeader: "<h2 class='heading-medium'>Your chosen carriers</h2>",
   afterInit: function(ms){
     var that = this,
         $selectableSearch = that.$selectableUl.prev(),
@@ -167,6 +168,11 @@ $(document).ready(function() {
   }
 });
 });
+
+$(document).ready(function() {
+  $(".ms-selection").insertBefore(".ms-selectable");
+});
+
 
 $(".change-value a.link").click(function(){
     $(".initial").hide();
