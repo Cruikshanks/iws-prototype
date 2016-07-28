@@ -134,7 +134,7 @@ $(document).ready(function() {
   $('.searchable').multiSelect({
   keepOrder: true,
   selectableHeader: "<input type='text' class='search-input form-control' autocomplete='off' placeholder='Start typing to search address book'>",
-  selectionHeader: "<h2 class='heading-medium visuallyhidden'>Your chosen carriers</h2>",
+  selectionHeader: "<h2 class='heading-medium visuallyhidden'>Your chosen carriers</h2><p class='intro'>Select carriers from the list below.</p>",
   afterInit: function(ms){
     var that = this,
         $selectableSearch = that.$selectableUl.prev(),
