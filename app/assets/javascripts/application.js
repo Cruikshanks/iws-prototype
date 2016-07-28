@@ -173,6 +173,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $(".ms-selection").insertBefore(".ms-selectable");
+  $("li.ms-elem-selection").append("<span class=\"iws-remove\">Remove</span>");
 });
 
 

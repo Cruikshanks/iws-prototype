@@ -111,13 +111,33 @@ strong {
   margin-bottom: 30px;
 }
 
-.ms-selectable .search-input {
+.ms-container .ms-selection .ms-list li {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+.ms-container .ms-selection .ms-list li span:first-child {
+  flex-grow: 1;
+}
+
+.ms-container .ms-selection .iws-remove {
+   color:#005ea5;
+   text-decoration:underline;
+   padding-left:10px;
+   vertical-align: top;
+}
+
+.ms-container .ms-selectable li.ms-hover,
+.ms-container .ms-selection li.ms-hover {
+  background-color: $grey-3;
+}
+
+.ms-container .ms-selectable .search-input {
   width:50%;
   margin-bottom:15px;
   font-size: 16px;
   color:$black;
 }
-
 
 .ms-container .ms-selectable li.ms-elem-selectable,
 .ms-container .ms-selection li.ms-elem-selection{
