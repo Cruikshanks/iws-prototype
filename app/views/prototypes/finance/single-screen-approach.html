@@ -1,0 +1,357 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+      <div class="phase-banner">
+          <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="https://prsd.sfwltd.co.uk/iws/feedback">feedback</a> will help us to improve it.</span></p>
+      </div>
+      <div class="top-content-box font-xsmall">
+          <div id="homepage-link-container"></div>
+          <div id="top-content-box-container">
+              <section class="noti-switch">
+                  <div>
+                      <form action="/iws/notification-switch/switch" method="post">
+                          <input name="__RequestVerificationToken" type="hidden" value="7acGAXexoO9cP0Mzga4MphB4s3Xsib-LEBXgxG3G7Aq_US49rkM0mP2yqNI8PF09FhCLQKKu9i3sLaMfMkCShJYJllTwyAqHvjmnwJmzAYscIGiLXRvksOvO89xuur-LNAqkK5qhsQ4GO8lPnLFQEg2"> <input id="OriginalNumber" name="OriginalNumber" type="hidden" value="GB 0001 006003"> <span>You're working on</span> <input class="noti-number" id="Number" name="Number" title="Click and type a new notification number" type="text" value="GB 0001 006003"> <i class="fa fa-exchange"></i> <button class="button switch" type="submit">Change notification</button>
+                      </form>
+                  </div>
+              </section>
+              <ul>
+                  <li>
+                      <div class="text-secondary">
+                          Signed in as: <span class="username-format">Jeremy Gillies</span>
+                      </div>
+                  </li>
+                  <li>
+                      <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+                          <input name="__RequestVerificationToken" type="hidden" value="ThJgQ_rRibUwAWKGzlrsNFSF4fM3V0NGd9L-XVNH_B03fOPYuHTbGRb09FEaKxpjidm_2LDKlWn2jR3ZtoWofL_YDz7idDytzU-i0YBBED6lWxrqWIXQfmdRw92cpirt96o39Un6W3pkex7AtTZ9Aw2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+                      </form>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="grid-row">
+          <aside class="column-third">
+              <div class="accordion-export" id="accordion">
+                  <p class="bold-medium">&nbsp;GB 0001 006003</p>
+                  <ul>
+                      <li>
+                          <h3><span></span>Notification assessment</h3>
+                          <!--<ul>
+                              <li>
+                                  <a href="index">Notification overview</a>
+                              </li>
+                              <li>
+                                  <a href="#">Key dates</a>
+                              </li>
+                              <li>
+                                  <a href="#">Assessment decision</a>
+                              </li>
+                              <li>
+                                  <a href="#">Assign an area</a>
+                              </li>
+                              <li>
+                                  <a href="#">Mark notification as interim or non-interim</a>
+                              </li>
+                              <li class="active"><a href="financial-guarantee-assessment">Financial guarantee assessment</a></li>
+                          </ul>-->
+                      </li>
+                      <li>
+                          <h3><span></span>Shipments</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604">Shipment summary</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604/capture-movement">Record shipment data</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604/cancel">Cancel shipments</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="active">
+                          <h3 class="current"><span></span>Finance</h3>
+                          <ul>
+                              <li>
+                                  <a href="#">Finance management</a>
+                              </li>
+
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Reporting</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/export-stats">Export stats</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/missing-shipments">Missing shipments</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/export-notifications">Data Export Notifications</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/finance">Finance report</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/reports/rdf-srf-wood">FOI report</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Account services</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin/user-administration/manage-new-users">Manage new users</a>
+                              </li>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin/entry-or-exit-point">New ports or border crossings</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <h3><span></span>Change owner</h3>
+                          <ul>
+                              <li>
+                                  <a href="https://prsd.sfwltd.co.uk/iws/admin-export-assessment/6895b0dc-f709-4d05-9408-a5d100aef604/change-notification-owner">Change owner</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </aside>
+
+          <div class="column-two-thirds">
+              <h1 class="heading-large">Finance management</h1>
+
+
+                <div class="column-third" style="padding: 0px;">
+                  <p class="bold-xsmall">Total billable for notification</p>
+                  <p class="bold-large">£1895</p>
+                </div>
+                <div class="column-third column-one-third">
+                  <p class="bold-xsmall">Amount paid</p>
+                  <p class="bold-large">£1400</p>
+                </div>
+                <div class="column-third column-one-third">
+                  <p class="bold-xsmall">Amount remaining</p>
+                  <p class="bold-large">£495</p>
+                </div>
+
+                <table>
+  <thead>
+    <tr>
+      <th scope="col">Transaction</th>
+      <th scope="col">Date</th>
+      <th class="numeric" scope="col">Amount</th>
+      <th scope="col">Type</th>
+      <th class="numeric" scope="col">Receipt</th>
+      <th scope="col">Comments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Payment</td>
+      <td>14/10/2016</td>
+      <td class="numeric">£120.55</td>
+      <td>Card</td>
+      <td class="numeric">146567790</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Payment</td>
+      <td>31/09/2016</td>
+      <td class="numeric">£499.45</td>
+      <td>Card</td>
+      <td class="numeric">146427791</td>
+      <td><a href="#payment-comment-1">Yes</a></td>
+    </tr>
+    <tr>
+      <td>Refund</td>
+      <td>20/09/2016</td>
+      <td class="numeric">£200.00</td>
+      <td>Card</td>
+      <td class="numeric">126365790</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Payment</td>
+      <td>30/08/2016</td>
+      <td class="numeric">£1760.00</td>
+      <td>Card</td>
+      <td class="numeric">146567790</td>
+      <td>No</td>
+    </tr>
+
+  </tbody>
+</table>
+<br/>
+<!--Enter a payment section -->
+<details>
+
+  <summary><span class="summary">Enter a payment</span></summary>
+
+  <div class="panel-border-narrow">
+    <form action="javascript:alert('Submits form');">
+<div class="form-group">
+    <label class="form-label payment-form-amount extraMargin" for="amount-paid">
+    Amount paid (£)
+
+  </label>
+  <input class="form-control payment-form-amount" id="amount-paid" type="text">
+
+
+<select class="form-control payment-form-type" id="select-box">
+  <option>Payment method</option>
+  <option>Card</option>
+  <option>Cash</option>
+  <option>Cheque</option>
+</select>
+</div>
+
+<div class="form-group">
+  <label class="form-label" for="amount-paid">
+  Receipt number
+  </label>
+  <input class="form-control" id="receipt-number" type="text">
+</div>
+
+<div class="form-group">
+  <label class="form-label" for="date-received">
+  Date received
+  </label>
+  <span class="form-hint">For example 20 3 1976</span>
+<div class="date">
+  <label class="form-label" for="day">
+    Day
+  </label>
+  <input class="form-control" name="day" type="number"/>
+</div>
+<div class="date">
+  <label class="form-label" for="month">
+    Month
+  </label>
+  <input class="form-control"  name="month" type="number"/>
+</div>
+<div class="date">
+  <label class="form-label" for="year">
+    Year
+  </label>
+  <input class="form-control"  name="year" type="number"/>
+</div>
+</div>
+
+<div class="form-group">
+  <label class="form-label" for="comments">
+    Comments
+  </label>
+<textarea class="form-control extraWidth extraMargin" name="comments" rows="4" cols="50">
+</textarea>
+</div>
+  <input class="button" type="submit" value="Submit payment">
+</form>
+
+</details>
+<!-- End section -->
+
+<!-- Starts refund section -->
+<details class="extraMargin">
+
+  <summary><span class="summary">Refunds</span></summary>
+
+  <div class="panel-border-narrow">
+    <form action = "javascript:alert('Submits form');">
+    <div class="form-group">
+        <label class="form-label payment-form-amount extraMargin" for="amount-paid">
+        Amount paid (£)
+
+      </label>
+      <input class="form-control payment-form-amount" id="amount-paid" type="text">
+
+
+    <select class="form-control payment-form-type" id="select-box">
+      <option>Refund method</option>
+      <option>Card</option>
+      <option>Cash</option>
+      <option>Cheque</option>
+    </select>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="amount-paid">
+      Receipt number
+      </label>
+      <input class="form-control" id="receipt-number" type="text">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="date-refunded">
+      Date refunded
+      </label>
+      <span class="form-hint">For example 20 3 1976</span>
+    <div class="date">
+      <label class="form-label" for="day">
+        Day
+      </label>
+      <input class="form-control" name="day" type="number"/>
+    </div>
+    <div class="date">
+      <label class="form-label" for="month">
+        Month
+      </label>
+      <input class="form-control"  name="month" type="number"/>
+    </div>
+    <div class="date">
+      <label class="form-label" for="year">
+        Year
+      </label>
+      <input class="form-control"  name="year" type="number"/>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label" for="comments">
+        Comments
+      </label>
+  <textarea class="form-control extraWidth extraMargin" name="comments" rows="4" cols="50">
+  </textarea>
+</div>
+      <input class="button" type="submit" value="Submit refund">
+    </form>
+  </div>
+
+</details>
+<!-- ends refund section -->
+
+<!-- Starts comments section -->
+<details class="extraMargin">
+
+  <summary><span class="summary">Comments</span></summary>
+
+  <div class="panel-border-narrow">
+    <div class="form-group">
+      <p id="payment-comment-1">Payment 31/09/2016<br/>
+      This is an example comment.</p>
+
+      <p id="payment-comment-2">Refund 09/09/2016<br/>
+      This is an example comment.</p>
+    </div>
+  </div>
+
+</details>
+<!-- ends refund section -->
+
+
+              </div>
+
+          </div>
+      </div>
+  </main>
+{% endblock %}

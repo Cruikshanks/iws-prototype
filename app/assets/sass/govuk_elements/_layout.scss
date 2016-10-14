@@ -38,6 +38,7 @@
 
 // Use .grid-column to create a grid column with 15px gutter
 // By default grid columns break to become full width at tablet size
+
 .column-quarter,
 .column-one-quarter {
   @include grid-column(1/4);
