@@ -192,9 +192,39 @@ GOV.UK prototype kit
              <td>Archived on</td>
              <td>--<br>
              </td>
-             <td><a class="change-answer" href="04-add-archived-on#archive-date">Add</a></td>
+             <td></td>
            </tr>
          </table>
+         <br/>
+         <form action="05-archived-result">
+         <div class="form-group" id="archive-date">
+           <label class="form-label" for="date-refunded">
+           Archive date
+           </label>
+           <span class="form-hint">For example 20 3 1976</span>
+         <div class="date">
+           <label class="form-label" for="day">
+             Day
+           </label>
+           <input class="form-control" name="day" type="number"/>
+         </div>
+         <div class="date">
+           <label class="form-label" for="month">
+             Month
+           </label>
+           <input class="form-control"  name="month" type="number"/>
+         </div>
+         <div class="date">
+           <label class="form-label" for="year">
+             Year
+           </label>
+           <input class="form-control"  name="year" type="number"/>
+         </div>
+         </div>
+         <input class="button" type="submit" value="Submit">
+       </form>
+
+
        </div>
      </div>
    </div>
