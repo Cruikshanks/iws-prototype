@@ -1,0 +1,217 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Shipment summary
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_beta.html" %}
+  <div class="top-content-box font-xsmall">
+    <div id="homepage-link-container"></div>
+      <div id="top-content-box-container">
+        <section class="noti-switch" id="">
+          <div>
+            <form action=""><span>You're working on</span>
+              <input class="noti-number" id="Number" name="Number" title="Click and type a new notification number" type="text" value="GB 0001 004008">
+              <button class="button switch" type="submit">Change notification</button>
+            </form>
+          </div>
+        </section>
+        <ul>
+          <li>
+            <div class="text-secondary">Signed in as: <span class="username-format">Liam McMurray </span></div>
+          </li>
+          <li>
+            <form action="/iws/account/log-off" id="logoutForm" method="post">
+              <input name="__RequestVerificationToken" type="hidden" value="KoUTnWq7eVl2DGt5nAnDAJLcFS_4tMPlbYtus1aBesLdLGnKLpeBBFt85JdFoNCslT9WeU0gjMpPC-BKwBW9zk1iWS5vKgJbGCQETDlVicxOYAXAq-BHQCiXeoC6LDLPT8KEW4PeGcIRc2FjRTrF7w2">
+              <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="shipping-home">
+      <h1 class="heading-large">Shipment summary</h1>
+      <div class="grid-row">
+        <div class="column-half">
+          <table class="odd-table">
+            <caption class="visuallyhidden">Shipment summary</caption>
+            <tbody>
+              <tr>
+                <td>Total intended number of shipments:</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td>Number of shipments used:</td>
+                <td>9</td>
+              </tr>
+              <tr>
+                <td>Active loads permitted:</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Current active loads:</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Total quantity received:</td>
+                <td>576.37 tonnes (t)</td>
+              </tr>
+              <tr>
+                <td>Total quantity remaining:</td>
+                <td>2023.63 tonnes (t)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="column-half">
+          <div class="nav-bloc">
+            <h2 class="heading-small">Shipping options</h2>
+            <nav>
+              <a href="/iws/admin-export-notification-movements/184d9c93-cff7-4ac6-9178-a5fe00a791c8/capture-movement">Record shipment data</a>
+              <a href="/iws/admin-export-notification-movements/184d9c93-cff7-4ac6-9178-a5fe00a791c8/cancel">Cancel a prenotification</a>
+              <a href="/iws/admin-export-notification-movements/184d9c93-cff7-4ac6-9178-a5fe00a791c8/delete">Delete a shipment</a>
+              <a href="/iws/admin-export-notification-movements/184d9c93-cff7-4ac6-9178-a5fe00a791c8/rejected-movement/list">View rejected shipments</a>
+              <a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8">Go to notification overview</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <section class="ship-data">
+        <h3 class="heading-small">Shipment details</h3>
+        <div class="grid-row">
+          <form action="/iws/admin-export-notification-movements/184d9c93-cff7-4ac6-9178-a5fe00a791c8" method="post">
+            <input name="__RequestVerificationToken" type="hidden" value="C3atsZ9Hv6yMkgXvyeVuQ-bujVdNVC7V9il7v9aJ7FSwB-pBg4X7VJnT6m7cs44Hkfa32QpYKO9vKzwWbLGrxFktT_g3pbzPss6SJRP1_RwBAnu2pv3XvePBKQbXnVKu9QhY9XOMjap2eXFaek-bZg2">
+            <div class="column-two-thirds">
+              <div class="form-group">
+                <select class="form-control view-by" id="SelectedMovementStatus" name="SelectedMovementStatus">
+                  <option value="">View all</option>
+                  <option value="1">Incomplete</option>
+                  <option value="2">Prenotified</option>
+                  <option value="3">Received</option>
+                  <option value="4">Recovered</option>
+                  <option value="5">Rejected</option>
+                  <option value="6">Cancelled</option>
+                  <option value="7">Pending</option>
+                </select>
+                <button id="updateStatus" class="button" type="submit" style="display: none;">Update</button>
+              </div>
+            </div>
+            <div class="column-one-third">
+              <a href="/iws/admin-export-notification-movements/184d9c93-cff7-4ac6-9178-a5fe00a791c8/download">Download shipment details</a>
+            </div>
+          </form>
+        </div>
+        <div class="form-group">
+          <table class="odd-table highlight-row">
+            <caption class="visuallyhidden">Shipment summary</caption>
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Status</th>
+                <th>Prenotified</th>
+                <th>Shipment due</th>
+                <th>Received</th>
+                <th>Quantity</th>
+                <th>Recovered</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="edit-shipment.html">9</a></td>
+                <td>Recovered</td>
+                <td>16 Jun 2016</td>
+                <td>21 Sep 2016</td>
+                <td>10 Oct 2016</td>
+                <td>6.16 t</td>
+                <td>31 Jan 2017</td>
+              </tr>
+              <tr>
+                <td><a href="edit-shipment.html">8</a></td>
+                <td>Recovered</td>
+                <td>14 Sep 2016</td>
+                <td>19 Sep 2016</td>
+                <td>4 Oct 2016</td>
+                <td>7.17 t</td>
+                <td>31 Jan 2017</td>
+              </tr>
+              <tr>
+                <td><a href="edit-shipment.html">7</a></td>
+                <td>Recovered</td>
+                <td>18 Sep 2016</td>
+                <td>23 Sep 2016</td>
+                <td>10 Oct 2016</td>
+                <td>20.04 t</td>
+                <td>31 Jan 2017</td>
+              </tr>
+              <tr>
+                <td><a href="edit-shipment.html">6</a></td>
+                <td>Received</td>
+                <td>8 Aug 2018</td>
+                <td>8 Aug 2018</td>
+                <td>2 Dec 2016</td>
+                <td>2 t</td>
+                <td>- -</td>
+              </tr>
+              <tr>
+                <td><a href="edit-shipment.html">5</a></td>
+                <td>Received</td>
+                <td>12 Dec 2016</td>
+                <td>12 Dec 2018</td>
+                <td>1 Feb 2017</td>
+                <td>500 t</td>
+                <td>- -</td>
+              </tr>
+              <tr>
+                <td><a href="edit-shipment.html">4</a></td>
+                <td>Received</td>
+                <td>18 Dec 2017</td>
+                <td>18 Dec 2017</td>
+                <td>18 Dec 2017</td>
+                <td>1 t</td>
+                <td>- -</td>
+              </tr>
+              <tr>
+                <td><a href="edit-shipment.html">3</a></td>
+                <td>Rejected</td>
+                <td>1 Oct 2014</td>
+                <td>1 Dec 2020</td>
+                <td>- -</td>
+                <td>- -</td>
+                <td>- -</td>
+              </tr>
+              <tr>
+                <td><a href="edit-shipment.html">2</a></td>
+                <td>Recovered</td>
+                <td>- -</td>
+                <td>1 Jan 2020</td>
+                <td>1 Jan 2017</td>
+                <td>40 t</td>
+                <td>2 Jan 2016</td>
+              </tr>
+              <tr>
+                <td><a href="edit-shipment.html">1</a></td>
+                <td>Pending</td>
+                <td>- -</td>
+                <td>10 Feb 2017</td>
+                <td>- -</td>
+                <td>- -</td>
+                <td>- -</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pager">
+          <div class="pager-controls"></div>
+          <div class="pager-summary">Showing 1 – 9 of 9 results</div>
+        </div>
+      </section>
+      <div class="form-group">
+        <a class="button" href="#">Go to notification overview</a>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

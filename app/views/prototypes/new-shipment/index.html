@@ -1,0 +1,203 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Create a shipment
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+{% include "includes/phase_banner_beta.html" %}
+  <div class="top-content-box font-xsmall">
+    <div id="homepage-link-container"></div>
+    <div id="top-content-box-container">
+      <section class="noti-switch" id="">
+        <div>
+          <form action=""><span>You're working on</span>
+            <input class="noti-number" id="Number" name="Number" title="Click and type a new notification number" type="text" value="GB 0001 004008">
+            <button class="button switch" type="submit">Change notification</button>
+          </form>
+        </div>
+      </section>
+      <ul>
+        <li>
+          <div class="text-secondary">Signed in as: <span class="username-format">Liam McMurray </span></div>
+        </li>
+        <li>
+          <form action="/iws/account/log-off" id="logoutForm" method="post">
+            <input name="__RequestVerificationToken" type="hidden" value="KoUTnWq7eVl2DGt5nAnDAJLcFS_4tMPlbYtus1aBesLdLGnKLpeBBFt85JdFoNCslT9WeU0gjMpPC-BKwBW9zk1iWS5vKgJbGCQETDlVicxOYAXAq-BHQCiXeoC6LDLPT8KEW4PeGcIRc2FjRTrF7w2">
+            <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Capture a shipment</h1>
+      <form>
+<!-- Shipment number -->
+        <div class="form-group">
+          <fieldset>
+            <legend class="form-label-bold">Shipment number</legend>
+            <p class="form-hint">Enter the shipment number.<br />
+            For example, '5'.
+            </p>
+            <input class="form-control" id="Number" min="1" name="Number" type="number" value="">
+          </fieldset>
+        </div>
+<!-- Prenotification date -->
+        <div class="form-group">
+          <label class="heading-small" for="PrenotificationDate">Prenotification date</label>
+          <div class="form-date">
+            <input id="PrenotificationDate_IsAutoTabEnabled" name="PrenotificationDate.IsAutoTabEnabled" type="hidden" value="True">
+            <input id="PrenotificationDate_AllowPastDates" name="PrenotificationDate.AllowPastDates" type="hidden" value="True">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="PrenotificationDate_Day">Day </label>
+              <input class="form-control" data-type="date" id="PrenotificationDate_Day" max="31" min="1" name="PrenotificationDate.Day" placeholder="" type="number" value="" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="PrenotificationDate_Month">Month </label>
+              <input class="form-control" data-type="date" id="PrenotificationDate_Month" max="12" min="1" name="PrenotificationDate.Month" placeholder="" type="number" value="" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="PrenotificationDate_Year">Year </label>
+              <input class="form-control" id="PrenotificationDate_Year" min="1900" name="PrenotificationDate.Year" placeholder="" type="number" value="" style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <fieldset>
+            <label class="block-label selection-button-checkbox" for="HasNoPrenotification">
+              <input id="HasNoPrenotification" name="HasNoPrenotification" type="checkbox" value="true"><input name="HasNoPrenotification" type="hidden" value="false">
+              No prenotification received
+            </label>
+          </fieldset>
+        </div>
+<!-- Actual date -->
+        <div class="form-group">
+          <label class="heading-small" for="ActualShipmentDate">Actual date of shipment</label>
+          <div class="form-date">
+            <input id="ActualShipmentDate_IsAutoTabEnabled" name="ActualShipmentDate.IsAutoTabEnabled" type="hidden" value="True">
+            <input id="ActualShipmentDate_AllowPastDates" name="ActualShipmentDate.AllowPastDates" type="hidden" value="True">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="ActualShipmentDate_Day">Day </label>
+              <input class="form-control" data-type="date" id="ActualShipmentDate_Day" max="31" min="1" name="ActualShipmentDate.Day" placeholder="" type="number" value="">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="ActualShipmentDate_Month">Month </label>
+              <input class="form-control" data-type="date" id="ActualShipmentDate_Month" max="12" min="1" name="ActualShipmentDate.Month" placeholder="" type="number" value="">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="ActualShipmentDate_Year">Year </label>
+              <input class="form-control" id="ActualShipmentDate_Year" min="1900" name="ActualShipmentDate.Year" placeholder="" type="number" value="">
+            </div>
+          </div>
+        </div>
+<!-- Received -->
+        <div class="form-group">
+          <label class="heading-small" for="Receipt_ReceivedDate">When was the waste received?</label>
+          <div class="form-date">
+            <input id="Receipt_ReceivedDate_IsAutoTabEnabled" name="Receipt.ReceivedDate.IsAutoTabEnabled" type="hidden" value="True">
+            <input id="Receipt_ReceivedDate_AllowPastDates" name="Receipt.ReceivedDate.AllowPastDates" type="hidden" value="True">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="Receipt_ReceivedDate_Day">Day </label>
+              <input class="form-control" data-type="date" id="Receipt_ReceivedDate_Day" max="31" min="1" name="Receipt.ReceivedDate.Day" placeholder="" type="number" value="">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="Receipt_ReceivedDate_Month">Month </label>
+              <input class="form-control" data-type="date" id="Receipt_ReceivedDate_Month" max="12" min="1" name="Receipt.ReceivedDate.Month" placeholder="" type="number" value="">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="Receipt_ReceivedDate_Year">Year </label>
+              <input class="form-control" id="Receipt_ReceivedDate_Year" min="1900" name="Receipt.ReceivedDate.Year" placeholder="" type="number" value="">
+            </div>
+          </div>
+        </div>
+<!-- Accepted -->
+        <div class="form-group">
+          <label class="heading-small" for="Receipt_WasShipmentAccepted">Was the shipment accepted?</label>  
+            <fieldset>
+              <label class="block-label selection-button-radio selected" for="yes">
+              <input checked="checked" id="yes" name="Receipt.WasShipmentAccepted" type="radio" value="True"> Yes</label>
+              <label class="block-label selection-button-radio" data-target="rejected" for="no">
+              <input id="no" name="Receipt.WasShipmentAccepted" type="radio" value="False" aria-controls="rejected"> No</label>
+              <div class="panel-indent js-hidden" id="rejected">
+                <div class="form-group">
+                  <label class="form-label-bold" for="Receipt_RejectionReason">Why was it rejected?</label>
+                  <select class="form-control" id="Receipt_RejectionReason" name="Receipt.RejectionReason"><option value=""></option>
+                    <option>Illegal shipment</option>
+                    <option>Unplanned shipment</option>
+                    <option>An accident</option>
+                    <option>Site inspection</option>
+                    <option>Rejected by consignee</option>
+                    <option>Refused entry by competent authority</option>
+                    <option>Unauthorised shipment</option>
+                    <option>Waste not as specified</option>
+                    <option>Abandoned waste</option>
+                    <option>Unrecovered waste</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="Receipt_RejectionFurtherInformation">Further information on why the shipment was rejected</label>
+                  <textarea class="form-control-wide" cols="20" id="Receipt_RejectionFurtherInformation" name="Receipt.RejectionFurtherInformation" rows="10"></textarea>
+                </div>
+              </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <h3 class="heading-small" style="margin-top: 0">How much waste was received?</h3>
+          <p>Enter the quantity of waste received on the shipment</p>
+          <label class="form-label" for="Receipt_ActualQuantity">Quantity received</label>
+          <div class="grid-row">
+            <div class="column-third">
+              <input class="form-control form-control-wide" id="Receipt_ActualQuantity" min="0" name="Receipt.ActualQuantity" step="any" type="number" value="">
+            </div>
+            <div class="column-third">
+              <select class="form-control form-control-wide" id="Receipt_Units" name="Receipt.Units">
+                <option value="Kilograms">kilograms (kg)</option>
+                <option selected="selected" value="Tonnes">tonnes (t)</option>
+              </select>
+              <input id="Receipt_PossibleUnits_0_" name="Receipt.PossibleUnits[0]" type="hidden" value="Kilograms">
+              <input id="Receipt_PossibleUnits_1_" name="Receipt.PossibleUnits[1]" type="hidden" value="Tonnes">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="heading-small" for="Recovery_RecoveryDate">When was the waste recovered?</label>
+          <div class="form-date">
+            <input id="Recovery_RecoveryDate_IsAutoTabEnabled" name="Recovery.RecoveryDate.IsAutoTabEnabled" type="hidden" value="True">
+            <input id="Recovery_RecoveryDate_AllowPastDates" name="Recovery.RecoveryDate.AllowPastDates" type="hidden" value="True">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="Recovery_RecoveryDate_Day">Day </label>
+              <input class="form-control" data-type="date" id="Recovery_RecoveryDate_Day" max="31" min="1" name="Recovery.RecoveryDate.Day" placeholder="" type="number" value="">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="Recovery_RecoveryDate_Month">Month </label>
+              <input class="form-control" data-type="date" id="Recovery_RecoveryDate_Month" max="12" min="1" name="Recovery.RecoveryDate.Month" placeholder="" type="number" value="">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="Recovery_RecoveryDate_Year">Year </label>
+              <input class="form-control" id="Recovery_RecoveryDate_Year" min="1900" name="Recovery.RecoveryDate.Year" placeholder="" type="number" value="">
+            </div>
+          </div>
+        </div>
+        <button class="button" type="submit">Save and continue</button>
+      </form>
+      <a href="/iws/admin-export-notification-movements/184d9c93-cff7-4ac6-9178-a5fe00a791c8">Return to shipment summary</a>
+    </div>
+    <aside id="form-menu" class="column-third form-status">
+    <p><span>GB 0001 004008</span></p>
+    <ul class="summary-list">
+      <li> <span class="grey-text">Total number of shipments:</span> 10</li>
+      <li><span class="grey-text">Active loads permitted:</span> 10</li>
+      <li><span class="grey-text">Current active loads:</span> 0</li>
+      <li><span class="grey-text">Total quantity received:</span> 576.37&nbsp;t</li>
+      <li><span class="grey-text">Total quantity remaining:</span> 2023.63&nbsp;t</li>
+    </ul>
+    </aside>
+  </div>
+</main>
+
+{% endblock %}
