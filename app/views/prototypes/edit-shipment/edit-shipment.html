@@ -40,7 +40,107 @@
     </div>
   </div>
   <div class="grid-row">
-    <aside id="form-menu" class="column-third form-status">
+    <div class="column-two-thirds">
+    <h1 class="heading-large">Edit shipment data</h1>
+  <table class="check-your-answers">
+    <thead>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium">
+            Shipment 66
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>
+          Prenotification date
+        </td>
+        <td>
+          16 June 2016
+        </td>
+        <td class="change-answer">
+          <a href="/prototypes/new-shipment/index">
+            Change <span class="visuallyhidden">prenotification date</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Actual date
+        </td>
+        <td>
+          21 September 2016
+        </td>
+        <td class="change-answer">
+          <a href="/prototypes/new-shipment/index">
+            Change <span class="visuallyhidden">actual date</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Waste received date
+        </td>
+        <td>
+          10 October 2016
+        </td>
+        <td class="change-answer">
+          <a href="/prototypes/new-shipment/index">
+            Change <span class="visuallyhidden">waste received</span>
+          </a>
+        </td>
+      </tr>
+       <tr>
+        <td>
+          Shipment accepted?
+        </td>
+        <td>
+         Yes
+        </td>
+        <td class="change-answer">
+          <a href="/prototypes/new-shipment/index">
+            Change <span class="visuallyhidden">shipment accepted</span>
+          </a>
+        </td>
+      </tr>
+       <tr>
+        <td>
+          Quantity received
+        </td>
+        <td>
+          6.16 Tonnes
+        </td>
+        <td class="change-answer">
+          <a href="/prototypes/new-shipment/index">
+            Change <span class="visuallyhidden">waste received</span>
+          </a>
+        </td>
+      </tr>
+       <tr>
+        <td>
+          Waste recovered date
+        </td>
+        <td>
+          31 January 2017
+        </td>
+        <td class="change-answer">
+          <a href="/prototypes/new-shipment/index">
+            Change <span class="visuallyhidden">waste received</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="form-group">
+    <p></p><p><a href="/prototypes/edit-shipment/index">Return to shipment summary</a></p>
+  </div>
+    </div>
+        <aside id="form-menu" class="column-third form-status">
         <p>
     <span>GB 0001 004008</span>
 </p>
@@ -59,58 +159,6 @@
 </ul>
 
     </aside>
-
-    <div class="column-two-thirds">
-        
-
-
-<h1 class="heading-large">Shipment data</h1>
-
-<p>Currently displaying shipment 66</p>
-
-<table>
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Prenotification date</td>
-            <td>
-16 June 2016            </td>
-        </tr>
-        <tr>
-            <td>Actual date</td>
-            <td>21 September 2016</td>
-        </tr>
-    </tbody>
-</table>
-
-<form action="/iws/admin-export-movement/43caaa52-7a7f-4b61-ae58-a7160104c279/internal-capture" method="post"><div class="error-summary-valid" data-valmsg-summary="true">
-                        <ul class="error-summary-list">
-                            <li style="display:none"></li>
-                        </ul>
-                    </div><input name="__RequestVerificationToken" type="hidden" value="u1TCs9C27uz4F_DOCxicQGv0Q9cgSFNtgeR777FDF3j21OQlSyXF5lyBhnOPohPZPqnKDT1jG-tHTTlxcVKm89Wvcoz_Au_ebjg1wajhNYWOFEUUfnCcdle-JIHGlyB6gVd-PlE6bWNjUbKM_z1GdQ2"><input id="MovementNumber" name="MovementNumber" type="hidden" value="66"><input id="ActualDate" name="ActualDate" type="hidden" value="21/09/2016 00:00:00"><input id="PrenotificationDate" name="PrenotificationDate" type="hidden" value="16/06/2016 00:00:00"><input id="IsReceived" name="IsReceived" type="hidden" value="True"><input id="IsOperationCompleted" name="IsOperationCompleted" type="hidden" value="True"><input id="NotificationId" name="NotificationId" type="hidden" value="184d9c93-cff7-4ac6-9178-a5fe00a791c8"><input id="NotificationType" name="NotificationType" type="hidden" value="Recovery"><input id="Receipt_ReceivedDate_Day" name="Receipt.ReceivedDate.Day" type="hidden" value="10"><input id="Receipt_ReceivedDate_Month" name="Receipt.ReceivedDate.Month" type="hidden" value="10"><input id="Receipt_ReceivedDate_Year" name="Receipt.ReceivedDate.Year" type="hidden" value="2016"><input id="Receipt_ActualQuantity" name="Receipt.ActualQuantity" type="hidden" value="6.1600"><input id="Receipt_Units" name="Receipt.Units" type="hidden" value="Tonnes">            <p>
-                </p><div class="heading-small"><label for="Receipt_ReceivedDate">When was the waste received?</label></div>
-                10 October 2016
-            <p></p>
-            <p>
-                </p><div class="heading-small">Was the shipment accepted?</div>
-Yes            <p></p>
-            <p>
-                </p><div class="heading-small"><label for="Receipt_ActualQuantity">Quantity received</label></div>
-                6.16  Tonnes
-            <p></p>
-<input id="Recovery_RecoveryDate_Day" name="Recovery.RecoveryDate.Day" type="hidden" value="31"><input id="Recovery_RecoveryDate_Month" name="Recovery.RecoveryDate.Month" type="hidden" value="1"><input id="Recovery_RecoveryDate_Year" name="Recovery.RecoveryDate.Year" type="hidden" value="2017">            <p>
-                </p><div class="heading-small">When was the waste recovered?</div>
-                31 January 2017
-            <p></p>
-</form>
-
-<a href="/iws/admin-export-notification-movements/184d9c93-cff7-4ac6-9178-a5fe00a791c8">Return to shipment summary</a>
-    </div>
 </div>
 </main>
 {% endblock %}
