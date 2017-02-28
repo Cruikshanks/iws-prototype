@@ -36,25 +36,19 @@
   <div>
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h1 class="heading-large">Capture a shipment</h1>
-      <form action="/prototypes/edit-shipment/index">
+      <h1 class="heading-large">Edit shipment data</h1>
+      
 <!-- Shipment number -->
-        <div class="form-group">
-          <fieldset>
-            <legend class="form-label-bold">Shipment number</legend>
-            <p class="form-hint">Enter the shipment number.<br />
-            For example, '5'.
-            </p>
-            <input autofocus class="form-control" id="Number" min="1" name="Number" type="number" value="">
-          </fieldset>
-        </div>
-
- <form action="/prototypes/edit-shipment/index">
+        <h2 class="heading-medium">Shipment 33</h2>
+        <p>Current status is <strong>Pending</strong></p>
+       
+          
+         <form action="/prototypes/edit-shipment/index">
 <!-- Prenotification date -->
           <div class="form-group form-group-year"><label class="heading-small" for="PrenotificationDate">Prenotification date</label>
             <fieldset style="margin-bottom: 15px;">
               <label class="block-label selection-button-checkbox" for="HasNoPrenotification">
-                <input id="HasNoPrenotification" name="HasNoPrenotification" type="checkbox" value="true"><input name="HasNoPrenotification" type="hidden" value="false">
+                <input id="HasNoPrenotification" name="HasNoPrenotification" type="checkbox" checked="checked" value="true"><input name="HasNoPrenotification" type="hidden" value="false">
                 No prenotification received
               </label>
             </fieldset>
@@ -68,7 +62,7 @@
             <input id="ActualShipmentDate_IsAutoTabEnabled" name="ActualShipmentDate.IsAutoTabEnabled" type="hidden" value="True">
             <input id="ActualShipmentDate_AllowPastDates" name="ActualShipmentDate.AllowPastDates" type="hidden" value="True">
               <label class="form-label form-hint" for="ActualShipmentDate_Year">e.g. '19/01/17'</label>
-              <input class="form-control form-control-1-4" id="ActualShipmentDate_Year" min="1900" name="ActualShipmentDate.Year" placeholder="" value="">
+              <input class="form-control form-control-1-4" id="ActualShipmentDate_Year" min="1900" name="ActualShipmentDate.Year" placeholder="" value="21/12/16">
             </div>
 
 <!-- Received -->
@@ -78,7 +72,7 @@
           <input id="Receipt_ReceivedDate_AllowPastDates" name="Receipt.ReceivedDate.AllowPastDates" type="hidden" value="True">
           <div class="form-group form-group-year">
             <label class="form-label form-hint" for="Receipt_ReceivedDate_Year">e.g. '19/01/17' </label>
-            <input class="form-control form-control-1-4" id="Receipt_ReceivedDate_Year" min="1900" name="Receipt.ReceivedDate.Year" placeholder="" value="">
+            <input class="form-control form-control-1-4" id="Receipt_ReceivedDate_Year" min="1900" name="Receipt.ReceivedDate.Year" placeholder="" value="22/02/17">
           </div>
         </div>
 <!-- Accepted -->
@@ -90,7 +84,7 @@
       
 
       <label class="block-label selection-button-radio" data-target="contact-by-email" for="example-contact-by-email">
-        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes" checked="checked">
         Yes
       </label>
 
@@ -152,17 +146,13 @@
           <label class="heading-small" for="textarea-a">
             Comments
           </label>
-          <textarea class="form-control" id="textarea-a" cols="30" rows="10"></textarea>
+          <textarea class="form-control" id="textarea-a" cols="30" rows="10">Please confirm prenote</textarea>
         </div>
         <div class="form-group">
-        <form action="/prototypes/edit-shipment/edit-shipment-saved">
-        <button class="button" type="submit">Save and continue</button>
+        <form action="">
+        <button class="button" type="submit" disabled="disabled">Saved</button>
         </form>
         </div>
-      </form>
-
-
-
       </form>
       <a href="/prototypes/edit-shipment/index">Return to shipment summary</a>
     </div>
@@ -175,6 +165,23 @@
       <li><span class="grey-text">Total quantity received:</span> 576.37&nbsp;t</li>
       <li><span class="grey-text">Total quantity remaining:</span> 2023.63&nbsp;t</li>
     </ul>
+    <h2 class="heading-small">Shipment 33</h2>
+     <h3>Select a different shipment:</h3>
+         <div class="form-group">
+           <select class="form-control" id="Receipt_RejectionReason" name="Receipt.RejectionReason"><option value="Shipsment associated with this notification"></option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>6</option>
+              <option>8</option>
+              <option>9</option>
+              <option>12</option>
+              <option>13</option>
+              <option>14</option>
+              <option>33</option>
+            </select>
+            <a href="edit-shipment-alt.html">Change shipment</a>
+          </div>
     </aside>
   </div>
 </main>
