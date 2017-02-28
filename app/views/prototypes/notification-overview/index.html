@@ -1,0 +1,1085 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Blank page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+<div class="phase-banner">
+    <p>
+        <strong class="phase-tag">BETA</strong>
+        <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span>
+    </p>
+</div>
+        <div class="top-content-box font-xsmall">
+            <div id="homepage-link-container">
+            </div>
+            <div id="top-content-box-container">
+                
+    <section class="noti-switch" id="">
+    <div>
+<form action="/iws/notification-switch/switch" method="post"><input name="__RequestVerificationToken" type="hidden" value="ymnnPw9Jc9q7QI1KevDToGsE35oQQprpAblIYks6TGAMwyXA45HRgZhSBuvBDMeR-VgS-0Wu5uv2cpICFZlvUM4MYm6NL8gZf2J3vYUjRLceWvDTAVabu40xQ-CPawmwRbSegUl_xvQcHODbvDJRfg2" /><input id="OriginalNumber" name="OriginalNumber" type="hidden" value="GB&#32;0001&#32;004008" />            <span>You're working on</span>
+<input class="noti-number" id="Number" name="Number" title="Click&#32;and&#32;type&#32;a&#32;new&#32;notification&#32;number" type="text" value="GB&#32;0001&#32;004008" />            <i class="fa fa-exchange"></i>
+            <button class="button switch" type="submit">Change notification</button>
+</form>    </div>
+</section>
+  
+
+                <ul>
+    <li>
+        <div class="text-secondary">Signed in as: <span class="username-format">Liam McMurray </span></div>
+    </li>
+    <li>
+<form action="/iws/account/log-off" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="wJq-y-0JqyEg4LfcXLvMywKY4sB5qqisBIjPmU7BRFBH5MI7zvvmxkLdNuU3aaHPM4UzAFcE7t8MU1qgqDLjgWbXPcwPObf4RzoGTkBDYmJWsUWTSz6PAjWAkw0-v_YOoEHApvgPR8qXH9GF2082gA2" />            <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+</form>    </li>
+</ul>
+            </div>
+        </div>
+    
+
+<div class="grid-row">
+    <aside class="column-third">
+        
+    
+
+<div id="accordion" class="accordion-export">
+    <div class="notification-number">
+        <p class="bold-medium">
+            GB 0001 004008
+                <br/>
+                <span class="assigned-area">Greater Manchester, Merseyside and Cheshire</span>
+            <br/>
+            <span class="assigned-area">Consented</span>
+            <br />
+            <span class="assigned-area"> Non-Interim</span>
+        </p>
+    </div>
+    <ul>
+        <li class="">
+            <h3 class="">
+                <span></span>
+                Notification assessment
+            </h3>
+            <ul>
+                <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/overview">Notification overview</a></li>
+                <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/key-dates">Key dates</a></li>
+                    <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/key-dates-override">Update key dates</a></li>
+                                    <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/decision">Assessment decision</a></li>
+                                    <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/assign-area">Assign an area</a></li>
+                <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/mark-as-interim">Mark notification as interim or non-interim</a></li>
+                <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/financial-guarantee-assessment">Financial guarantee assessment</a></li>
+                <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/financial-guarantee-decision-history">Financial guarantee decision history</a></li>
+                    <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/financial-guarantee-dates">Update financial guarantee dates</a></li>
+                <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/annex">Download annexes</a></li>
+            </ul>
+        </li>
+
+            <li class="active">
+                <h3 class="current">
+                    <span></span>
+                    Shipments
+                </h3>
+                <ul>
+                    <li><a href="/prototypes/edit-shipment/index">Shipment summary</a></li>
+                    <li><a href="#">Cancel prenotifications</a></li>
+                    <li><a href="#">Download shipment documents</a></li>
+                </ul>
+            </li>
+
+        <li class="">
+            <h3 class="">
+                <span></span>
+                Finance
+            </h3>
+            <ul>
+                <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/account-management">Finance management</a></li>
+            </ul>
+        </li>
+
+        <li class="">
+            <h3 class="">
+                <span></span>
+                Reporting
+            </h3>
+            <ul>
+    <li><a href="/iws/reports/export-stats">Export stats</a></li>
+    <li><a href="/iws/reports/import-stats">Import stats</a></li>
+    <li><a href="/iws/reports/missing-shipments">Missing shipments</a></li>
+    <li><a href="/iws/reports/export-notifications">Data Export Notifications</a></li>
+    <li><a href="/iws/reports/import-notifications">Data Import Notifications</a></li>
+    <li><a href="/iws/reports/finance">Finance report</a></li>
+    <li><a href="/iws/reports/freedom-of-information">FOI report</a></li>
+    <li><a href="/iws/reports/export-movements">Export Movement Documents Input</a></li>
+    <li><a href="/iws/reports/blanket-bonds">Blanket bonds</a></li>
+</ul>
+
+        </li>
+
+            <li class="">
+                <h3 class="">
+                    <span></span>
+                    Account services
+                </h3>
+                <ul>
+        <li><a href="/iws/admin/user-administration/manage-new-users">Manage new users</a></li>
+            <li><a href="/iws/admin/user-administration/change-user-role">Change user role</a></li>
+        <li><a href="/iws/admin/user-administration/change-user-status">Change user status</a></li>
+            <li><a href="/iws/admin/entry-or-exit-point">New ports or border crossings</a></li>
+            <li><a href="/iws/admin/delete-notification">Delete a notification</a></li>
+</ul>
+
+            </li>
+
+        <li class="">
+            <h3 class="">
+                <span></span>
+                Change owner
+            </h3>
+            <ul>
+                <li><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/change-notification-owner">Change owner</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</div>
+
+    </aside>
+
+    <div class="column-two-thirds">
+        
+
+<div id="submit-overview-area">
+    
+<header class="hgroup">
+        <h1 class="heading-large">Notification overview</h1>
+</header>
+<hr />
+
+<div>
+    
+
+<table class="overview-table">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <h2 class="heading-medium">Organisations involved</h2>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Exporter
+            </td>
+            <td>
+                
+<div class="overview-block">
+        <div class="overview-block-element">
+            Avanti Environmental Group Ltd
+            <br/>
+            Charleywood Road,
+            ,
+            Knowsley Industrial Estate,
+            L33 7SG,
+            United Kingdom
+        </div>
+        <div class="overview-block-element">
+            Organisation type: 
+            Limited company
+            <br/>
+            Company registration: 
+            03476148
+        </div>
+        <div class="overview-block-element">
+            <dl>
+    <dd>Contact: Matthew Thompson</dd>
+    <dd>
+        Tel: +44
+        330 240 4065
+    </dd>
+        <dd>
+            Fax: +44
+            151 549 2245
+        </dd>
+    <dd>Email: <a href="mailto:mathompson@avantienvironmental.co.uk">mathompson@avantienvironmental.co.uk</a></dd>
+</dl>
+        </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Producers
+            </td>
+            <td>
+                <div class="overview-block">
+            <div class="change-answer"><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/producer/add">Add</a></div>
+            <div class="overview-block-element">
+                Avanti Environmental Group Ltd
+                <br/>
+                Charleywood Road,
+                ,
+                Knowsley Industrial Estate,
+                L33 7SG,
+                United Kingdom
+            </div>
+            <div class="overview-block-element">
+                Organisation type:
+                Limited company
+                <br />
+                Company registration:
+                03476148
+            </div>
+            <div class="overview-block-element">
+                <dl>
+    <dd>Contact: Matthew Thompson</dd>
+    <dd>
+        Tel: +44
+        333 240 4065
+    </dd>
+        <dd>
+            Fax: +44
+            151 549 2245
+        </dd>
+    <dd>Email: <a href="mailto:mathompson@avantienvironmental.co.uk">mathompson@avantienvironmental.co.uk</a></dd>
+</dl>
+            </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Site of export
+            </td>
+            <td>
+                
+<div class="overview-block">
+        <div class="overview-block-element">
+            Avanti Environmental Group Ltd
+            <br/>
+            Charleywood Road,
+            ,
+            Knowsley Industrial Estate,
+            L33 7SG,
+            United Kingdom
+        </div>
+        <div class="overview-block-element">
+            Organisation type:
+            Limited company
+            <br />
+            Company registration:
+            03476148
+        </div>
+        <div class="overview-block-element">
+            <dl>
+    <dd>Contact: Matthew Thompson</dd>
+    <dd>
+        Tel: +44
+        333 240 4065
+    </dd>
+        <dd>
+            Fax: +44
+            151 549 2245
+        </dd>
+    <dd>Email: <a href="mailto:mathompson@avantienvironmental.co.uk">mathompson@avantienvironmental.co.uk</a></dd>
+</dl>
+        </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Importer
+            </td>
+            <td>
+                <div class="overview-block">
+        <div class="overview-block-element">
+            Geocycle
+            <br />
+            Rue De Courriere 49,
+            ,
+            B7181 Seneffe,
+            ,
+            Belgium
+        </div>
+        <div class="overview-block-element">
+            Organisation type:
+            Limited company
+            <br />
+            Company registration:
+            0432.772.131
+        </div>
+        <div class="overview-block-element">
+            <dl>
+    <dd>Contact: Eric Waeyenbergh</dd>
+    <dd>
+        Tel: +32
+        64 510 424
+    </dd>
+        <dd>
+            Fax: +32
+            64 510 429
+        </dd>
+    <dd>Email: <a href="mailto:eric.waeyenbergh@holcim.com">eric.waeyenbergh@holcim.com</a></dd>
+</dl>
+        </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Recovery facilities
+            </td>
+            <td>
+                <div class="overview-block">
+            <div class="overview-block-element">
+                Geocycle
+                <br />
+                Rue De Courriere 49,
+                ,
+                B7181 Seneffe,
+                ,
+                Belgium
+            </div>
+            <div class="overview-block-element">
+                Organisation type:
+                Limited company
+                <br />
+                Company registration:
+                0432.772.131
+            </div>
+            <div class="overview-block-element">
+                <dl>
+    <dd>Contact: Eric Waeyenbergh</dd>
+    <dd>
+        Tel: +32
+        64 510 424
+    </dd>
+        <dd>
+            Fax: +32
+            64 510 429
+        </dd>
+    <dd>Email: <a href="mailto:eric.waeyenbergh@holcim.com">eric.waeyenbergh@holcim.com</a></dd>
+</dl>
+            </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Recovery site
+            </td>
+            <td>
+                <div class="overview-block">
+        <div class="overview-block-element">
+            Geocycle
+            <br />
+            Rue De Courriere 49,
+            ,
+            B7181 Seneffe,
+            ,
+            Belgium
+        </div>
+        <div class="overview-block-element">
+            Organisation type:
+            Limited company
+            <br />
+            Company registration:
+            0432.772.131
+        </div>
+        <div class="overview-block-element">
+            <dl>
+    <dd>Contact: Eric Waeyenbergh</dd>
+    <dd>
+        Tel: +32
+        64 510 424
+    </dd>
+        <dd>
+            Fax: +32
+            64 510 429
+        </dd>
+    <dd>Email: <a href="mailto:eric.waeyenbergh@holcim.com">eric.waeyenbergh@holcim.com</a></dd>
+</dl>
+        </div>
+</div>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div>
+    
+
+<table class="overview-table">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <h2 class="heading-medium">Recovery operation</h2>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Recovery codes
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+R1, R12    </div>
+</div>
+            </td>
+            
+        </tr>
+            <tr>
+                <td>
+                    Pre-consented facility
+                </td>
+                <td>
+                    <div class="overview-block">
+    <div class="overview-block-element">
+No    </div>
+</div>
+                </td>
+                
+            </tr>
+        <tr>
+            <td>
+                Recovery technology
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+            <div class="overview-block-element">
+                Replacement fuel in cement kilns
+            </div>
+                <div class="overview-block-element">
+                Further details:
+                <br/>
+                
+                </div>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Reason for export
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+No suitable facilities in the UK    </div>
+</div>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div>
+    
+
+
+
+<table class="overview-table">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <h2 class="heading-medium">Transportation</h2>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Intended carriers
+            </td>
+            <td>
+                <div class="overview-block">
+            <div class="overview-block-element">
+                SKM &amp; Son Haulage Ltd
+                <br />
+                18 Andrea Avenue,
+                Grays
+                RM16 6RD,
+                United Kingdom
+            </div>
+            <div class="overview-block-element">
+                Organisation type:
+                Limited company
+                <br />
+                Company registration:
+                06467021
+            </div>
+            <div class="overview-block-element">
+                <dl>
+    <dd>Contact: SKM &amp; Son Haulage</dd>
+    <dd>
+        Tel: +44
+        7984 788980
+    </dd>
+        <dd>
+            Fax: +44
+            1375 371 462
+        </dd>
+    <dd>Email: <a href="mailto:skmhaulage@gmail.com">skmhaulage@gmail.com</a></dd>
+</dl>
+            </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Means of transport
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+Road                    &#8594;
+Sea                    &#8594;
+Road    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Packaging types
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+            <ul>
+                    <li>1 - Drum</li>
+                    <li>IBC</li>
+            </ul>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Special handling requirements
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+No special handling required    </div>
+</div>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div>
+    
+
+<table class="overview-table">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <h2 class="heading-medium">The journey</h2>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Export route
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+            <div class="grid-row">
+                <div class="column-half">
+                    Exit point:
+                </div>
+                <div class="column-half">
+                    Killingholme,
+                    United Kingdom
+
+                        <div class="change-answer"><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/update-journey/exit-point">Change</a></div>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="column-half">
+                    Competent authority:
+                </div>
+                <div class="column-half">
+                    GB01
+                    -
+                    Environment Agency
+                </div>
+            </div>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Import route
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+            <div class="grid-row">
+                <div class="column-half">
+                    Entry point:
+                </div>
+                <div class="column-half">
+                    Zeebrugge,
+                    Belgium
+
+                        <div class="change-answer"><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/update-journey/entry-point">Change</a></div>
+                </div>
+            </div>
+            <div class="grid-row">
+                <div class="column-half">
+                    Competent authority:
+                </div>
+                <div class="column-half">
+                    BE003
+                    -
+                    Wallonia Service public de Wallonie Direction générale de l&#39;Agriculture, des Ressources naturelles et de l&#39;Environnement
+                </div>
+            </div>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Transits
+            </td>
+            <td>
+                <div class="overview-block">
+        <div class="overview-block-element">
+            There are no transit states
+        </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Customs office
+            </td>
+            <td>
+                <div class="overview-block">
+        <div class="overview-block-element">Not applicable</div>
+</div>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div>
+    
+
+<table class="overview-table">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <h2 class="heading-medium">Amounts and dates</h2>
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Intended&nbsp;total&nbsp;shipments
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+100                <div class="change-answer" ><a href="/iws/admin-export-assessment/184d9c93-cff7-4ac6-9178-a5fe00a791c8/number-of-shipments">Change</a></div>
+    </div>
+</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Intended&nbsp;total&nbsp;quantity
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+2600 t    </div>
+</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Intended&nbsp;dates&nbsp;of&nbsp;departure
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+31 May 2016 to 30 May 2017    </div>
+</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div>
+    
+
+<table class="overview-table">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <h2 class="heading-medium">Waste classification</h2>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Chemical composition
+            </td>
+            <td>
+                <div class="overview-block">
+        <div class="overview-block-element grid-row">
+            <div class="column-third">Type:</div>
+            <div class="column-two-thirds">Other</div>
+        </div>
+            <div class="overview-block-element grid-row">
+                <div class="column-third">Name:</div>
+                <div class="column-two-thirds">Heavy fuel oil based calorific oily solids</div>
+            </div>
+            <div class="overview-block-element grid-row">
+                <div class="column-third">Further details:</div>
+                <div class="column-two-thirds">To be provided in a separate annex.</div>
+            </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Process of generation
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+Site bulking and consolidation    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Physical characteristics
+            </td>
+            <td>
+                <div class="overview-block">
+    <div class="overview-block-element">
+            <span>Solid</span>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div>
+    
+
+<table class="overview-table">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <h2 class="heading-medium">Waste codes</h2>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                Basel code
+            </td>
+            <td>
+                
+
+<div class="overview-block">
+            <div class="overview-block-element">Not listed</div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                EWC code
+            </td>
+            <td>
+                
+
+<div class="overview-block">
+    <div class="overview-block-element">
+        <div class="grid-row">
+            <div class="column-third">Code:</div>
+            <div class="column-two-thirds">19 02 09*</div>
+        </div>
+            <div class="grid-row">
+                <div class="column-third">Description:</div>
+                <div class="column-two-thirds">solid combustible wastes containing hazardous substances</div>
+            </div>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Y code
+            </td>
+            <td>
+                
+
+<div class="overview-block">
+    <div class="overview-block-element">
+        <div class="grid-row">
+            <div class="column-third">Code:</div>
+            <div class="column-two-thirds">Y9</div>
+        </div>
+            <div class="grid-row">
+                <div class="column-third">Description:</div>
+                <div class="column-two-thirds">Waste oils/water, hydrocarbons/water mixtures, emulsions</div>
+            </div>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                H or HP code
+            </td>
+            <td>
+                
+
+<div class="overview-block">
+    <div class="overview-block-element">
+        <div class="grid-row">
+            <div class="column-third">Code:</div>
+            <div class="column-two-thirds">H12</div>
+        </div>
+            <div class="grid-row">
+                <div class="column-third">Description:</div>
+                <div class="column-two-thirds">Ecotoxic</div>
+            </div>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                UN class
+            </td>
+            <td>
+                
+
+<div class="overview-block">
+    <div class="overview-block-element">
+        <div class="grid-row">
+            <div class="column-third">Code:</div>
+            <div class="column-two-thirds">9</div>
+        </div>
+            <div class="grid-row">
+                <div class="column-third">Description:</div>
+                <div class="column-two-thirds">Miscellaneous dangerous goods</div>
+            </div>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                UN number
+            </td>
+            <td>
+                
+
+<div class="overview-block">
+    <div class="overview-block-element">
+        <div class="grid-row">
+            <div class="column-third">Code:</div>
+            <div class="column-two-thirds">UN 3077</div>
+        </div>
+            <div class="grid-row">
+                <div class="column-third">Description:</div>
+                <div class="column-two-thirds">Environmentally hazardous substance, solid, n.o.s. (not including waste)</div>
+            </div>
+    </div>
+</div>
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                Other codes
+            </td>
+            <td>
+                <div class="overview-block">
+        <div class="overview-block-element grid-row">
+            <div class="column-third">Other code:</div>
+            <div class="column-two-thirds">
+                    Not applicable
+            </div>
+        </div>
+        <div class="overview-block-element grid-row">
+            <div class="column-third">National code in country&nbsp;of&nbsp;export:</div>
+            <div class="column-two-thirds">
+                    Not applicable
+            </div>
+        </div>
+        <div class="overview-block-element grid-row">
+            <div class="column-third">National code in country&nbsp;of&nbsp;import:</div>
+            <div class="column-two-thirds">
+                    Not applicable
+            </div>
+        </div>
+        <div class="overview-block-element grid-row">
+            <div class="column-third non-breaking">Customs code(s):</div>
+            <div class="column-two-thirds">
+                    Not applicable
+            </div>
+        </div>
+</div>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+</div>
+
+    <div>
+        
+
+<table class="overview-table">
+    <thead>
+        <tr>
+            <th colspan="2">
+                <h2 class="heading-medium">Waste recovery</h2>
+            </th>
+        </tr>
+    </thead>
+    
+        <tbody>
+        <tr>
+            <td>
+                Details provided by importer
+            </td>
+            <td>
+                <div class="overview-block">
+                    <div class="overview-block-element">
+No                    </div>
+                </div>
+            </td>
+        </tr>
+            <tr>
+                <td>
+                    Recoverable percentage
+                </td>
+                <td>
+                    <div class="overview-block">
+                        <div class="overview-block-element">
+98.00%
+                        </div>
+                    </div>
+                </td>
+            </tr>
+                <tr>
+                    <td>
+                        Disposal method
+                    </td>
+                    <td>
+                        <div class="overview-block">
+                            <div class="overview-block-element">
+Incineration                            </div>
+                        </div>
+                    </td>
+                </tr>
+            <tr>
+                <td>
+                    Estimated&nbsp;value&nbsp;of&nbsp;recoverable material
+                    (per tonne)
+                </td>
+                <td>
+                    <div class="overview-block">
+                        <div class="overview-block-element">
+                                &pound;13.40
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Recovery cost (per tonne)
+                </td>
+                <td>
+                    <div class="overview-block">
+                        <div class="overview-block-element">
+                                &pound;23.65
+                        </div>
+                    </div>
+                </td>
+            </tr>
+                <tr>
+                    <td>
+                        Disposal cost (per tonne)
+                    </td>
+                    <td>
+                        <div class="overview-block">
+                            <div class="overview-block-element">
+                                    &pound;118.26
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+    </tbody>
+
+            
+</table>
+    </div>
+
+</div>
+
+
+
+    </div>
+</div>
+
+
+
+
+</main>
+
+{% endblock %}
