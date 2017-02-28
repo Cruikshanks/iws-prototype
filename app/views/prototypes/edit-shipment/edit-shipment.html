@@ -93,7 +93,7 @@
         No
       </label>
       <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
-        <label class="form-label-bold" for="Receipt_RejectionReason">Why was it rejected?</label>
+        <div class="form-group"><label class="form-label-bold" for="Receipt_RejectionReason">Why was it rejected?</label>
                   <select class="form-control" id="Receipt_RejectionReason" name="Receipt.RejectionReason"><option value=""></option>
                     <option>Illegal shipment</option>
                     <option>Unplanned shipment</option>
@@ -105,7 +105,12 @@
                     <option>Waste not as specified</option>
                     <option>Abandoned waste</option>
                     <option>Unrecovered waste</option>
-                  </select>
+                  </select></div>
+                  <div class="form-group">
+                        <label class="form-label" for="Receipt_RejectionFurtherInformation">Further information on why the shipment was rejected</label>
+                        
+                        <textarea class="form-control" cols="15" id="Receipt_RejectionFurtherInformation" name="Receipt.RejectionFurtherInformation" rows="10"></textarea>
+                    </div>
       </div>
 
     </fieldset>
