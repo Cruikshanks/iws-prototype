@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+    <div class="phase-banner">
+      <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+    </div>
+    <div class="top-content-box font-xsmall">
+      <div id="homepage-link-container">
+        <a href="/iws/applicant/home">Go to your homepage</a>
+      </div>
+      <div id="top-content-box-container">
+        <ul>
+          <li>
+            <div class="text-secondary">
+              Signed in as: <span class="username-format">Jeremy Gillies</span>
+            </div>
+          </li>
+          <li>
+            <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+              <input name="__RequestVerificationToken" type="hidden" value="ZfpX1axn4zooXCUNB0mraluUZORyQ9WpFeRRLrEDE6NDm5XKt9HZ1GePcoGerur7-ZVXbKVKSFcsnYQ4LWOdjfOeAAhmMtGfjqX8nO4C1j9mKLA3fA9nKPS_uNHJuMxUmCo_mgwqLW-_EfukTrTF5A2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-row">
+      <aside class="column-third form-status" id="form-menu">
+        <p><span>GB 0001 006003</span></p>
+        <ul class="summary-list">
+          <li><span class="grey-text">Shipment number:</span> 45</li>
+          <li><span class="grey-text">Total number of shipments:</span> 45</li>
+          <li><span class="grey-text">Active loads permitted:</span> 12</li>
+          <li><span class="grey-text">Current active loads:</span> 0</li>
+          <li><span class="grey-text">Total quantity received:</span> 631 t</li>
+          <li><span class="grey-text">Total quantity remaining:</span> 369 t</li>
+        </ul>
+      </aside>
+      <div class="column-two-thirds">
+        <header class="hgroup">
+          <h1 class="heading-large">What to do next with this prenotification</h1>
+        </header>
+        <p>Before we can consider your prenotification, you still have to complete, sign and submit the documentation. This is a five step process:</p>
+        <div class="form-group">
+          <ol class="list-number">
+            <li>download the <a href="/iws/export-movement/4f074069-c946-49c0-8cde-a63400f8e2d5/home/generate-movement-document">IWS movement</a> document
+            </li>
+            <li>print the document</li>
+            <li>complete blocks 7 and 8</li>
+            <li>sign it</li>
+            <li>upload the signed document</li>
+          </ol>
+        </div>
+        <p>You can either upload the signed file now, or choose to upload it later. You'll be able to do this from the 'Notification options' page.</p>
+        <div class="form-group">
+          <a class="button" href="/prototypes/finish">Continue</a>
+        </div><a href="/iws/feedback">What do you think of this service?</a>
+      </div>
+    </div>
+  </main>
+  {% endblock %}
