@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+    <div class="phase-banner">
+      <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+    </div>
+    <div class="top-content-box font-xsmall">
+      <div id="homepage-link-container">
+        <a href="/iws/applicant/home">Go to your homepage</a>
+      </div>
+      <div id="top-content-box-container">
+        <ul>
+          <li>
+            <div class="text-secondary">
+              Signed in as: <span class="username-format">Phil Baird</span>
+            </div>
+          </li>
+          <li>
+            <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+              <input name="__RequestVerificationToken" type="hidden" value="ZfpX1axn4zooXCUNB0mraluUZORyQ9WpFeRRLrEDE6NDm5XKt9HZ1GePcoGerur7-ZVXbKVKSFcsnYQ4LWOdjfOeAAhmMtGfjqX8nO4C1j9mKLA3fA9nKPS_uNHJuMxUmCo_mgwqLW-_EfukTrTF5A2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="column-two-thirds">        
+<h1 class="heading-large">Which prenotification would you like to upload?</h1>
+
+<form action="upload-your-prenotification"><input name="__RequestVerificationToken" type="hidden" value="_qVI2tsD18pLVb5D1vdciztDshHuyWAwpZUOltFSJrWUZcTkI3OndzmHQcyS71ZUH99zxQDbIkzgYA9oJQ8FE8XoH24U1grh_KjDhDl_PlkFmlOs3oK3VgBC3SwthmvXdsPFa2sSPkqK_tZdUguXLw2" /><div class='error-summary-valid' data-valmsg-summary='true'>
+                        <ul class='error-summary-list'>
+                            <li style='display:none'></li>
+                        </ul>
+                    </div><input id="NotificationId" name="NotificationId" type="hidden" value="40dff78b-2cb4-4e52-8d58-a6da00c0d9ad" />        <div class="form-group">
+            
+                    <label for="RadioButtons.PossibleValues[0].Value" class="block-label">
+            <input id="RadioButtons_PossibleValues_0__Key" name="RadioButtons.PossibleValues[0].Key" type="hidden" value="Shipment&#32;1" />
+            <input id="RadioButtons_PossibleValues_0__Value" name="RadioButtons.PossibleValues[0].Value" type="hidden" value="b6d289c4-1667-4e72-a97f-a72a00f094cc" />
+
+            <input id="RadioButtons.PossibleValues[0].Value" name="RadioButtons.SelectedValue" type="radio" value="b6d289c4-1667-4e72-a97f-a72a00f094cc" />
+
+            Shipment 1
+        </label>
+        <label for="RadioButtons.PossibleValues[1].Value" class="block-label">
+            <input id="RadioButtons_PossibleValues_1__Key" name="RadioButtons.PossibleValues[1].Key" type="hidden" value="Shipment&#32;3" />
+            <input id="RadioButtons_PossibleValues_1__Value" name="RadioButtons.PossibleValues[1].Value" type="hidden" value="4d891a32-8ce8-4e4a-be97-a72a00f6fab1" />
+
+            <input id="RadioButtons.PossibleValues[1].Value" name="RadioButtons.SelectedValue" type="radio" value="4d891a32-8ce8-4e4a-be97-a72a00f6fab1" />
+
+            Shipment 2
+        </label>
+        <label for="RadioButtons.PossibleValues[2].Value" class="block-label">
+            <input id="RadioButtons_PossibleValues_2__Key" name="RadioButtons.PossibleValues[2].Key" type="hidden" value="Shipment&#32;4" />
+            <input id="RadioButtons_PossibleValues_2__Value" name="RadioButtons.PossibleValues[2].Value" type="hidden" value="6c9a19a6-ba28-43ab-98e5-a72f00995186" />
+
+            <input id="RadioButtons.PossibleValues[2].Value" name="RadioButtons.SelectedValue" type="radio" value="6c9a19a6-ba28-43ab-98e5-a72f00995186" />
+
+            Shipment 3
+        </label>
+
+        </div>
+        <div class="form-group">
+            <button class="button" type="submit">Continue</button>
+        </div>
+        <div>
+            <a href="/iws/notification-application/40dff78b-2cb4-4e52-8d58-a6da00c0d9ad/options">Go to notification options</a>
+        </div>
+</form>
+
+
+
+      </div>
+            <aside class="column-third form-status" id="form-menu" style="margin-top: 30px;">
+        <p><span>GB 0001 006003</span></p>
+        <ul class="summary-list">
+          <li><span class="grey-text">Shipment number:</span> 45</li>
+          <li><span class="grey-text">Total number of shipments:</span> 45</li>
+          <li><span class="grey-text">Active loads permitted:</span> 12</li>
+          <li><span class="grey-text">Current active loads:</span> 0</li>
+          <li><span class="grey-text">Total quantity received:</span> 631 t</li>
+          <li><span class="grey-text">Total quantity remaining:</span> 369 t</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  {% endblock %}

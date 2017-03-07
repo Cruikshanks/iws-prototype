@@ -20,7 +20,7 @@ GOV.UK prototype kit
         <ul>
           <li>
             <div class="text-secondary">
-              Signed in as: <span class="username-format">Jeremy Gillies</span>
+              Signed in as: <span class="username-format">Phil Baird</span>
             </div>
           </li>
           <li>
@@ -32,21 +32,10 @@ GOV.UK prototype kit
       </div>
     </div>
     <div class="grid-row">
-      <aside class="column-third form-status" id="form-menu">
-        <p><span>GB 0001 006003</span></p>
-        <ul class="summary-list">
-          <li><span class="grey-text">Shipment number:</span> 45</li>
-          <li><span class="grey-text">Total number of shipments:</span> 44</li>
-          <li><span class="grey-text">Active loads permitted:</span> 12</li>
-          <li><span class="grey-text">Current active loads:</span> 0</li>
-          <li><span class="grey-text">Total quantity received:</span> 631 t</li>
-          <li><span class="grey-text">Total quantity remaining:</span> 369 t</li>
-        </ul>
-      </aside>
       <div class="column-two-thirds">
         <header class="hgroup">
           <h1 class="heading-large">Manage prenotifications for this shipment</h1>
-          <p>Prenotifications for shipment date: 16/06/2016</p>
+          <p>Prenotifications for shipment date: 09/03/2017</p>
         </header>
 
         <div class="form-group">
@@ -58,21 +47,27 @@ GOV.UK prototype kit
             </tr>
             <tr>
               <td>20 tonnes</td>
-              <td>Jerrycan</td>
-              <td class="remove"><a href="#">Remove</a></td>
-            </tr>
-            <tr>
-              <td>15 tonnes</td>
-              <td>Jerrycan</td>
-              <td class="remove"><a href="#">Remove</a></td>
+              <td>Jerrican</td>
+              <td class="remove"><a href="../Shipment-date">Remove</a></td>
             </tr>
           </table>
         </div>
-        <p><a href="../third/03-Actual-quantity">Generate another prenotification</a></p>
         <div class="form-group">
-          <a class="button" href="../third/03-Actual-quantity">Save and continue</a>
+          <a class="button" href="../download-your-prenotification">Save and continue</a>
         </div>
+        <p><a href="../2/actual-quantity">Create another prenotification for this date</a></p>
       </div>
+      <aside class="column-third form-status" id="form-menu" style="margin-top: 30px;">
+        <p><span>GB 0001 006003</span></p>
+        <ul class="summary-list">
+          <li><span class="grey-text">Shipment number:</span> 45</li>
+          <li><span class="grey-text">Total number of shipments:</span> 44</li>
+          <li><span class="grey-text">Active loads permitted:</span> 12</li>
+          <li><span class="grey-text">Current active loads:</span> 0</li>
+          <li><span class="grey-text">Total quantity received:</span> 631 t</li>
+          <li><span class="grey-text">Total quantity remaining:</span> 369 t</li>
+        </ul>
+      </aside>
     </div>
   </main>
   {% endblock %}
