@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+    <div class="phase-banner">
+      <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+    </div>
+    <div class="top-content-box font-xsmall">
+      <div id="homepage-link-container">
+        <a href="/iws/applicant/home">Go to your homepage</a>
+      </div>
+      <div id="top-content-box-container">
+        <ul>
+          <li>
+            <div class="text-secondary">
+              Signed in as: <span class="username-format">Phil Baird</span>
+            </div>
+          </li>
+          <li>
+            <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+              <input name="__RequestVerificationToken" type="hidden" value="KV_-N6kQbGYAafULFLl_0QV8N2l5ss3xGBdwV6eEoBADktwcLiqag1ACR-ooW29ZHP4PGBsM3DMiG-l7NFkkBALm7LNKSCyAcp2EU1ISulXWzOPftUL4hilZzp53w_J24-yes-Zr-m7s2Ueu6wtrkQ2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <header class="hgroup">
+          <h1 class="heading-large">Manage prenotifications for this shipment</h1>
+          <p>Prenotifications for shipment date: 09/03/2017</p>
+        </header>
+
+        <div class="form-group">
+          <table>
+            <tr>
+              <th>Quantity</th>
+              <th>Type</th>
+              <th><span class="visually-hidden">Action</span></th>
+            </tr>
+            <tr>
+              <td>20 tonnes</td>
+              <td>Jerrican</td>
+              <td class="remove"><a href="../1/add-another">Remove</a></td>
+            </tr>
+             <tr>
+              <td>15 tonnes</td>
+              <td>Bag</td>
+              <td class="remove"><a href="../1/add-another">Remove</a></td>
+            </tr>
+          </table>
+          </div>
+         <div class="form-group">
+          <a class="button" href="../download-your-prenotification">Save and continue</a>
+        </div>
+          <p><a href="../3/actual-quantity">Create another prenotification for this date</a></p>
+      </div>
+      <aside class="column-third form-status" id="form-menu" style="margin-top: 30px;">
+        <p><span>GB 0001 006003</span></p>
+        <ul class="summary-list">
+          <li><span class="grey-text">Shipment number:</span> 45</li>
+          <li><span class="grey-text">Total number of shipments:</span> 44</li>
+          <li><span class="grey-text">Active loads permitted:</span> 12</li>
+          <li><span class="grey-text">Current active loads:</span> 0</li>
+          <li><span class="grey-text">Total quantity received:</span> 631 t</li>
+          <li><span class="grey-text">Total quantity remaining:</span> 369 t</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  {% endblock %}
