@@ -21,7 +21,7 @@ GOV.UK prototype kit
 
                 <ul>
                     <li>
-                        <div class="text-secondary">Signed in as: <span class="username-format">Jeremy Gillies </span></div>
+                        <div class="text-secondary">Signed in as: <span class="username-format">Phil Baird</span></div>
                     </li>
                     <li>
                         <form action="/iws/account/log-off" id="logoutForm" method="post">
@@ -35,7 +35,52 @@ GOV.UK prototype kit
 
 
         <div class="grid-row">
-            <aside id="form-menu" class="column-third form-status">
+            <div class="column-two-thirds">
+
+
+                <header class="hgroup">
+                    <h1 class="heading-large">How much waste and when was it received?</h1>
+                </header>
+
+                <form action="/iws/export-movement/e043efc5-7bd7-4d4d-aafb-a6110103b202/date-received" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="8_-CVpZMtZYdn5e5krBwHNiP-9lHcRLx646ODgU5uKDRVYWTCCwoKrBIKw0ZwkFOTIyYGeVY-AJnM-phcQOp01ww-BYWlFTqpx0JxiA3tvw4IkeTanohMCFAJUXujsqdrfH7_V8vleg6kfiksTfLrg2" />
+                    <div class='error-summary-valid' data-valmsg-summary='true'>
+                        <ul class='error-summary-list'>
+                            <li style='display:none'></li>
+                        </ul>
+                    </div>
+                    <input id="MovementDate" name="MovementDate" type="hidden" value="01/06/2016&#32;00:00:00" />
+                    <div class="form-group">
+                        
+<legend>
+                                <span class="heading-small">Quantity received in tonnes (t)</span>
+                            </legend>
+                        <input class="form-control form-control-1-4" id="Quantity" name="Quantity" type="text" value="" />
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>
+                                <span class="heading-small">Received date</span>
+                            </legend>
+                            <div class="form-date">
+            <label class="form-label form-hint" for="PrenotificationDate">e.g. '19/01/17'</label>
+            <input class="form-control form-control-1-4" data-type="date" id="PrenotificationDate_Day" max="31" min="1" name="PrenotificationDate.Day" placeholder="" value="">
+            </div>
+                        </fieldset>
+                    </div>
+
+                    
+                    <div class="form-group">
+                      <a class="button" href="send-receipt">Continue</a>
+                    </div>
+
+
+
+                </form>
+            </div>
+
+
+                        <aside id="form-menu" class="column-third form-status">
                 <p>
                     <span>GB 0001 006003</span>
                 </p>
@@ -52,52 +97,6 @@ GOV.UK prototype kit
                 </ul>
 
             </aside>
-
-            <div class="column-two-thirds">
-
-
-                <header class="hgroup">
-                    <h1 class="heading-large">When was the waste received?</h1>
-                </header>
-
-                <form action="/iws/export-movement/e043efc5-7bd7-4d4d-aafb-a6110103b202/date-received" method="post">
-                    <input name="__RequestVerificationToken" type="hidden" value="8_-CVpZMtZYdn5e5krBwHNiP-9lHcRLx646ODgU5uKDRVYWTCCwoKrBIKw0ZwkFOTIyYGeVY-AJnM-phcQOp01ww-BYWlFTqpx0JxiA3tvw4IkeTanohMCFAJUXujsqdrfH7_V8vleg6kfiksTfLrg2" />
-                    <div class='error-summary-valid' data-valmsg-summary='true'>
-                        <ul class='error-summary-list'>
-                            <li style='display:none'></li>
-                        </ul>
-                    </div>
-                    <input id="MovementDate" name="MovementDate" type="hidden" value="01/06/2016&#32;00:00:00" />
-                    <div class="form-group">
-                        <fieldset>
-                            <legend>
-                                <span class="form-label">Received date</span>
-                            </legend>
-                            <div class="form-date">
-                                <p class="form-hint">For example, 31 3 2016</p>
-
-
-
-                                <div class="form-group form-group-day">
-                                    <label class="form-label" for="Day">Day </label>
-                                    <input class="form-control" id="Day" max="31" min="1" name="Day" type="number" value="" />
-                                </div>
-                                <div class="form-group form-group-month">
-                                    <label class="form-label" for="Month">Month </label>
-                                    <input class="form-control" id="Month" max="12" min="1" name="Month" type="number" value="" />
-                                </div>
-                                <div class="form-group form-group-year">
-                                    <label class="form-label" for="Year">Year </label>
-                                    <input class="form-control" id="Year" min="2015" name="Year" type="number" value="" />
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
-                    <div class="form-group">
-                      <a class="button" href="quantity-received">Continue</a>
-                    </div>
-                </form>
-            </div>
         </div>
 
 

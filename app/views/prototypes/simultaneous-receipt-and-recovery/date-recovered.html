@@ -35,23 +35,6 @@ GOV.UK prototype kit
 
 
         <div class="grid-row">
-            <aside id="form-menu" class="column-third form-status">
-                <p>
-                    <span>GB 0001 006003</span>
-                </p>
-
-                <ul class="summary-list">
-                    <li><span class="grey-text">Shipment number:</span> 35</li>
-                    <li> <span class="grey-text">Total number of shipments:</span> 44</li>
-                    <li><span class="grey-text">Active loads permitted:</span> 12</li>
-                    <li><span class="grey-text">Current active loads:</span> 1</li>
-                    <li><span class="grey-text">Total quantity received:</span> 631&nbsp;t
-                    </li>
-                    <li><span class="grey-text">Total quantity remaining:</span> 369&nbsp;t
-                    </li>
-                </ul>
-
-            </aside>
 
             <div class="column-two-thirds">
 
@@ -72,31 +55,37 @@ GOV.UK prototype kit
                     <div class="form-group">
                         <fieldset>
                             <legend>
-                                <span class="form-label">Date</span>
+                                <span class="heading-small">Recovered date</span>
                             </legend>
                             <div class="form-date">
-                                <p class="form-hint">For example, 31 3 2016</p>
-                                <div class="form-group form-group-day">
-                                    <label class="form-label" for="Day">Day </label>
-                                    <input class="form-control" id="Day" max="31" min="1" name="Day" type="number" value="" />
-                                </div>
-                                <div class="form-group form-group-month">
-                                    <label class="form-label" for="Month">Month </label>
-                                    <input class="form-control" id="Month" max="12" min="1" name="Month" type="number" value="" />
-                                </div>
-                                <div class="form-group form-group-year">
-                                    <label class="form-label" for="Year">Year </label>
-                                    <input class="form-control" id="Year" min="2015" name="Year" type="number" value="" />
-                                </div>
-                            </div>
+            <label class="form-label form-hint" for="PrenotificationDate">e.g. '19/01/17'</label>
+            <input class="form-control form-control-1-4" data-type="date" id="PrenotificationDate_Day" max="31" min="1" name="PrenotificationDate.Day" placeholder="" value="">
+            </div>
                         </fieldset>
                     </div>
 
                     <div class="form-group">
-                      <a class="button" href="send-certificates">Continue</a>
+                      <a class="button" href="send-recovery">Continue</a>
                     </div>
                 </form>
             </div>
+                        <aside id="form-menu" class="column-third form-status">
+                <p>
+                    <span>GB 0001 006003</span>
+                </p>
+
+                <ul class="summary-list">
+                    <li><span class="grey-text">Shipment number:</span> 35</li>
+                    <li> <span class="grey-text">Total number of shipments:</span> 44</li>
+                    <li><span class="grey-text">Active loads permitted:</span> 12</li>
+                    <li><span class="grey-text">Current active loads:</span> 1</li>
+                    <li><span class="grey-text">Total quantity received:</span> 631&nbsp;t
+                    </li>
+                    <li><span class="grey-text">Total quantity remaining:</span> 369&nbsp;t
+                    </li>
+                </ul>
+
+            </aside>
         </div>
 
 

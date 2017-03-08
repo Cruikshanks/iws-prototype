@@ -1,0 +1,132 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+    <main id="content">
+        <div class="phase-banner">
+            <p>
+                <strong class="phase-tag">BETA</strong>
+                <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span>
+            </p>
+        </div>
+        <div class="top-content-box font-xsmall">
+            <div id="homepage-link-container">
+                <a href="/iws/applicant/home">Go to your homepage</a> </div>
+            <div id="top-content-box-container">
+
+                <ul>
+                    <li>
+                        <div class="text-secondary">Signed in as: <span class="username-format">Phil Baird</span></div>
+                    </li>
+                    <li>
+                        <form action="/iws/account/log-off" id="logoutForm" method="post">
+                            <input name="__RequestVerificationToken" type="hidden" value="koKAakBe2O4aB_FmalNUKHRBPGqwZQ6QISNoHQ1l02XgU5CMyUykrz8W_H_9lU7iA0dnwHkm47nZlh4RhYSpPN15lO1YkBzzRJks5tvHP5f4kCSemDXG2TreKvnr89cd21bwb2GVJWQpu-i-Q8MwDg2" />
+                            <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="grid-row">
+            <div class="column-two-thirds">
+
+
+                <header class="hgroup">
+                    <h1 class="heading-large">How much waste and when was it received and recovered?</h1>
+                </header>
+
+                <form action="/iws/export-movement/e043efc5-7bd7-4d4d-aafb-a6110103b202/date-received" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="8_-CVpZMtZYdn5e5krBwHNiP-9lHcRLx646ODgU5uKDRVYWTCCwoKrBIKw0ZwkFOTIyYGeVY-AJnM-phcQOp01ww-BYWlFTqpx0JxiA3tvw4IkeTanohMCFAJUXujsqdrfH7_V8vleg6kfiksTfLrg2" />
+                    <div class='error-summary-valid' data-valmsg-summary='true'>
+                        <ul class='error-summary-list'>
+                            <li style='display:none'></li>
+                        </ul>
+                    </div>
+                    <input id="MovementDate" name="MovementDate" type="hidden" value="01/06/2016&#32;00:00:00" />
+                                        <div class="form-group">
+                        
+<legend>
+                                <span class="heading-small">Quantity received in tonnes (t)</span>
+                            </legend>
+                        <input class="form-control form-control-1-4" id="Quantity" name="Quantity" type="text" value="" />
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <legend>
+                                <span class="heading-small">Received date</span>
+                            </legend>
+                            <div class="form-date">
+            <label class="form-label form-hint" for="PrenotificationDate">e.g. '19/01/17'</label>
+            <input class="form-control form-control-1-4" data-type="date" id="PrenotificationDate_Day" max="31" min="1" name="PrenotificationDate.Day" placeholder="" value="">
+            </div>
+                        </fieldset>
+                    </div>
+<div class="form-group">
+          <fieldset>
+
+            <legend class="heading-medium">Is this also the date of recovery?</legend>
+
+            <label for="radio-part-2" class="block-label selection-button-radio selected">
+              <input id="radio-part-2" type="radio" name="housing-act" value="Part 2">
+              Yes
+            </label>
+
+            <label for="radio-part-3" class="block-label selection-button-radio" data-target="example_nationality_other">
+              <input id="radio-part-3" type="radio" name="housing-act" value="Part 3" aria-controls="example_nationality_other" aria-expanded="false">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="example_nationality_other" aria-hidden="true">
+<fieldset>
+                            <legend>
+                                <span class="heading-small">Recovered date</span>
+                            </legend>
+                            <div class="form-date">
+            <label class="form-label form-hint" for="PrenotificationDate">e.g. '19/01/17'</label>
+            <input class="form-control form-control-1-4" data-type="date" id="PrenotificationDate_Day" max="31" min="1" name="PrenotificationDate.Day" placeholder="" value="">
+            </div>
+                        </fieldset>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+                                        <div class="form-group">
+                      <a class="button" href="send-receipt-recovery">Continue</a>
+                    </div>
+                </form>
+            </div>
+
+
+                        <aside id="form-menu" class="column-third form-status">
+                <p>
+                    <span>GB 0001 006003</span>
+                </p>
+
+                <ul class="summary-list">
+                    <li><span class="grey-text">Shipment number:</span> 35</li>
+                    <li> <span class="grey-text">Total number of shipments:</span> 44</li>
+                    <li><span class="grey-text">Active loads permitted:</span> 12</li>
+                    <li><span class="grey-text">Current active loads:</span> 1</li>
+                    <li><span class="grey-text">Total quantity received:</span> 611&nbsp;t
+                    </li>
+                    <li><span class="grey-text">Total quantity remaining:</span> 389&nbsp;t
+                    </li>
+                </ul>
+
+            </aside>
+        </div>
+
+
+
+    </main>
+
+    {% endblock %}

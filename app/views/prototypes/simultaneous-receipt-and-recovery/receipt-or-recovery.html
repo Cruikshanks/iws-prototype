@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+  <div class="phase-banner">
+    <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+  </div>
+  <div class="top-content-box font-xsmall">
+    <div id="homepage-link-container">
+      <a href="/iws/applicant/home">Go to your homepage</a>
+    </div>
+    <div id="top-content-box-container">
+      <ul>
+        <li>
+          <div class="text-secondary">
+            Signed in as: <span class="username-format">Phil Baird</span>
+          </div>
+        </li>
+        <li>
+          <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+            <input name="__RequestVerificationToken" type="hidden" value="wnwKnOGAjJXWSuqMkib8bc34t7mcGcYma8t63IH1SOPTYWY5vGBtDr5CX_7ise-AaW12bc0JlHPN3YyyU6jJgTFWzUi8KXKcGeKWHFZ3JzpRUuG8vMIa-wuUUbf4OHUc8vGwxCa7VkTRtw9g0B45jw2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">What documentation would you like to add?</h1>
+      <form action="" method="post">
+        <div class="form-group">
+          <label class="block-label" for="RadioButtons.PossibleValues[0].Value"><input id="RadioButtons_PossibleValues_0__Key" name="RadioButtons.PossibleValues[0].Key" type="hidden" value="Shipment&#32;35"> <input id="RadioButtons_PossibleValues_0__Value" name="RadioButtons.PossibleValues[0].Value" type="hidden" value="e043efc5-7bd7-4d4d-aafb-a6110103b202"> <input id="RadioButtons.PossibleValues[0].Value" name="RadioButtons.SelectedValue" type="radio" value="e043efc5-7bd7-4d4d-aafb-a6110103b202" checked="checked"> Certificate of receipt</label>
+          <label class="block-label" for="RadioButtons.PossibleValues[1].Value"><input id="RadioButtons_PossibleValues_1__Key" name="RadioButtons.PossibleValues[1].Key" type="hidden" value="Shipment&#32;35"> <input id="RadioButtons_PossibleValues_1__Value" name="RadioButtons.PossibleValues[1].Value" type="hidden" value="e043efc5-7bd7-4d4d-aafb-a6110103b202"> <input id="RadioButtons.PossibleValues[1].Value" name="RadioButtons.SelectedValue" type="radio" value="e043efc5-7bd7-4d4d-aafb-a6110103b202"> Certificate of recovery</label>
+          <label class="block-label" for="RadioButtons.PossibleValues[2].Value"><input id="RadioButtons_PossibleValues_2__Key" name="RadioButtons.PossibleValues[2].Key" type="hidden" value="Shipment&#32;35"> <input id="RadioButtons_PossibleValues_2__Value" name="RadioButtons.PossibleValues[2].Value" type="hidden" value="e043efc5-7bd7-4d4d-aafb-a6110103b202"> <input id="RadioButtons.PossibleValues[2].Value" name="RadioButtons.SelectedValue" type="radio" value="e043efc5-7bd7-4d4d-aafb-a6110103b202"> Certificate of receipt and recovery</label>
+        </div>
+        <h2>Temporary navigation whilst I'm working on adding in template branching javascript</h2>
+        <ul class="list list-bullet">
+          <li><a href="date-received">Certificate of receipt</a></li>
+          <li><a href="date-recovered">Certificate of recovery</a></li>
+          <li><a href="date-received-recovered">Certificate of receipt and recovery</a></li>
+        </ul>
+        <div class="form-group-compound">
+          <!-- <a class="button" href="date-received">Continue</a> -->
+
+        </div><a href="/iws/notification-application/6895b0dc-f709-4d05-9408-a5d100aef604/options">Go to notification options</a>
+      </form>
+    </div>
+        <aside class="column-third form-status" id="form-menu">
+      <p><span>GB 0001 006003</span></p>
+      <ul class="summary-list">
+        <li><span class="grey-text">Total number of shipments:</span> 44</li>
+        <li><span class="grey-text">Active loads permitted:</span> 12</li>
+        <li><span class="grey-text">Current active loads:</span> 1</li>
+        <li><span class="grey-text">Total quantity received:</span> 611&nbsp;t</li>
+        <li><span class="grey-text">Total quantity remaining:</span> 389&nbsp;t</li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+{% endblock %}
