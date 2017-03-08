@@ -21,7 +21,7 @@ GOV.UK prototype kit
 
                 <ul>
                     <li>
-                        <div class="text-secondary">Signed in as: <span class="username-format">Jeremy Gillies </span></div>
+                        <div class="text-secondary">Signed in as: <span class="username-format">Phil Baird</span></div>
                     </li>
                     <li>
                         <form action="/iws/account/log-off" id="logoutForm" method="post">
@@ -35,7 +35,42 @@ GOV.UK prototype kit
 
 
         <div class="grid-row">
-            <aside id="form-menu" class="column-third form-status">
+
+            <div class="column-two-thirds">
+
+
+                <header class="hgroup">
+                    <h1 class="heading-large">Your certificates of receipt and recovery is now complete</h1>
+                    <p>Before you continue, you need to send the signed copies of the certificates of receipt and recovery.</p>
+                </header>
+
+                <form action="/iws/export-movement/e043efc5-7bd7-4d4d-aafb-a6110103b202/receipt-complete" enctype="multipart/form-data" method="post">
+                    <input name="__RequestVerificationToken" type="hidden" value="tTSutcNYLM2LDGD9mOkNISjyaMavmD-8KsljfYQHkpzdPugiHzIS74MLlSAY5P2kvOMHm185kg7v28TUYUN2chmOR1gknTGk1NOwnGYGD4w8QSX1jAwIQX-Uj9Jp75I-hn5_ShwVI6fsqZ-h6IXQyQ2" />
+                    <input id="NotificationId" name="NotificationId" type="hidden" value="6895b0dc-f709-4d05-9408-a5d100aef604" />
+                    <input id="Unit" name="Unit" type="hidden" value="Tonnes" />
+                    <input id="DateReceived" name="DateReceived" type="hidden" value="12/06/2016&#32;00:00:00" />
+                    <input id="Quantity" name="Quantity" type="hidden" value="20" />
+                    <div class='error-summary-valid' data-valmsg-summary='true'>
+                        <ul class='error-summary-list'>
+                            <li style='display:none'></li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="File">Upload the signed copy of the certificate of receipt </label>
+
+                        <input class="form-control" id="File" name="File" type="file" value="" />
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="File">Upload the signed copy of the certificate of recovery </label>
+
+                        <input class="form-control" id="File" name="File" type="file" value="" />
+                    </div>
+                    <div class="form-group">
+                      <a class="button" href="upload-successful">Continue</a>
+                    </div>
+                </form>
+            </div>
+                        <aside id="form-menu" class="column-third form-status">
                 <p>
                     <span>GB 0001 006003</span>
                 </p>
@@ -52,35 +87,6 @@ GOV.UK prototype kit
                 </ul>
 
             </aside>
-
-            <div class="column-two-thirds">
-
-
-                <header class="hgroup">
-                    <h1 class="heading-large">Your certificate of receipt and recovery is now complete</h1> Before you continue, you need to send the signed copy of the certificate of receipt and recovery.
-                </header>
-
-                <form action="/iws/export-movement/e043efc5-7bd7-4d4d-aafb-a6110103b202/receipt-complete" enctype="multipart/form-data" method="post">
-                    <input name="__RequestVerificationToken" type="hidden" value="tTSutcNYLM2LDGD9mOkNISjyaMavmD-8KsljfYQHkpzdPugiHzIS74MLlSAY5P2kvOMHm185kg7v28TUYUN2chmOR1gknTGk1NOwnGYGD4w8QSX1jAwIQX-Uj9Jp75I-hn5_ShwVI6fsqZ-h6IXQyQ2" />
-                    <input id="NotificationId" name="NotificationId" type="hidden" value="6895b0dc-f709-4d05-9408-a5d100aef604" />
-                    <input id="Unit" name="Unit" type="hidden" value="Tonnes" />
-                    <input id="DateReceived" name="DateReceived" type="hidden" value="12/06/2016&#32;00:00:00" />
-                    <input id="Quantity" name="Quantity" type="hidden" value="20" />
-                    <div class='error-summary-valid' data-valmsg-summary='true'>
-                        <ul class='error-summary-list'>
-                            <li style='display:none'></li>
-                        </ul>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="File">Upload the signed copy of the certificate of receipt and recovery</label>
-
-                        <input class="form-control" id="File" name="File" type="file" value="" />
-                    </div>
-                    <div class="form-group">
-                      <a class="button" href="upload-successful">Continue</a>
-                    </div>
-                </form>
-            </div>
         </div>
 
 

@@ -21,7 +21,7 @@ GOV.UK prototype kit
 
                 <ul>
                     <li>
-                        <div class="text-secondary">Signed in as: <span class="username-format">Jeremy Gillies </span></div>
+                        <div class="text-secondary">Signed in as: <span class="username-format">Phil Baird</span></div>
                     </li>
                     <li>
                         <form action="/iws/account/log-off" id="logoutForm" method="post">
@@ -35,7 +35,25 @@ GOV.UK prototype kit
 
 
         <div class="grid-row">
-            <aside id="form-menu" class="column-third form-status">
+
+            <div class="column-two-thirds">
+
+
+
+                <header class="hgroup">
+                    <h1 class="heading-large">You've successfully recorded the receipt of this shipment</h1>
+                </header>
+                <input id="NotificationId" name="NotificationId" type="hidden" value="6895b0dc-f709-4d05-9408-a5d100aef604" />
+
+                <div class="form-group">
+                    <a class="button" href="which-shipment">Record another certificate</a>
+                </div>
+
+                <a href="../index">Return to notification options</a>
+
+            </div>
+
+                        <aside id="form-menu" class="column-third form-status">
                 <p>
                     <span>GB 0001 006003</span>
                 </p>
@@ -52,23 +70,6 @@ GOV.UK prototype kit
                 </ul>
 
             </aside>
-
-            <div class="column-two-thirds">
-
-
-
-                <header class="hgroup">
-                    <h1 class="heading-large">You've successfully recorded the receipt and recovery of this shipment</h1>
-                </header>
-                <input id="NotificationId" name="NotificationId" type="hidden" value="6895b0dc-f709-4d05-9408-a5d100aef604" />
-
-                <div class="form-group">
-                    <a class="button" href="/prototypes/finish">Go to notification options</a>
-                </div>
-
-                <a href="/prototypes/finish">What do you think of this service?</a>
-
-            </div>
         </div>
 
 

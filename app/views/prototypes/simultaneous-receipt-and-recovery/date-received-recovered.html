@@ -39,7 +39,7 @@ GOV.UK prototype kit
 
 
                 <header class="hgroup">
-                    <h1 class="heading-large">How much waste and when was it received?</h1>
+                    <h1 class="heading-large">How much waste and when was it received and recovered?</h1>
                 </header>
 
                 <form action="/iws/export-movement/e043efc5-7bd7-4d4d-aafb-a6110103b202/date-received" method="post">
@@ -50,6 +50,13 @@ GOV.UK prototype kit
                         </ul>
                     </div>
                     <input id="MovementDate" name="MovementDate" type="hidden" value="01/06/2016&#32;00:00:00" />
+                                        <div class="form-group">
+                        
+<legend>
+                                <span class="heading-small">Quantity received in tonnes (t)</span>
+                            </legend>
+                        <input class="form-control form-control-1-4" id="Quantity" name="Quantity" type="text" value="" />
+                    </div>
                     <div class="form-group">
                         <fieldset>
                             <legend>
@@ -61,20 +68,40 @@ GOV.UK prototype kit
             </div>
                         </fieldset>
                     </div>
+<div class="form-group">
+          <fieldset>
 
-                    <div class="form-group">
-                        
-<legend>
-                                <span class="heading-small">Quantity received in tonnes (t)</span>
+            <legend class="heading-medium">Is this also the date of recovery?</legend>
+
+            <label for="radio-part-2" class="block-label selection-button-radio selected">
+              <input id="radio-part-2" type="radio" name="housing-act" value="Part 2">
+              Yes
+            </label>
+
+            <label for="radio-part-3" class="block-label selection-button-radio" data-target="example_nationality_other">
+              <input id="radio-part-3" type="radio" name="housing-act" value="Part 3" aria-controls="example_nationality_other" aria-expanded="false">
+              No
+            </label>
+
+            <div class="panel panel-border-narrow js-hidden" id="example_nationality_other" aria-hidden="true">
+<fieldset>
+                            <legend>
+                                <span class="heading-small">Recovered date</span>
                             </legend>
-                        <input class="form-control form-control-1-4" id="Quantity" name="Quantity" type="text" value="" />
+                            <div class="form-date">
+            <label class="form-label form-hint" for="PrenotificationDate">e.g. '19/01/17'</label>
+            <input class="form-control form-control-1-4" data-type="date" id="PrenotificationDate_Day" max="31" min="1" name="PrenotificationDate.Day" placeholder="" value="">
+            </div>
+                        </fieldset>
+            </div>
+
+          </fieldset>
+        </div>
+
+
+                                        <div class="form-group">
+                      <a class="button" href="send-receipt-recovery">Continue</a>
                     </div>
-                    <div class="form-group">
-                      <a class="button" href="send-receipt">Continue</a>
-                    </div>
-
-
-
                 </form>
             </div>
 
