@@ -25,7 +25,7 @@ router.get('/prototypes/simultaneous-receipt-and-recovery/send-receipt', functio
   } else {
 
     // if certificate is any other value (or is missing) render the page requested
-    res.render('/prototypes/simultaneous-receipt-and-recovery/send-receipt');
+    res.render('prototypes/simultaneous-receipt-and-recovery/send-receipt');
 
   }
 
