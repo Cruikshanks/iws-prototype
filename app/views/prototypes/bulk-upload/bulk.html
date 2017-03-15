@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+  <div class="phase-banner">
+    <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+  </div>
+  <div class="top-content-box font-xsmall">
+    <div id="homepage-link-container">
+      <a href="/iws/applicant/home">Go to your homepage</a>
+    </div>
+    <div id="top-content-box-container">
+      <ul>
+        <li>
+          <div class="text-secondary">
+            Signed in as: <span class="username-format">Phil Baird</span>
+          </div>
+        </li>
+        <li>
+          <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+            <input name="__RequestVerificationToken" type="hidden" value="wnwKnOGAjJXWSuqMkib8bc34t7mcGcYma8t63IH1SOPTYWY5vGBtDr5CX_7ise-AaW12bc0JlHPN3YyyU6jJgTFWzUi8KXKcGeKWHFZ3JzpRUuG8vMIa-wuUUbf4OHUc8vGwxCa7VkTRtw9g0B45jw2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Upload your signed prenotifications</h1>
+      <p>Please make sure your prenotification is signed before you upload it.</p>
+      <form>
+        <div class="form-group">
+          <fieldset class="inline">
+      		  <label class="form-label" for="select-box">Select the prenotification to upload</label>
+            <select class="form-control" id="select-box">
+              <option>Shipment 1</option>
+              <option>Shipment 2</option>
+              <option>Shipment 3</option>
+              <option>Shipment 4</option>
+              <option>Shipment 5</option>
+              <option>Shipment 6</option>
+              <option>Shipment 7</option>
+              <option>Shipment 8</option>
+            </select>
+            <label for="File" class="visually-hidden">Upload the signed copy of the prenotification document</label>
+            <input class="form-control" id="File" name="File" type="file" value="" />
+          </fieldset>
+        </div>
+        <a href="bulk-2">Upload another signed prenotification</a><br /><br /><br />
+        <div class="form-group">
+          <a class="button" href="complete">Save and continue</a>
+        </div>
+      </form>
+    </div>
+    <aside class="column-third form-status" id="form-menu">
+      <p><span>GB 0001 006003</span></p>
+      <ul class="summary-list">
+        <li><span class="grey-text">Total number of shipments:</span> 8</li>
+        <li><span class="grey-text">Active loads permitted:</span> 12</li>
+        <li><span class="grey-text">Current active loads:</span> 0</li>
+        <li><span class="grey-text">Total quantity received:</span> 0&nbsp;t</li>
+        <li><span class="grey-text">Total quantity remaining:</span> 250&nbsp;t</li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+{% endblock %}
