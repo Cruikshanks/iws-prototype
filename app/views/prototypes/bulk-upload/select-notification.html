@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+  <div class="phase-banner">
+    <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+  </div>
+  <div class="top-content-box font-xsmall">
+    <div id="homepage-link-container">
+      <a href="/iws/applicant/home">Go to your homepage</a>
+    </div>
+    <div id="top-content-box-container">
+      <ul>
+        <li>
+          <div class="text-secondary">
+            Signed in as: <span class="username-format">Phil Baird</span>
+          </div>
+        </li>
+        <li>
+          <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+            <input name="__RequestVerificationToken" type="hidden" value="wnwKnOGAjJXWSuqMkib8bc34t7mcGcYma8t63IH1SOPTYWY5vGBtDr5CX_7ise-AaW12bc0JlHPN3YyyU6jJgTFWzUi8KXKcGeKWHFZ3JzpRUuG8vMIa-wuUUbf4OHUc8vGwxCa7VkTRtw9g0B45jw2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+<h1 class="heading-large">Select prenotification(s) to upload</h1>
+
+<form>
+  <div class="form-group">
+    <fieldset>
+
+      <legend class="visually-hidden">Select prenotification(s) to upload</legend>
+      <p>Please select all the prenotifications that you would like to upload documentation for.</p>
+     <label class="block-label selection-button-checkbox" for="shipment-1">
+      <input id="shipment-1" name="shipments" type="radio" value="Shipment 1">
+      Shipment 1
+    </label>
+    <label class="block-label selection-button-checkbox" for="shipment-2">
+      <input id="shipment-2" name="shipments" type="radio" value="Shipment 2">
+      Shipment 2
+    </label>
+    <label class="block-label selection-button-checkbox" for="shipment-3">
+      <input id="shipment-3" name="shipments" type="radio" value="Shipment 3">
+      Shipment 3
+    </label>
+    <label class="block-label selection-button-checkbox" for="shipment-4">
+      <input id="shipment-4" name="shipments" type="radio" value="Shipment 4">
+      Shipment 4
+    </label>
+    <label class="block-label selection-button-checkbox" for="shipment-5">
+      <input id="shipment-5" name="shipments" type="radio" value="Shipment 5">
+      Shipment 5
+    </label>
+    <label class="block-label selection-button-checkbox" for="shipment-6">
+      <input id="shipment-6" name="shipments" type="radio" value="Shipment 6">
+      Shipment 6
+    </label>
+    <label class="block-label selection-button-checkbox" for="shipment-7">
+      <input id="shipment-7" name="shipments" type="radio" value="Shipment 7">
+      Shipment 7
+    </label>
+    <label class="block-label selection-button-checkbox" for="shipment-8">
+      <input id="shipment-8" name="shipments" type="radio" value="Shipment 8">
+      Shipment 8
+    </label>
+
+    </fieldset>
+  </div>
+  <div class="form-group">
+    <a class="button" href="upload-prenotification" role="button">Continue</a>
+  </div>
+</form>
+
+
+
+    </div>
+        <aside class="column-third form-status" id="form-menu">
+      <p><span>GB 0001 006003</span></p>
+      <ul class="summary-list">
+        <li><span class="grey-text">Total number of shipments:</span> 8</li>
+        <li><span class="grey-text">Active loads permitted:</span> 12</li>
+        <li><span class="grey-text">Current active loads:</span> 0</li>
+        <li><span class="grey-text">Total quantity received:</span> 0&nbsp;t</li>
+        <li><span class="grey-text">Total quantity remaining:</span> 250&nbsp;t</li>
+      </ul>
+    </aside>
+  </div>
+</main>
+
+{% endblock %}
