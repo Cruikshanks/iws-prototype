@@ -7,38 +7,28 @@ router.get('/', function (req, res) {
 
 });
 
+router.get('/prototypes/simultaneous-receipt-and-recovery/send-receipt', function (req, res) {
 
-// Example routes - feel free to delete these
 
-// Passing data into a page
+  var certificate = req.query.certificate;
 
-router.get('/examples/template-data', function (req, res) {
-
-  res.render('examples/template-data', { 'name' : 'Foo' });
-
-});
-
-// Branching
-
-router.get('/examples/over-18', function (req, res) {
-
-  // get the answer from the query string (eg. ?over18=false)
-  var over18 = req.query.over18;
-
-  if (over18 == "false"){
+  if (certificate == "recovery"){
 
     // redirect to the relevant page
-    res.redirect("/examples/under-18");
+    res.redirect("/prototypes/simultaneous-receipt-and-recovery/send-recovery");
+
+  } else if (certificate == "receipt_recovery"){
+
+    // if certificate is any other value (or is missing) render the page requested
+    res.redirect('/prototypes/simultaneous-receipt-and-recovery/send-receipt-recovery');
 
   } else {
 
-    // if over18 is any other value (or is missing) render the page requested
-    res.render('examples/over-18');
+    // if certificate is any other value (or is missing) render the page requested
+    res.render('prototypes/simultaneous-receipt-and-recovery/send-receipt');
 
   }
 
 });
-
-// add your routes here
 
 module.exports = router;
