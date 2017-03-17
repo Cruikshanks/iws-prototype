@@ -7,7 +7,7 @@ router.get('/', function (req, res) {
 
 });
 
-router.get('/prototypes/simultaneous-receipt-and-recovery/send-receipt', function (req, res) {
+router.get('/prototypes/simultaneous-receipt-and-recovery/date-received', function (req, res) {
 
 
   var certificate = req.query.certificate;
@@ -15,17 +15,17 @@ router.get('/prototypes/simultaneous-receipt-and-recovery/send-receipt', functio
   if (certificate == "recovery"){
 
     // redirect to the relevant page
-    res.redirect("/prototypes/simultaneous-receipt-and-recovery/send-recovery");
+    res.redirect("/prototypes/simultaneous-receipt-and-recovery/date-recovered");
 
   } else if (certificate == "receipt_recovery"){
 
     // if certificate is any other value (or is missing) render the page requested
-    res.redirect('/prototypes/simultaneous-receipt-and-recovery/send-receipt-recovery');
+    res.redirect('/prototypes/simultaneous-receipt-and-recovery/date-received-recovered');
 
   } else {
 
     // if certificate is any other value (or is missing) render the page requested
-    res.render('prototypes/simultaneous-receipt-and-recovery/send-receipt');
+    res.render('prototypes/simultaneous-receipt-and-recovery/date-received');
 
   }
 
