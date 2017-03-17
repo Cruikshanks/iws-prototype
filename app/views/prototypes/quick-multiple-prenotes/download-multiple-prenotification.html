@@ -25,7 +25,7 @@ GOV.UK prototype kit
           </li>
           <li>
             <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
-              <input name="__RequestVerificationToken" type="hidden" value="KV_-N6kQbGYAafULFLl_0QV8N2l5ss3xGBdwV6eEoBADktwcLiqag1ACR-ooW29ZHP4PGBsM3DMiG-l7NFkkBALm7LNKSCyAcp2EU1ISulXWzOPftUL4hilZzp53w_J24-yes-Zr-m7s2Ueu6wtrkQ2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+              <input name="__RequestVerificationToken" type="hidden" value="ZfpX1axn4zooXCUNB0mraluUZORyQ9WpFeRRLrEDE6NDm5XKt9HZ1GePcoGerur7-ZVXbKVKSFcsnYQ4LWOdjfOeAAhmMtGfjqX8nO4C1j9mKLA3fA9nKPS_uNHJuMxUmCo_mgwqLW-_EfukTrTF5A2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
             </form>
           </li>
         </ul>
@@ -34,41 +34,28 @@ GOV.UK prototype kit
     <div class="grid-row">
       <div class="column-two-thirds">
         <header class="hgroup">
-          <h1 class="heading-large">Manage prenotifications for this shipment</h1>
-          <p>Prenotifications for shipment date: 09/03/2017</p>
+          <h1 class="heading-large">What to do next with this prenotification</h1>
         </header>
-
+        <p>Before we can consider your prenotification, you still have to complete, sign and submit the documentation. This is a five step process:</p>
         <div class="form-group">
-          <table>
-            <tr>
-              <th>Shipment number</th>
-              <th>Quantity</th>
-              <th>Type</th>
-              <th><span class="visually-hidden">Action</span></th>
-            </tr>
-            <tr>
-              <td>45</td>
-              <td>20 tonnes</td>
-              <td>Jerrican</td>
-              <td class="remove"><a href="../1/add-another">Remove</a></td>
-            </tr>
-             <tr>
-              <td>46</td>
-              <td>15 tonnes</td>
-              <td>Bag</td>
-              <td class="remove"><a href="../1/add-another">Remove</a></td>
-            </tr>
-          </table>
-          </div>
-         <div class="form-group">
-          <a class="button" href="../download-multiple-prenotification">Save and continue</a>
+          <ol class="list-number">
+            <li>download the <a href="/iws/export-movement/4f074069-c946-49c0-8cde-a63400f8e2d5/home/generate-movement-document">IWS movement</a> document
+            </li>
+            <li>print the document</li>
+            <li>complete blocks 7 and 8</li>
+            <li>sign it</li>
+            <li>upload the signed document</li>
+          </ol>
         </div>
-          <p><a href="../3/actual-quantity">Create another prenotification for this date</a></p>
+        <p>You can either upload the signed file now, or choose to upload it later. You'll be able to do this from the 'Notification options' page.</p>
+        <div class="form-group">
+          <a class="button" href="select-your-prenotification">Continue</a>
+        </div><a href="/iws/feedback">What do you think of this service?</a>
       </div>
-      <aside class="column-third form-status" id="form-menu" style="margin-top: 30px;">
+            <aside class="column-third form-status" id="form-menu" style="margin-top: 30px;">
         <p><span>GB 0001 006003</span></p>
         <ul class="summary-list">
-          <li><span class="grey-text">Shipment number:</span> 46</li>
+          <li><span class="grey-text">Shipment number:</span> 45</li>
           <li><span class="grey-text">Total number of shipments:</span> 45</li>
           <li><span class="grey-text">Active loads permitted:</span> 12</li>
           <li><span class="grey-text">Current active loads:</span> 0</li>
