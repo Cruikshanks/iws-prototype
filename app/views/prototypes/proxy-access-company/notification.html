@@ -1,0 +1,215 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+  <div class="phase-banner">
+    <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+  </div>
+  <div class="top-content-box font-xsmall">
+    <div id="homepage-link-container">
+      <a href="/iws/applicant/home">Go to your homepage</a>
+    </div>
+    <div id="top-content-box-container">
+      <ul>
+        <li>
+          <div class="text-secondary">
+            Signed in as: <span class="username-format">Phil Baird</span>
+          </div>
+        </li>
+        <li>
+          <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+            <input name="__RequestVerificationToken" type="hidden" value="X_xtra_5BoFGvZOpbRTM92GKVWxh9kFGIJIcQd1Ea9jAMweUsTPMSAb9vEbWt_CaGxynmwYSWVCc02OQBqmWL8aRcWqkL9HeP6qP1yPBmeJ-zXvn_GJI5b8Y4-GeO_qvm11oBCB-kpYO5SiGcN_XLA2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="shipping-home">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-large">Notification options</h1>
+      </div>
+    </div>
+    <div class="grid-row">
+      <div class="column-full">
+        <h2 class="heading-medium">Current notification: <span class="iws-highlight">GB 0001 006285</span></h2>
+      </div>
+    </div>
+    <hr>
+ <div class="grid-row">
+
+            <div class="column-half">
+                <h2 class="heading-medium">Shipment options</h2>
+                <div class="nav-bloc">
+<nav>
+  <a href="/iws/notification-movements/58d375b5-d647-4129-afe4-a6de00a8387c/receive-movement">Record a certificate of receipt</a>
+  <a href="/iws/notification-movements/58d375b5-d647-4129-afe4-a6de00a8387c/complete">Record a certificate of recovery</a>
+  <a href="/iws/notification-movements/58d375b5-d647-4129-afe4-a6de00a8387c/reject">Record a rejected shipment</a>
+  <a href="/iws/notification-movements/58d375b5-d647-4129-afe4-a6de00a8387c/download">Download a list of all movements in csv format</a>
+  <a href="/iws/notification-movements/58d375b5-d647-4129-afe4-a6de00a8387c/documents">Download shipment documents</a>
+</nav>
+                </div>
+            </div>
+            <div class="column-half">
+                <h2 class="heading-medium">Shipment summary</h2>
+                <table class="odd-table">
+                    <caption class="visuallyhidden">Shipment summary</caption>
+                    <tbody>
+                        <tr>
+                            <td>Total number of shipments:</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Number of shipments used:</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Active loads permitted:</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Current active loads:</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>Total quantity received:</td>
+                            <td>75 tonnes (t)</td>
+                        </tr>
+                        <tr>
+                            <td>Total quantity remaining:</td>
+                            <td>-25 tonnes (t)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    <section class="ship-data">
+            <h2 class="heading-medium">
+                Shipment key dates - based on status.
+            </h2>
+
+            <div class="grid-row">
+<form action="/iws/notification-application/58d375b5-d647-4129-afe4-a6de00a8387c/options" method="post"><input name="__RequestVerificationToken" type="hidden" value="T7E923NfbJ3XaMFcHvcEtitCa1PKMGLZ84aUQqD8jeI1ncCM5TZtIxYUsn-NZi28t-vZRdLRBzu_hlp7BkYskTuF58lAPbn3NFfRtixaEaxH4hzKzFya-pjGIJ1NOnOwklRx4F_3fd0hzu9frBPpOA2">                    <div class="column-third">
+                        Choose what you would like to view
+                    </div>
+                    <div class="column-half">
+                        <div class="form-group">
+                            <select class="form-control view-by" id="SelectedMovementStatus" name="SelectedMovementStatus"><option value="">View all</option>
+<option value="1">Incomplete</option>
+<option value="2">Prenotified</option>
+<option value="3">Received</option>
+<option value="4">Recovered</option>
+<option value="5">Rejected</option>
+<option value="6">Cancelled</option>
+<option value="7">Pending</option>
+</select>
+                            <button id="updateStatus" class="button" type="submit" style="display: none;">Update</button>
+                        </div>
+                    </div>
+</form>            </div>
+
+            <div class="form-group">
+                <table class="odd-table">
+                    <caption class="visuallyhidden">Shipment summary</caption>
+                    <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Status</th>
+                        <th>Prenotified</th>
+                        <th>Shipment due</th>
+                        <th>Received</th>
+                        <th>Quantity</th>
+                        <th>Recovered</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                            <tr>
+                                <td>4</td>
+                                <td>Cancelled</td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Recovered</td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                                <td>
+                                    25 t
+                                </td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Recovered</td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                                <td>
+                                    25 t
+                                </td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Recovered</td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                                <td>
+                                    25 t
+                                </td>
+                                <td>
+                                    16 Dec 2016
+                                </td>
+                            </tr>
+
+                    </tbody>
+                </table>
+            </div>
+</main>
+{% endblock %}

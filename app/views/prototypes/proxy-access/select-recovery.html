@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+    <main id="content">
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span>
+        </p>
+      </div>
+      <div class="top-content-box font-xsmall">
+        <div id="homepage-link-container">
+          <a href="/iws/applicant/home">Go to your homepage</a> </div>
+        <div id="top-content-box-container">
+          <ul>
+            <li>
+              <div class="text-secondary">Signed in as: <span class="username-format">Phil Baird</span></div>
+            </li>
+            <li>
+              <form action="/iws/account/log-off" id="logoutForm" method="post">
+                <input name="__RequestVerificationToken" type="hidden" value="acDJ3C-lOwWheNykYcp2o0g_lEqGi2e_UmWXTf1KH13_mFWxV5g-GRJ_NMnNC2XUXom4QUHY4DNxJy36EnNcLna6VBNC6zft35lULTvYGjAAoRGVCZHT137gLfa_Bevo0BznDgWDuWATit-ZSLF8lw2" />
+                <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h1 class="heading-large">Assign recovery agent</h1>
+          <p>This is a list of companies from your address book, please assign one to push this notification to.</p>
+            <table title="Address book records">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>UVR-FIA GMBH</td>
+                      <td>D-09599 Freiberg, Chemnitzer Str. 40, Germany</td>
+                      <td><a href="notification-assigned">Assign</a></td>
+                    </tr>
+                    <tr>
+                    <td>Mayfran International</td>
+                      <td>Unit 38 Bradley Fold Trading Estate, Bradley Fold Road, Radcliffe, Bury, BL2 6RT</td>
+                      <td><a href="notification-assigned">Assign</a></td>
+                    </tr>
+                    <tr>
+                    <td>Christian Stöhr GmbH &amp; Co.KG</td>
+                      <td>Kronacher Str. 14 D-96364 Marktrodach</td>
+                      <td><a href="notification-assigned">Assign</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--<div class="form-group"><br>
+              <p>Not seeing the company you need? <a href="/prototypes/address-book/addresses">Add a new company to your address book</a>.</p>
+            </div>-->
+        </div>
+        <aside id="form-menu" class="column-third form-status">
+          <p><span class="iws-highlight">GB 0001 006285</span></p>
+          <ul class="summary-list">
+            <li><span class="grey-text">Active loads permitted:</span> 12</li>
+            <li><span class="grey-text">Total quantity remaining:</span> 600&nbsp;t</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    {% endblock %}

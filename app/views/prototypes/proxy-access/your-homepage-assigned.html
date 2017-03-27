@@ -1,0 +1,217 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+    <main id="content">
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span>
+        </p>
+      </div>
+      <div class="top-content-box font-xsmall">
+        <div id="homepage-link-container">
+          <a href="/iws/applicant/home">Go to your homepage</a> </div>
+        <div id="top-content-box-container">
+          <ul>
+            <li>
+              <div class="text-secondary">Signed in as: <span class="username-format">Phil Baird</span></div>
+            </li>
+            <li>
+              <form action="/iws/account/log-off" id="logoutForm" method="post">
+                <input name="__RequestVerificationToken" type="hidden" value="acDJ3C-lOwWheNykYcp2o0g_lEqGi2e_UmWXTf1KH13_mFWxV5g-GRJ_NMnNC2XUXom4QUHY4DNxJy36EnNcLna6VBNC6zft35lULTvYGjAAoRGVCZHT137gLfa_Bevo0BznDgWDuWATit-ZSLF8lw2" />
+                <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-row">
+
+<div class="column-two-thirds">
+        <h1 class="heading-large">Your homepage</h1>
+
+        <h2 class="heading-medium">Would you like to start a notification?</h2>
+        <p>
+            Start a new notification now or read the  <a href="https://www.gov.uk/importing-and-exporting-waste" 
+                                    target="_blank" 
+                                    title="View supporting information on GOV.UK in new tab"
+                                    rel="external"
+                                    data-track="element" 
+                                    data-category="Export notification" 
+                                    data-action="Supporting information">supporting information</a>
+             first.
+
+            <span class="visuallyhidden">This link opens in a new browser tab</span>
+            <br/>
+            You could also <a data-action="Copy" data-category="Export&#32;notification" data-track="element" href="/iws/new-notification/competent-authority?cfp=1">create a new notification based on a previous one</a>.
+        </p>
+
+        <p id="get-started" class="get-started group">
+            <a class="button" data-action="Start" data-category="Export&#32;notification" data-track="element" href="/iws/new-notification/competent-authority">Start a new notification</a>
+        </p>
+        
+    </div>
+    <div class="column-third" id="submit-side-bar">
+        <h3 class="heading-medium">Account services</h3>
+        <ul>
+            <li><a href="/iws/registration/change-account-details">Account details</a></li>
+            <li><a href="/iws/address-book">Address book</a></li>
+        </ul>
+    </div>
+</div>
+
+<h2 class="heading-medium">Your notifications</h2>
+
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+<form action="/iws/applicant/home/3b9c422a-8c03-47af-9796-4e425bd05dc2" method="post"><div class='error-summary-valid' data-valmsg-summary='true'>
+                        <ul class='error-summary-list'>
+                            <li style='display:none'></li>
+                        </ul>
+                    </div><input name="__RequestVerificationToken" type="hidden" value="QZfE4UBq9uHIWvzz2R_iZQHYlZ9sjBBev2Z38KZmlU8KZHAanip0VXY7wDT879WuwBPpmEcnMndQL1ICYVMNPBEzHS3i-FMRTXlRD5A-UGs4206Uc7cXH4VH2n-PlZtVZZtO9QlijweVx5tcoVsgiQ2" />                <p>Search for one of your notifications</p>
+                <div id="search-container" class="form-group">
+                    
+                    <p class="form-hint">The notification number must be entered in full, for example GB0001009999</p>
+                    <input class="form-control" id="SearchTerm" name="SearchTerm" placeholder="Enter&#32;notification&#32;number" title="Search&#32;term" type="text" value="" />
+                    <button name="button" value="search" class="button" type="submit">Search</button>
+                </div>
+</form>        </div>
+    </div>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+<form action="/iws/applicant/home/3b9c422a-8c03-47af-9796-4e425bd05dc2" method="post"><input name="__RequestVerificationToken" type="hidden" value="S3MY81iVnZunmUaalbC15Sdqd6VkIkKsQgp08ql7NkF_ZPS9MgPcnWc0iHSAVscKsvkWyxAPBgi5jImKgItFmvAVat-fN5Sd-D9TsibrnRwjtetTP6PEzJMhQOSLxsn816-ZzXFvNfQ2mj10eSrW8A2" />                <div class="form-group">
+                    <select class="form-control&#32;view-by" id="SelectedNotificationStatus" name="SelectedNotificationStatus"><option value="">View all</option>
+<option value="12">Change required</option>
+<option value="11">Consent withdrawn</option>
+<option value="10">Consented</option>
+<option value="7">Decision required</option>
+<option value="14">File closed</option>
+<option value="4">In assessment</option>
+<option value="1">Not submitted</option>
+<option value="3">Notification received</option>
+<option value="9">Objected</option>
+<option value="5">Ready to transmit</option>
+<option value="13">Reassessment</option>
+<option value="2">Submitted</option>
+<option value="6">Transmitted</option>
+<option value="8">Withdrawn</option>
+</select>
+                    <button id="updateStatus" class="button" type="submit">Update</button>
+                </div>
+</form>        </div>
+    </div>
+    <div class="form-group">
+
+        <table class="odd-table" title="Manage Notifications">
+            <caption class="visuallyhidden">Notifications</caption>
+            <thead>
+            <tr>
+                <th>
+                    Notification number
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    <abbr title="This is the company assigned ot complete the shipments">Assigned</abbr>
+                </th>
+                <th>
+                    <abbr title="This is the notifier">Exporter</abbr>
+                </th>
+                <th>
+                    <abbr title="This is the site of export">Producer</abbr>
+                </th>
+                <th>
+                    <abbr title="This is the consignee">Importer</abbr>
+                </th>
+                <th>
+                    Action
+                </th>
+            </tr>
+            </thead>
+
+            <tbody>
+ 
+                <tr>
+                    <td>
+                        GB&nbsp;0001&nbsp;006282
+                    </td>
+                    <td>
+                        <span class="statusbox s-blue table">NOT&nbsp;SUBMITTED </span>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        Zelda Recoveries Incorporated
+                    </td>
+                    <td>
+                        Example Waste Producer
+                    </td>
+                    <td>
+                        Example Importer
+                    </td>
+                    <td>
+                        <a href="notification-no-consent">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        GB&nbsp;0001&nbsp;006275
+                    </td>
+                    <td>
+                        <span class="statusbox s-green table">CONSENTED </span>
+                    </td>
+                    <td>
+                        Christian Stöhr GmbH &amp; Co.KG
+                    </td>
+                    <td>
+                        Waste Exporter
+                    </td>
+                    <td>
+                        Gordon Bennett Ltd
+                    </td>
+                    <td>
+                        Waste Importer
+                    </td>
+                    <td>
+                        <a href="notification">View</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        GB&nbsp;0001&nbsp;006272
+                    </td>
+                    <td>
+                        <span class="statusbox s-green table">CONSENTED </span>
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+                        Waste Waste
+                    </td>
+                    <td>
+                        Waste Place
+                    </td>
+                    <td>
+                        Chris Jack Waste
+                    </td>
+                    <td>
+                        <a href="notification">View</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+      </div>
+    </main>
+
+    {% endblock %}
