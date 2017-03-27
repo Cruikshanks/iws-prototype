@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+    <main id="content">
+      <div class="phase-banner">
+        <p>
+          <strong class="phase-tag">BETA</strong>
+          <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span>
+        </p>
+      </div>
+      <div class="top-content-box font-xsmall">
+        <div id="homepage-link-container">
+          <a href="/iws/applicant/home">Go to your homepage</a> </div>
+        <div id="top-content-box-container">
+          <ul>
+            <li>
+              <div class="text-secondary">Signed in as: <span class="username-format">Phil Baird</span></div>
+            </li>
+            <li>
+              <form action="/iws/account/log-off" id="logoutForm" method="post">
+                <input name="__RequestVerificationToken" type="hidden" value="acDJ3C-lOwWheNykYcp2o0g_lEqGi2e_UmWXTf1KH13_mFWxV5g-GRJ_NMnNC2XUXom4QUHY4DNxJy36EnNcLna6VBNC6zft35lULTvYGjAAoRGVCZHT137gLfa_Bevo0BznDgWDuWATit-ZSLF8lw2" />
+                <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="column-full">           
+<header>
+    <h1 class="heading-large">Your address book</h1>
+    <p class="subtitle">Manage your address book</p>
+</header>
+
+<nav class="tabbed-nav">
+    <a class="tabbed-tab&#32;active" href="#">Exporter-notifier and producer</a>
+    <a class="tabbed-tab" href="#">Carriers</a>
+    <a class="tabbed-tab" href="#">Importer-consignee and facility</a>
+</nav>
+
+    <div class="form-group table-container">
+        <table title="Address book records">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th colspan="2">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Example Waste Producer</td>
+                    <td>
+                        1 Pretend Place,
+                        Fakenham,
+                        NA1 00A
+                    </td>
+                    <td><a href="edit">Edit</a></td>
+                    <td><a href="/iws/address-book/delete/index/ba2d6ee7-38b8-4b5f-ba58-a72a00d08ee4?type=Producer">Delete</a></td>
+                </tr>
+                <tr>
+                    <td>zelda recoveries incorporated</td>
+                    <td>
+                        118A Unity Drive,
+                        Basingstoke,
+                        SW184LL
+                    </td>
+                    <td><a href="edit">Edit</a></td>
+                    <td><a href="/iws/address-book/delete/index/366c18f9-060a-4bf2-b40b-a72a00cf33e6?type=Producer">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="form-group"><br><br><br>
+          <a class="button">Add a new address</a>
+        </div>
+    </div>
+
+
+        </div>
+      </div>
+    </main>
+
+    {% endblock %}

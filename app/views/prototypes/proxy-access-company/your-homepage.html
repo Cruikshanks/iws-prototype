@@ -88,7 +88,9 @@ GOV.UK prototype kit
     <div class="grid-row">
         <div class="column-two-thirds">
 <form action="/iws/applicant/home/3b9c422a-8c03-47af-9796-4e425bd05dc2" method="post"><input name="__RequestVerificationToken" type="hidden" value="S3MY81iVnZunmUaalbC15Sdqd6VkIkKsQgp08ql7NkF_ZPS9MgPcnWc0iHSAVscKsvkWyxAPBgi5jImKgItFmvAVat-fN5Sd-D9TsibrnRwjtetTP6PEzJMhQOSLxsn816-ZzXFvNfQ2mj10eSrW8A2" />                <div class="form-group">
-                    <select class="form-control&#32;view-by" id="SelectedNotificationStatus" name="SelectedNotificationStatus"><option value="">View all</option>
+                    <select class="form-control&#32;view-by" id="SelectedNotificationStatus" name="SelectedNotificationStatus">
+                    <option value="15">Assigned to me</option>
+<option value="">View all</option>
 <option value="12">Change required</option>
 <option value="11">Consent withdrawn</option>
 <option value="10">Consented</option>
@@ -121,9 +123,6 @@ GOV.UK prototype kit
                     Status
                 </th>
                 <th>
-                    <abbr title="This is the company assigned ot complete the shipments">Assigned</abbr>
-                </th>
-                <th>
                     <abbr title="This is the notifier">Exporter</abbr>
                 </th>
                 <th>
@@ -139,37 +138,12 @@ GOV.UK prototype kit
             </thead>
 
             <tbody>
- 
-                <tr>
-                    <td>
-                        GB&nbsp;0001&nbsp;006282
-                    </td>
-                    <td>
-                        <span class="statusbox s-blue table">NOT&nbsp;SUBMITTED </span>
-                    </td>
-                    <td>
-                    </td>
-                    <td>
-                        Zelda Recoveries Incorporated
-                    </td>
-                    <td>
-                        Example Waste Producer
-                    </td>
-                    <td>
-                        Example Importer
-                    </td>
-                    <td>
-                        <a href="notification-no-consent">View</a>
-                    </td>
-                </tr>
                 <tr>
                     <td>
                         GB&nbsp;0001&nbsp;006275
                     </td>
                     <td>
                         <span class="statusbox s-green table">CONSENTED </span>
-                    </td>
-                    <td>
                     </td>
                     <td>
                         Waste Exporter
@@ -190,8 +164,6 @@ GOV.UK prototype kit
                     </td>
                     <td>
                         <span class="statusbox s-green table">CONSENTED </span>
-                    </td>
-                    <td>
                     </td>
                     <td>
                         Waste Waste
