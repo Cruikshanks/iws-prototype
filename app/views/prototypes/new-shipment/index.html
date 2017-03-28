@@ -36,21 +36,85 @@
   <div>
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h1 class="heading-large">Capture a shipment</h1>
-      <form action="/prototypes/edit-shipment/index">
-<!-- Shipment number -->
-        <div class="form-group">
-          <fieldset>
-            <legend class="form-label-bold">Shipment number</legend>
-            <p class="form-hint">Enter the shipment number.<br />
-            For example, '5'.
-            </p>
-            <input autofocus class="form-control" id="Number" min="1" name="Number" type="number" value="">
-          </fieldset>
-        </div>
+      <h2 class="heading-large">Record shipment data</h2>
+        <form action="/prototypes/edit-shipment/index">
+          <div class="form-group">
+            <fieldset>
+              <label for="ShipmentNumber" class="form-label-bold">Shipment number</label>
+              <input autofocus class="form-control form-control-1-8" id="ShipmentNumber" type="number" min="1">
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <fieldset>
+              <legend class="form-label-bold">Prenotification date</legend>
+              <p class="form-hint">For example, 19 11 16</p>
+              <label for="HasNoPrenotification" class="block-label selection-button-checkbox">
+              <input id="HasNoPrenotification" type="checkbox" value="true">
+                No prenotification received</label>
+            </fieldset>
+          </div>
+
+
+<form name="formName">
+(<input type="text" maxlength="3" oninput="autotab(this, document.formName.inputName)" >) <input type="text" maxlength="7" name="inputName">
+</form>
+
+
+          <div class="form-group">
+            <fieldset data-required="" data-error="Enter a valid date that is within 28 days">
+              <div class="form-group">
+                <div class="form-date">
+                  <div class="form-group form-group-month">
+                    <label for="day">Day</label>
+                    <input class="form-control" id="day" value="" maxlength="2" type="text">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="month">Month</label>
+                    <input class="form-control" id="month" value="" maxlength="2" type="text">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="year">Year</label>
+                    <input class="form-control" id="year" value="" maxlength="2" type="text">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+
+          </div>
+        </form>
+
+
+
+
+
+
+
+
+    </div>
+    <aside id="form-menu" class="column-third form-status">
+      <p><span>GB 0001 004008</span></p>
+      <ul class="summary-list">
+        <li> <span class="grey-text">Total number of shipments:</span> 10</li>
+        <li><span class="grey-text">Active loads permitted:</span> 10</li>
+        <li><span class="grey-text">Current active loads:</span> 0</li>
+        <li><span class="grey-text">Total quantity received:</span> 576.37&nbsp;t</li>
+        <li><span class="grey-text">Total quantity remaining:</span> 2023.63&nbsp;t</li>
+      </ul>
+    </aside>
+  </div>
+
+
+
+
+
+
+
+
+<!-- old code
+
 
  <form action="/prototypes/edit-shipment/index">
-<!-- Prenotification date -->
+<!-- Prenotification date
           <div class="form-group form-group-year"><label class="heading-small" for="PrenotificationDate">Prenotification date</label>
             <fieldset style="margin-bottom: 15px;">
               <label class="block-label selection-button-checkbox" for="HasNoPrenotification">
@@ -62,7 +126,7 @@
             <label class="form-label form-hint" for="PrenotificationDate">e.g. '19/01/17'</label>
             <input class="form-control form-control-1-4" data-type="date" id="PrenotificationDate_Day" max="31" min="1" name="PrenotificationDate.Day" placeholder="" value="">
           </div>
-<!-- Actual date -->
+<!-- Actual date
             <div class="form-group form-group-year">
                         <label class="heading-small" for="ActualShipmentDate">Actual date of shipment</label>
             <input id="ActualShipmentDate_IsAutoTabEnabled" name="ActualShipmentDate.IsAutoTabEnabled" type="hidden" value="True">
@@ -71,7 +135,7 @@
               <input class="form-control form-control-1-4" id="ActualShipmentDate_Year" min="1900" name="ActualShipmentDate.Year" placeholder="" value="">
             </div>
 
-<!-- Received -->
+<!-- Received
         <div class="form-group">
           <label class="heading-small" for="Receipt_ReceivedDate">When was the waste received?</label>
           <input id="Receipt_ReceivedDate_IsAutoTabEnabled" name="Receipt.ReceivedDate.IsAutoTabEnabled" type="hidden" value="True">
@@ -81,7 +145,7 @@
             <input class="form-control form-control-1-4" id="Receipt_ReceivedDate_Year" min="1900" name="Receipt.ReceivedDate.Year" placeholder="" value="">
           </div>
         </div>
-<!-- Accepted -->
+<!-- Accepted
 <div class="form-group"><form>
   <div class="form-group">
   <label class="heading-small" for="Receipt_WasShipmentAccepted">Was the shipment accepted?</label>  
@@ -181,7 +245,7 @@
       <li><span class="grey-text">Total quantity remaining:</span> 2023.63&nbsp;t</li>
     </ul>
     </aside>
-  </div>
+  </div> -->
 </main>
 
 {% endblock %}

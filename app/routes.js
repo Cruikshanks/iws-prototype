@@ -2,10 +2,19 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-  
   res.render('index');
 
 });
+
+
+function autotab(current,to)
+{
+    if (current.getAttribute && current.value.length==current.getAttribute("maxlength")) 
+    {
+        to.focus() 
+    }
+}
+
 
 router.get('/prototypes/simultaneous-receipt-and-recovery/date-received', function (req, res) {
 
