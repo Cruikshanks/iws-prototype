@@ -41,7 +41,7 @@
           <div class="form-group">
             <fieldset>
               <label for="ShipmentNumber" class="form-label-bold">Shipment number</label>
-              <input autofocus class="form-control form-control-1-8" id="ShipmentNumber" type="number" min="1">
+              <input autofocus class="form-control form-control-1-8" id="ShipmentNumber" type="text" min="1" maxlength=4>
             </fieldset>
           </div>
           <div class="form-group">
@@ -53,39 +53,33 @@
                 No prenotification received</label>
             </fieldset>
           </div>
-
-
-<form name="formName">
-(<input type="text" maxlength="3" oninput="autotab(this, document.formName.inputName)" >) <input type="text" maxlength="7" name="inputName">
-</form>
-
-
-          <div class="form-group">
-            <fieldset data-required="" data-error="Enter a valid date that is within 28 days">
+        </form>
+<script>
+function autotab(current,to){
+    if (current.getAttribute && 
+      current.value.length==current.getAttribute("maxlength")) {
+        to.focus() 
+        }
+}
+</script>
+<form name="date"><fieldset name="date" data-required="" data-error="Enter a valid date that is within 28 days">
               <div class="form-group">
                 <div class="form-date">
-                  <div class="form-group form-group-month">
-                    <label for="day">Day</label>
-                    <input class="form-control" id="day" value="" maxlength="2" type="text">
-                  </div>
-                  <div class="form-group form-group-month">
-                    <label for="month">Month</label>
-                    <input class="form-control" id="month" value="" maxlength="2" type="text">
-                  </div>
-                  <div class="form-group form-group-month">
-                    <label for="year">Year</label>
-                    <input class="form-control" id="year" value="" maxlength="2" type="text">
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-
-          </div>
-        </form>
-
-
-
-
+<div class="form-group form-group-month">
+  <label for="day">Day</label>
+  <input class="form-control" type="text" name="date1" size=4 onKeyup="autotab(this, document.date.date2)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="month">Month</label>
+  <input class="form-control" type="text" name="date2" size=4 onKeyup="autotab(this, document.date.date3)" maxlength=2>
+</div>
+<div class="form-group form-group-year">
+  <label for="year">Year</label>
+  <input class="form-control" type="text" name="date3" size=5 maxlength=4>
+</div>
+</div>
+</div></fieldset>
+</form>
 
 
 

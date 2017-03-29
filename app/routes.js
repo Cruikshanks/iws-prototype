@@ -6,16 +6,6 @@ router.get('/', function (req, res) {
 
 });
 
-
-function autotab(current,to)
-{
-    if (current.getAttribute && current.value.length==current.getAttribute("maxlength")) 
-    {
-        to.focus() 
-    }
-}
-
-
 router.get('/prototypes/simultaneous-receipt-and-recovery/date-received', function (req, res) {
 
 
