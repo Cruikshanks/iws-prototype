@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Create a shipment
+  Record shipment data
 {% endblock %}
 
 {% block content %}
@@ -34,55 +34,96 @@
     </div>
   </div>
   <div>
+  <script>
+function autotab(current,to){
+    if (current.getAttribute && 
+      current.value.length==current.getAttribute("maxlength")) {
+        to.focus() 
+        }
+}
+</script>
+<form name="date" action="/prototypes/edit-shipment/edit-shipment-saved" style="margin-bottom: 30px;">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h1 class="heading-large">Capture a shipment</h1>
-      <form action="/prototypes/edit-shipment/index">
-<!-- Shipment number -->
-        <div class="form-group">
-          <fieldset>
-            <legend class="form-label-bold">Shipment number</legend>
-            <p class="form-hint">Enter the shipment number.<br />
-            For example, '5'.
-            </p>
-            <input autofocus class="form-control" id="Number" min="1" name="Number" type="number" value="">
-          </fieldset>
-        </div>
+      <h1 class="heading-large">Record shipment data</h1>
 
- <form action="/prototypes/edit-shipment/index">
-<!-- Prenotification date -->
-          <div class="form-group form-group-year"><label class="heading-small" for="PrenotificationDate">Prenotification date</label>
-            <fieldset style="margin-bottom: 15px;">
-              <label class="block-label selection-button-checkbox" for="HasNoPrenotification">
-                <input id="HasNoPrenotification" name="HasNoPrenotification" type="checkbox" value="true"><input name="HasNoPrenotification" type="hidden" value="false">
-                No prenotification received
-              </label>
+          <div class="form-group">
+            <fieldset>
+              <label for="ShipmentNumber" class="form-label-bold">Shipment number</label>
+              <input autofocus class="form-control form-control-1-8" id="ShipmentNumber" type="text" min="1" maxlength=4>
             </fieldset>
-            
-            <label class="form-label form-hint" for="PrenotificationDate">e.g. '19/01/17'</label>
-            <input class="form-control form-control-1-4" data-type="date" id="PrenotificationDate_Day" max="31" min="1" name="PrenotificationDate.Day" placeholder="" value="">
           </div>
-<!-- Actual date -->
-            <div class="form-group form-group-year">
-                        <label class="heading-small" for="ActualShipmentDate">Actual date of shipment</label>
-            <input id="ActualShipmentDate_IsAutoTabEnabled" name="ActualShipmentDate.IsAutoTabEnabled" type="hidden" value="True">
-            <input id="ActualShipmentDate_AllowPastDates" name="ActualShipmentDate.AllowPastDates" type="hidden" value="True">
-              <label class="form-label form-hint" for="ActualShipmentDate_Year">e.g. '19/01/17'</label>
-              <input class="form-control form-control-1-4" id="ActualShipmentDate_Year" min="1900" name="ActualShipmentDate.Year" placeholder="" value="">
-            </div>
+          <div class="form-group">
+            <fieldset>
+              <legend class="form-label-bold">Prenotification date</legend>
+              <p class="form-hint">Specify day, month and last two digits of year. For example, 19 11 16</p>
+              <label for="HasNoPrenotification" class="block-label selection-button-checkbox">
+              <input id="HasNoPrenotification" type="checkbox" value="true">
+                No prenotification received</label>
+            </fieldset>
+          </div>
 
-<!-- Received -->
-        <div class="form-group">
-          <label class="heading-small" for="Receipt_ReceivedDate">When was the waste received?</label>
-          <input id="Receipt_ReceivedDate_IsAutoTabEnabled" name="Receipt.ReceivedDate.IsAutoTabEnabled" type="hidden" value="True">
-          <input id="Receipt_ReceivedDate_AllowPastDates" name="Receipt.ReceivedDate.AllowPastDates" type="hidden" value="True">
-          <div class="form-group form-group-year">
-            <label class="form-label form-hint" for="Receipt_ReceivedDate_Year">e.g. '19/01/17' </label>
-            <input class="form-control form-control-1-4" id="Receipt_ReceivedDate_Year" min="1900" name="Receipt.ReceivedDate.Year" placeholder="" value="">
-          </div>
-        </div>
-<!-- Accepted -->
-<div class="form-group"><form>
+  <fieldset>
+              <div class="form-group">
+                <div class="form-date">
+<div class="form-group form-group-month">
+  <label for="day">Day</label>
+  <input class="form-control" type="text" name="date1" size=4 onKeyup="autotab(this, document.date.date2)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="month">Month</label>
+  <input class="form-control" type="text" name="date2" size=4 onKeyup="autotab(this, document.date.date3)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="year">Year</label>
+  <input class="form-control" type="text" name="date3" size=4 onKeyup="autotab(this, document.date.date4)"maxlength=2>
+</div>
+</div>
+</div>
+<div class="form-group" style="margin-bottom: 0;">
+<legend class="form-label-bold">Actual date of shipment</legend>
+              <p class="form-hint">For example, 19 11 16</p>
+</div>
+
+              <div class="form-group">
+                <div class="form-date">
+<div class="form-group form-group-month">
+  <label for="day">Day</label>
+  <input class="form-control" type="text" name="date4" size=4 onKeyup="autotab(this, document.date.date5)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="month">Month</label>
+  <input class="form-control" type="text" name="date5" size=4 onKeyup="autotab(this, document.date.date6)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="year">Year</label>
+  <input class="form-control" type="text" name="date6" size=4 onKeyup="autotab(this, document.date.date7)" maxlength=2>
+</div>
+</div>
+</div>
+<div class="form-group" style="margin-bottom: 15px;">
+<legend class="form-label-bold">When was the waste received?</legend>
+</div>
+
+              <div class="form-group">
+                <div class="form-date">
+<div class="form-group form-group-month">
+  <label for="day">Day</label>
+  <input class="form-control" type="text" name="date7" size=4 onKeyup="autotab(this, document.date.date8)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="month">Month</label>
+  <input class="form-control" type="text" name="date8" size=4 onKeyup="autotab(this, document.date.date9)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="year">Year</label>
+  <input class="form-control" type="text" name="date9" size=4 maxlength=2>
+</div>
+</div>
+</div>
+      </fieldset>
+
+<div class="form-group">
   <div class="form-group">
   <label class="heading-small" for="Receipt_WasShipmentAccepted">Was the shipment accepted?</label>  
        <fieldset>
@@ -90,7 +131,7 @@
       
 
       <label class="block-label selection-button-radio" data-target="contact-by-email" for="example-contact-by-email">
-        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
+        <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes" checked="checked">
         Yes
       </label>
 
@@ -121,15 +162,15 @@
 
     </fieldset>
   </div>
-</form>
 </div>
-        <div class="form-group">
+
+<div class="form-group">
           <h3 class="heading-small" style="margin-top: 0">How much waste was received?</h3>
           <p>Enter the quantity of waste received on the shipment</p>
           <label class="form-label" for="Receipt_ActualQuantity">Quantity received</label>
           <div class="grid-row">
             <div class="column-third">
-              <input class="form-control form-control-wide" id="Receipt_ActualQuantity" min="0" name="Receipt.ActualQuantity" step="any" type="number" value="">
+              <input class="form-control form-control-wide" id="Receipt_ActualQuantity" min="0" name="Receipt.ActualQuantity" step="any" type="text" maxlength="10" value="">
             </div>
             <div class="column-third">
               <select class="form-control form-control-wide" id="Receipt_Units" name="Receipt.Units">
@@ -141,45 +182,71 @@
             </div>
           </div>
         </div>
-        <div class="form-group form-group-year">
-          <label class="heading-small" for="Recovery_RecoveryDate">When was the waste recovered?</label>
-          <div class="form-group form-group-year">
-            <input id="Recovery_RecoveryDate_IsAutoTabEnabled" name="Recovery.RecoveryDate.IsAutoTabEnabled" type="hidden" value="True">
-            <input id="Recovery_RecoveryDate_AllowPastDates" name="Recovery.RecoveryDate.AllowPastDates" type="hidden" value="True">
-            <div class="form-group form-group-year">
-               <label class="form-label form-hint" for="ActualShipmentDate_Year">e.g. '19/01/17'</label>
-              <input class="form-control form-control-1-4" id="ActualShipmentDate_Year" min="1900" name="ActualShipmentDate.Year" placeholder="" value="">
+<div class="form-group" style="margin-bottom: 15px;">
+<legend class="form-label-bold">When was the waste recovered?</legend>
+</div>
+<div class="form-group">
+                <div class="form-date">
+<div class="form-group form-group-month">
+  <label for="day">Day</label>
+  <input class="form-control" type="text" name="date10" size=4 onKeyup="autotab(this, document.date.date11)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="month">Month</label>
+  <input class="form-control" type="text" name="date11" size=4 onKeyup="autotab(this, document.date.date12)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="year">Year</label>
+  <input class="form-control" type="text" name="date12" size=4 maxlength=2>
+</div>
+</div>
+</div>
 
-            </div>
-          </div>
-        </div>
+
+<div class="form-group">
+  <div class="form-group">
+  <label class="heading-small" for="Receipt_WasShipmentAccepted">Do you want to enter comments against this shipment?</label>  
+       <fieldset>
+
+      
+
+      <label class="block-label selection-button-radio" data-target="contact-comments" for="yes-comments">
+        <input id="yes-comments" type="radio" name="radio-comments" value="Yes">
+        Yes
+      </label>
+
+      <label class="block-label selection-button-radio" data-target="contact-no-comments" for="no-comments">
+        <input id="no-comments" type="radio" name="radio-comments" value="No" checked="checked">
+        No
+      </label>
+      <div class="panel panel-border-narrow js-hidden" id="contact-comments">
         <div class="form-group">
           <label class="heading-small" for="textarea-a">
             Comments
           </label>
           <textarea class="form-control" id="textarea-a" cols="30" rows="10"></textarea>
         </div>
-        <div class="form-group">
-        <form action="/prototypes/edit-shipment/edit-shipment-saved">
-        <button class="button" type="submit">Save and continue</button>
-        </form>
-        </div>
-      </form>
+      </div>
 
+    </fieldset>
+  </div>
+</div>
 
-
-      </form>
-      <a href="/prototypes/edit-shipment/index">Return to shipment summary</a>
+<button class="button" type="submit">Save and continue</button>
+</form>
+<p style="margin-top: 30px;"><a href="/prototypes/edit-shipment/index">Return to shipment summary</a></p>
     </div>
-    <aside id="form-menu" class="column-third form-status" style="margin-top: 0; position: fixed; left: 670px;">
-    <p><span>GB 0001 004008</span></p>
-    <ul class="summary-list">
-      <li> <span class="grey-text">Total number of shipments:</span> 10</li>
-      <li><span class="grey-text">Active loads permitted:</span> 10</li>
-      <li><span class="grey-text">Current active loads:</span> 0</li>
-      <li><span class="grey-text">Total quantity received:</span> 576.37&nbsp;t</li>
-      <li><span class="grey-text">Total quantity remaining:</span> 2023.63&nbsp;t</li>
-    </ul>
+    <aside id="form-menu" class="column-third form-status" style="position: fixed; top: 150px; right: 100px;">
+      <p><span>GB 0001 004008</span></p>
+      <ul class="summary-list">
+        <li><span class="grey-text">Total number of shipments:</span> 10</li>
+        <li><span class="grey-text">Active loads permitted:</span> 10</li>
+        <li><span class="grey-text">Current active loads:</span> 0</li>
+        <li><span class="grey-text">Total quantity received:</span> 518.550&nbsp;t</li>
+        <li><span class="grey-text">Total quantity remaining:</span> 2127.520&nbsp;t</li>
+        <li><span class="grey-text">Average tonnage per shipment:</span> 51.855&nbsp;t</li>
+        <li><span class="grey-text">Total consented tonnage:</span> 0&nbsp;t</li>
+      </ul>
     </aside>
   </div>
 </main>
