@@ -13,3 +13,17 @@
 // 	@extend .iws-highlight;
 // 	padding: 15px;
 // }
+
+// Saved content feedback
+#status-box-saved {
+	background-color: $focus-colour;
+	border: solid 3px;
+	border-color: darken($focus-colour, 18%);
+	margin-top: 15px;
+	padding: 30px;
+	text-align: center;
+
+	h2 {
+		margin: 0;
+	}
+}
