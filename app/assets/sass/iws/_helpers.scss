@@ -27,3 +27,32 @@
     margin: 0;
   }
 }
+
+// Styles for sticky info panel
+.stickem-row {
+  position: relative;
+}
+
+.stickem-row::after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.stickit {
+  margin-left: 660px;
+  position: fixed;
+  top: 0;
+}
+
+.stickit-end {
+  bottom: 40px;
+  position: absolute;
+  right: 0;
+}
+
+.stickem-container .stickem {
+  width: 330px;
+}
