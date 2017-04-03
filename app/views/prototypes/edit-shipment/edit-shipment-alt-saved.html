@@ -33,17 +33,15 @@
       </ul>
     </div>
   </div>
-
-  <script type="text/javascript">
-    $(function() {
+<script type="text/javascript">
+$(function () {
       // setTimeout() function will be fired after page is loaded
       // it will wait for 5 sec. and then will fire
-      // $("#successMessage").hide() function
-      setTimeout(function() {
+      setTimeout(function () {
         $("#status-box-saved").fadeOut(1000);
-      }, 3000);
-    });
-  </script>
+    }, 3000);
+});
+</script>
 
   <div class="grid-row">
     <div class="column-full">
@@ -55,13 +53,35 @@
 
   <div>
   <script>
-function autotab(current,to){
-    if (current.getAttribute && 
-      current.value.length==current.getAttribute("maxlength")) {
-        to.focus() 
-        }
+function autotab(current, to) {
+    if (current.getAttribute &&
+            current.value.length == current.getAttribute("maxlength")) {
+        to.focus();
+    }
 }
 </script>
+
+
+
+<div class="container">
+  <div class="row stickem-container">
+    <div class="content">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    
+    <div class="aside stickem">
+      I'm gonna be sticky!
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
 <form name="date" action="/prototypes/edit-shipment/edit-shipment-alt-saved" style="margin-bottom: 30px;">
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -188,7 +208,7 @@ function autotab(current,to){
           <label class="form-label" for="Receipt_ActualQuantity">Quantity received</label>
           <div class="grid-row">
             <div class="column-third">
-              <input class="form-control form-control-wide" id="Receipt_ActualQuantity" min="0" name="Receipt.ActualQuantity" step="any" type="text" maxlength="10" autofocus>
+              <input class="form-control form-control-wide" id="Receipt_ActualQuantity" min="0" name="Receipt.ActualQuantity" step="any" type="text" maxlength="10">
             </div>
             <div class="column-third">
               <select class="form-control form-control-wide" id="Receipt_Units" name="Receipt.Units">
@@ -254,7 +274,7 @@ function autotab(current,to){
 </form>
 <p style="margin-top: 30px;"><a href="/prototypes/edit-shipment/index">Return to shipment summary</a></p>
     </div>
-    <aside class="column-third form-status" style="position: fixed; top: 150px; right: 100px;">
+    <aside class="column-third form-status">
     <div id="form-menu">
       <p><span>GB 0001 004008</span></p>
       <ul class="summary-list">
@@ -287,5 +307,4 @@ function autotab(current,to){
     </aside>
   </div>
 </main>
-
 {% endblock %}
