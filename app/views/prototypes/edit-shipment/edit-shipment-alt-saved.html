@@ -33,18 +33,39 @@
       </ul>
     </div>
   </div>
+<script type="text/javascript">
+     $(function() {
+       // setTimeout() function will be fired after page is loaded
+       // it will wait for 5 sec. and then will fire
+       // $("#successMessage").hide() function
+       setTimeout(function() {
+         $("#status-box-saved").fadeOut(1000);
+       }, 3000);
+     });
+   </script>
+
+  <div class="grid-row">
+    <div class="column-full">
+      <div id="status-box-saved" name="status-box-saved">
+        <h2 class="heading-small">Your changes have been saved</h2>
+      </div>
+    </div>
+  </div>
+
   <div>
+   <div class="grid-row container">
+  <div class="stickem-row stickem-container">
+    <div class="column-two-thirds">
   <script>
-function autotab(current,to){
-    if (current.getAttribute && 
-      current.value.length==current.getAttribute("maxlength")) {
-        to.focus() 
-        }
+function autotab(current, to) {
+    if (current.getAttribute &&
+            current.value.length == current.getAttribute("maxlength")) {
+        to.focus();
+    }
 }
 </script>
+
 <form name="date" action="/prototypes/edit-shipment/edit-shipment-alt-saved" style="margin-bottom: 30px;">
-  <div class="grid-row">
-    <div class="column-two-thirds">
       <h1 class="heading-large">Record shipment data</h1>
 <div class="data">
   <span class="data-item bold-xxlarge">Shipment 33</span>
@@ -168,7 +189,7 @@ function autotab(current,to){
           <label class="form-label" for="Receipt_ActualQuantity">Quantity received</label>
           <div class="grid-row">
             <div class="column-third">
-              <input class="form-control form-control-wide" id="Receipt_ActualQuantity" min="0" name="Receipt.ActualQuantity" step="any" type="text" maxlength="10" autofocus>
+              <input class="form-control form-control-wide" id="Receipt_ActualQuantity" min="0" name="Receipt.ActualQuantity" step="any" type="text" maxlength="10">
             </div>
             <div class="column-third">
               <select class="form-control form-control-wide" id="Receipt_Units" name="Receipt.Units">
@@ -234,7 +255,7 @@ function autotab(current,to){
 </form>
 <p style="margin-top: 30px;"><a href="/prototypes/edit-shipment/index">Return to shipment summary</a></p>
     </div>
-    <aside class="column-third form-status" style="position: fixed; top: 150px; right: 100px;">
+    <aside class="column-third form-status stickem">
     <div id="form-menu">
       <p><span>GB 0001 004008</span></p>
       <ul class="summary-list">
@@ -266,6 +287,16 @@ function autotab(current,to){
 
     </aside>
   </div>
+  </div>
+  
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/jquery.stickem.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.container').stickem();
+    });
+  </script>
+
 </main>
 
 {% endblock %}

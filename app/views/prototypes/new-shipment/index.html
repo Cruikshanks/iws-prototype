@@ -34,7 +34,11 @@
     </div>
   </div>
   <div>
-  <script>
+
+  <div class="grid-row container">
+  <div class="stickem-row stickem-container">
+    <div class="column-two-thirds">
+<script>
 function autotab(current,to){
     if (current.getAttribute && 
       current.value.length==current.getAttribute("maxlength")) {
@@ -42,10 +46,8 @@ function autotab(current,to){
         }
 }
 </script>
-<form name="date" action="/prototypes/edit-shipment/edit-shipment-saved" style="margin-bottom: 30px;">
-  <div class="grid-row">
-    <div class="column-two-thirds">
-      <h1 class="heading-large">Record shipment data</h1>
+      <form name="date" action="/prototypes/edit-shipment/edit-shipment-saved" style="margin-bottom: 30px;">
+       <h1 class="heading-large">Record shipment data</h1>
 
           <div class="form-group">
             <fieldset>
@@ -85,7 +87,7 @@ function autotab(current,to){
               <p class="form-hint">For example, 19 11 16</p>
 </div>
 
-              <div class="form-group">
+<div class="form-group">
                 <div class="form-date">
 <div class="form-group form-group-month">
   <label for="day">Day</label>
@@ -232,11 +234,17 @@ function autotab(current,to){
   </div>
 </div>
 
-<button class="button" type="submit">Save and continue</button>
-</form>
-<p style="margin-top: 30px;"><a href="/prototypes/edit-shipment/index">Return to shipment summary</a></p>
+
+        <button class="button" type="submit">Save and continue</button>
+      </form>
+      <p style="margin-top: 30px;"><a href="/prototypes/edit-shipment/index">Return to shipment summary</a></p>
+
+
+
+
     </div>
-    <aside id="form-menu" class="column-third form-status" style="position: fixed; top: 150px; right: 100px;">
+
+    <aside id="form-menu" class="column-third form-status stickem">
       <p><span>GB 0001 004008</span></p>
       <ul class="summary-list">
         <li><span class="grey-text">Total number of shipments:</span> 10</li>
@@ -248,7 +256,20 @@ function autotab(current,to){
         <li><span class="grey-text">Total consented tonnage:</span> 0&nbsp;t</li>
       </ul>
     </aside>
+
+
+
+    </div>
   </div>
+  
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/jquery.stickem.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.container').stickem();
+    });
+  </script>
+
 </main>
 
 {% endblock %}
