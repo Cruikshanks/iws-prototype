@@ -41,8 +41,15 @@ GOV.UK prototype kit
                 <header class="hgroup">
                     <h1 class="heading-large">How much waste and when was it received?</h1>
                 </header>
-
-                <form action="/iws/export-movement/e043efc5-7bd7-4d4d-aafb-a6110103b202/date-received" method="post">
+<script>
+function autotab(current,to){
+    if (current.getAttribute && 
+      current.value.length==current.getAttribute("maxlength")) {
+        to.focus() 
+        }
+}
+</script>
+                <form name="date">
                     <input name="__RequestVerificationToken" type="hidden" value="8_-CVpZMtZYdn5e5krBwHNiP-9lHcRLx646ODgU5uKDRVYWTCCwoKrBIKw0ZwkFOTIyYGeVY-AJnM-phcQOp01ww-BYWlFTqpx0JxiA3tvw4IkeTanohMCFAJUXujsqdrfH7_V8vleg6kfiksTfLrg2" />
                     <div class='error-summary-valid' data-valmsg-summary='true'>
                         <ul class='error-summary-list'>
@@ -57,17 +64,29 @@ GOV.UK prototype kit
                             </legend>
                         <input class="form-control form-control-1-4" id="Quantity" name="Quantity" type="text" value="" />
                     </div>
-                    <div class="form-group">
-                        <fieldset>
-                            <legend>
-                                <span class="heading-small">Received date</span>
-                            </legend>
-                            <div class="form-date">
-            <label class="form-label form-hint" for="PrenotificationDate">e.g. '19/01/17'</label>
-            <input class="form-control form-control-1-4" data-type="date" id="PrenotificationDate_Day" max="31" min="1" name="PrenotificationDate.Day" placeholder="" value="">
-            </div>
-                        </fieldset>
-                    </div>
+                   
+
+                   <div class="form-group" style="margin-bottom: 0;">
+<legend class="form-label-bold">Received date</legend>
+              <p class="form-hint">For example, 19 11 16</p>
+</div>
+
+<div class="form-group">
+                <div class="form-date">
+<div class="form-group form-group-month">
+  <label for="day">Day</label>
+  <input class="form-control" type="text" name="date1" size=4 onKeyup="autotab(this, document.date.date2)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="month">Month</label>
+  <input class="form-control" type="text" name="date2" size=4 onKeyup="autotab(this, document.date.date3)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="year">Year</label>
+  <input class="form-control" type="text" name="date3" size=4 maxlength=2>
+</div>
+</div>
+</div>
 
                     
                     <div class="form-group">
