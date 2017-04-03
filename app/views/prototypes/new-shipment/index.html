@@ -142,24 +142,12 @@ function autotab(current,to){
         No
       </label>
       <div class="panel panel-border-narrow js-hidden" id="contact-by-phone">
-        <div class="form-group"><label class="form-label-bold" for="Receipt_RejectionReason">Why was it rejected?</label>
-                  <select class="form-control" id="Receipt_RejectionReason" name="Receipt.RejectionReason"><option value=""></option>
-                    <option>Illegal shipment</option>
-                    <option>Unplanned shipment</option>
-                    <option>An accident</option>
-                    <option>Site inspection</option>
-                    <option>Rejected by consignee</option>
-                    <option>Refused entry by competent authority</option>
-                    <option>Unauthorised shipment</option>
-                    <option>Waste not as specified</option>
-                    <option>Abandoned waste</option>
-                    <option>Unrecovered waste</option>
-                  </select></div>
-                  <div class="form-group">
-                        <label class="form-label" for="Receipt_RejectionFurtherInformation">Further information on why the shipment was rejected</label>
-                        
-                        <textarea class="form-control" cols="15" id="Receipt_RejectionFurtherInformation" name="Receipt.RejectionFurtherInformation" rows="10"></textarea>
-                    </div>
+
+        <div class="form-group">
+              <label class="form-label" for="Receipt_RejectionFurtherInformation">Reason why the shipment was rejected and any relevant details</label>
+              
+              <textarea class="form-control" cols="15" id="Receipt_RejectionFurtherInformation" name="Receipt.RejectionFurtherInformation" rows="10"></textarea>
+          </div>
       </div>
 
     </fieldset>
@@ -222,6 +210,14 @@ function autotab(current,to){
         No
       </label>
       <div class="panel panel-border-narrow js-hidden" id="contact-comments">
+      <div class="form-group">
+        <label class="form-label-bold" for="Receipt_RejectionReason">WSR/Basel annual stats marking (when required)</label>
+        <select class="form-control" id="Receipt_RejectionReason" name="Receipt.RejectionReason"><option value=""></option>
+          <option>Illegal Shipment (WSR Table 5)</option>
+          <option>Did not procedd as intended (Basel Table 9)</option>
+          <option>Accident occurred during transport (Basel Table 10)</option>
+        </select>
+        </div>
         <div class="form-group">
           <label class="heading-small" for="textarea-a">
             Comments
