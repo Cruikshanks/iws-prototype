@@ -222,6 +222,14 @@ function autotab(current,to){
         No
       </label>
       <div class="panel panel-border-narrow js-hidden" id="contact-comments">
+      <div class="form-group">
+        <label class="form-label-bold" for="Receipt_RejectionReason">WSR/Basel annual stats marking (when required)</label>
+        <select class="form-control" id="Receipt_RejectionReason" name="Receipt.RejectionReason"><option value=""></option>
+          <option>Illegal Shipment (WSR Table 5)</option>
+          <option>Did not procedd as intended (Basel Table 9)</option>
+          <option>Accident occurred during transport (Basel Table 10)</option>
+        </select>
+        </div>
         <div class="form-group">
           <label class="heading-small" for="textarea-a">
             Comments
