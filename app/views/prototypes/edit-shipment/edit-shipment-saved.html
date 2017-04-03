@@ -55,6 +55,9 @@
 
 
   <div>
+     <div class="grid-row container">
+  <div class="stickem-row stickem-container">
+    <div class="column-two-thirds">
   <script>
 function autotab(current,to){
     if (current.getAttribute && 
@@ -64,8 +67,6 @@ function autotab(current,to){
 }
 </script>
 <form name="date" action="/prototypes/edit-shipment/edit-shipment-saved" style="margin-bottom: 30px;">
-  <div class="grid-row">
-    <div class="column-two-thirds">
       <h1 class="heading-large">Record shipment data</h1>
 <div class="data">
   <span class="data-item bold-xxlarge">Shipment 11</span>
@@ -254,7 +255,7 @@ function autotab(current,to){
 </form>
 <p style="margin-top: 30px;"><a href="/prototypes/edit-shipment/index">Return to shipment summary</a></p>
     </div>
-    <aside class="column-third form-status">
+    <aside class="column-third form-status stickem">
     <div id="form-menu">
       <p><span>GB 0001 004008</span></p>
       <ul class="summary-list">
@@ -285,7 +286,17 @@ function autotab(current,to){
           <a href="../new-shipment/index.html">Start a new shipment</a>
 
     </aside>
+</div>
   </div>
+  
+  <script src="/public/javascripts/jquery-1.11.3.js"></script>
+  <script src="/public/javascripts/jquery.stickem.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.container').stickem();
+    });
+  </script>
+
 </main>
 
 {% endblock %}
