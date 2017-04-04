@@ -36,33 +36,53 @@ GOV.UK prototype kit
         <header class="hgroup">
           <h1 class="heading-large">What is the actual date of shipment?</h1>
         </header>
-        <form action="/iws/notification-movements/6895b0dc-f709-4d05-9408-a5d100aef604/create/shipment-date" enctype="multipart/form-data" method="post">
+        <script>
+function autotab(current,to){
+    if (current.getAttribute && 
+      current.value.length==current.getAttribute("maxlength")) {
+        to.focus() 
+        }
+}
+</script>
+      <form name="date">
           <input name="__RequestVerificationToken" type="hidden" value="re66L1LPApQQGIkMaNtkUcZkaLAXI9ky2qrq7VeseOiiNaRE4IspEDHJQBT37qz-YXynyl0s5RxnJAK1au-ijyO9kqAQdsfUWKIaXwEfNJJNdEAQIjQIo74ql4U3v3xz5WK6Q0EnUlm11v1GNgih2A2">
           <div class='error-summary-valid' data-valmsg-summary='true'>
             <ul class='error-summary-list'>
               <li style='display:none'></li>
             </ul>
           </div><input id="MovementId" name="MovementId" type="hidden" value="00000000-0000-0000-0000-000000000000"><input id="StartDate" name="StartDate" type="hidden" value="24/03/2016&#32;00:00:00"><input id="EndDate" name="EndDate" type="hidden" value="23/03/2017&#32;00:00:00"><input id="MovementNumber" name="MovementNumber" type="hidden" value="45">
-          <p>You can schedule your shipments from 24 Mar 2016 to 23 Mar 2017.</p>
-          <div class="form-group form-group-year"">
-            <fieldset>
-              <label for="departure_date" class="heading-small">Departure date</label>
-              <div class="form-group-year">
-                <p class="form-hint">e.g. '19/01/17'</p>
-                <div class="form-group form-group-day">
-                  <input class="form-control form-control-1-4" id="departure_date" max="31" min="1" name="Day" value="">
-                </div>
-              </div>
-            </fieldset>
-            <div class="notice">
+          <p>You can schedule your shipments from 24 Mar 2017 to 23 Mar 2018.</p>
+<div class="form-group" style="margin-bottom: 0;">
+<legend class="form-label-bold">Actual date of shipment</legend>
+              <p class="form-hint">For example, 19 11 16</p>
+</div>
+
+<div class="form-group">
+                <div class="form-date">
+<div class="form-group form-group-month">
+  <label for="day">Day</label>
+  <input class="form-control" type="text" name="date4" size=4 onKeyup="autotab(this, document.date.date5)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="month">Month</label>
+  <input class="form-control" type="text" name="date5" size=4 onKeyup="autotab(this, document.date.date6)" maxlength=2>
+</div>
+<div class="form-group form-group-month">
+  <label for="year">Year</label>
+  <input class="form-control" type="text" name="date6" size=4 onKeyup="autotab(this, document.date.date7)" maxlength=2>
+</div>
+</div>
+</div>
+
+   <div class="form-group">         <div class="notice">
   <i class="icon icon-important">
     <span class="visually-hidden">Warning</span>
   </i>
   <strong class="bold-small">
     You are required to give 3 working days notice of a shipment.
   </strong>
-</div>
-          </div>
+</div></div>
+
           <div class="form-group">
             <a class="button" href="1/actual-quantity">Save and continue</a>
           </div>
