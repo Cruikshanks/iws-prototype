@@ -97,51 +97,77 @@ GOV.UK prototype kit
         <em></em>
       </aside>
       <div class="column-two-thirds">
-        <h1 class="heading-large">Who are your intended carriers?</h1>
-        <p>Add details of all the intended carriers for the whole journey. &#13;&#10; After you&#39;ve added your first carrier, you can add several more by selecting &quot;Add another carrier&quot;.</p>
+        <h1 class="heading-large">Add carriers from your address book</h1>
+        <p>You can add several carriers from your address book by selecting them from the list below, or you can <a href="/prototypes/multiple-carriers/add-from-address-book">filter the list</a>.</p>
+        <p>If a carrier is not in the list, you will need to <a href="add-new-carrier">add a new carrier</a>.</p>
         <div class="form-group">
-          <table title="Address book records">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Carrier Pidgeon</td>
-                <td> Address, Town, TT1 1TT </td>
-                <td><a href="/iws/address-book/delete/index/808efc63-0a1d-40e5-bbaf-a61000a85370?type=Carrier">Remove</a></td>
-              </tr>
-              <tr>
-                <td>Colin Carrier</td>
-                <td> 1 Street, Big Town Place, BTP1 2TP </td>
-                <td><a href="/iws/address-book/delete/index/4314a4d2-216f-492c-9991-a57700ad018b?type=Carrier">Remove</a></td>
-              </tr>
-              <tr>
-                <td>Ergo</td>
-                <td> Street, City, CC1 1TT </td>
-                <td><a href="/iws/address-book/delete/index/accaf6c0-9b86-4e5d-86c5-a61000a8ef07?type=Carrier">Remove</a></td>
-              </tr>
-              <tr>
-                <td>Holden Ute</td>
-                <td> Line 1, Fremantle, </td>
-                <td><a href="/iws/address-book/delete/index/0dc79aa1-3eec-4773-b44c-a61e00ffc7bf?type=Carrier">Remove</a></td>
-              </tr>
-            </tbody>
-          </table>
-          </div>
-
-
-        <div class="form-group">
-            <a href="/prototypes/multiple-carriers/add-new-carrier">Add a new carrier</a>
+          <form>
+            <fieldset>
+              <legend class="visuallyhidden">Choose carriers addresses</legend>
+              <label class="block-label selection-button-checkbox selection-button-checkbox" for="carrier-address-1">
+                <input id="carrier-address-1" name="carrier-address" type="checkbox" value="Add Intended Carrier">
+                <strong>Add Intended Carrier</strong><br> Address line 1, Address line 2, Cityortown, ZZ1 2ZZ
+              </label>
+              <label class="block-label selection-button-checkbox selection-button-checkbox" for="carrier-address-2">
+                <input id="carrier-address-2" name="carrier-address" type="checkbox" value="Big Carrier">
+                <strong>Big Carrier</strong><br> 1 New Road, Old Town, NN1 O00
+              </label>
+              <label class="block-label selection-button-checkbox selection-button-checkbox" for="carrier-address-3">
+                <input id="carrier-address-3" name="carrier-address" type="checkbox" value="C&amp;C">
+                <strong>C&amp;C</strong><br> Line 1, Address, Cityville, CV1 1CV
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-4">
+                <input id="carrier-address-4" name="carrier-address" type="checkbox" value="Capricorn One">
+                <strong>Capricorn One</strong><br> 99 The Street, Capricorn, CP1 3TN
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-5">
+                <input id="carrier-address-5" name="carrier-address" type="checkbox" value="Carrier Pidgeon">
+                <strong>Carrier Pidgeon</strong><br> 1 Carrier Road, Pidgeon Town, PT1 2CP
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-6">
+                <input id="carrier-address-6" name="carrier-address" type="checkbox" value="Carrier Pidgeon">
+                <strong>Carrier Pidgeon</strong><br> Address, Town, TT1 1TT
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-7">
+                <input id="carrier-address-7" name="carrier-address" type="checkbox" value="Colin Carrier">
+                <strong>Colin Carrier</strong><br> 1 Street, Big Town Place, BTP1 2TP
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-8">
+                <input id="carrier-address-8" name="carrier-address" type="checkbox" value="Ergo">
+                <strong>Ergo</strong><br> Street, City, CC1 1TT
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-9">
+                <input id="carrier-address-9" name="carrier-address" type="checkbox" value="Holden Ute">
+                <strong>Holden Ute</strong><br> Line 1, Fremantle,
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-10">
+                <input id="carrier-address-10" name="carrier-address" type="checkbox" value="Intended Carrier">
+                <strong>Intended Carrier</strong><br> Line 1, Townorcity, TT1 1TT
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-11">
+                <input id="carrier-address-11" name="carrier-address" type="checkbox" value="Mr Transport">
+                <strong>Mr Transport</strong><br> Address line 1, Townorcity, TT1 5TT
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-12">
+                <input id="carrier-address-12" name="carrier-address" type="checkbox" value="Super Carriers">
+                <strong>Super Carriers</strong><br> Address line 1, Townorcityvillestadt, C1 9TT
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-13">
+                <input id="carrier-address-13" name="carrier-address" type="checkbox" value="This new carrier that needs to save this time">
+                <strong>This new carrier that needs to save this time</strong><br> Address line 1, Street 4, Rue de ville, Strasse 123, The district, in that area, in some new region, overthere, somewhere, with the trucks, TrucksvillecitytownstadtHGVplacethereburgh, UU1 1UU
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-14">
+                <input id="carrier-address-14" name="carrier-address" type="checkbox" value="Try Again">
+                <strong>Try Again</strong><br> Line 1, Or, OO1 2OO
+              </label>
+              <label class="block-label selection-button-checkbox" for="carrier-address-15">
+                <input id="carrier-address-15" name="carrier-address" type="checkbox" value="VSD">
+                <strong>VSD</strong><br> Address line 1, Townorcity, TT1 1TT
+              </label>
+            </fieldset>
+          </form>
         </div>
-        <div class="form-group">
-            <a href="add-from-address-book">Add carriers from your address book</a>
-        </div>
-
-        <a class="button" href="/prototypes/notification-overview/index">Save and continue</a>
+        <a class="button" href="list-carriers-added-multiple">Save and continue</a>
       </div>
     </div>
   </main>
