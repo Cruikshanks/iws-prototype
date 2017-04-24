@@ -1,0 +1,171 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Admin Users - Basic Search
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+<div class="phase-banner">
+    <p>
+        <strong class="phase-tag">BETA</strong>
+        <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span>
+    </p>
+</div>
+        <div class="top-content-box font-xsmall">
+            <div id="homepage-link-container">
+            </div>
+            <div id="top-content-box-container">
+                
+
+  
+
+                <ul>
+    <li>
+        <div class="text-secondary">Signed in as: <span class="username-format">Liam McMurray </span></div>
+    </li>
+    <li>
+<form action="/iws/account/log-off" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="wJq-y-0JqyEg4LfcXLvMywKY4sB5qqisBIjPmU7BRFBH5MI7zvvmxkLdNuU3aaHPM4UzAFcE7t8MU1qgqDLjgWbXPcwPObf4RzoGTkBDYmJWsUWTSz6PAjWAkw0-v_YOoEHApvgPR8qXH9GF2082gA2" />            <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+</form>    </li>
+</ul>
+            </div>
+        </div>
+    
+
+<div class="grid-row">
+        <aside class="column-third">
+
+<div id="accordion" class="accordion-general">
+    <ul>
+        <li class="active">
+            <h3 class="current">
+                <span></span>
+                Notifications
+            </h3>
+            <ul>
+                <li><a href="/iws/admin/import-notification/number">Create import notification</a></li>
+                <li><a href="/iws/admin/export-notification/notification-type">Create export notification</a></li>
+                <li><a href="/iws/admin/export-notifications">Unsubmitted export notifications</a></li>
+            </ul>
+        </li>
+
+        <li class="">
+            <h3 class="">
+                <span></span>
+                Reporting
+            </h3>
+            <ul>
+    <li><a href="/iws/reports/export-stats">Export stats</a></li>
+    <li><a href="/iws/reports/import-stats">Import stats</a></li>
+    <li><a href="/iws/reports/missing-shipments">Missing shipments</a></li>
+    <li><a href="/iws/reports/export-notifications">Data Export Notifications</a></li>
+    <li><a href="/iws/reports/import-notifications">Data Import Notifications</a></li>
+    <li><a href="/iws/reports/finance">Finance report</a></li>
+    <li><a href="/iws/reports/freedom-of-information">FOI report</a></li>
+    <li><a href="/iws/reports/export-movements">Export Movement Documents Input</a></li>
+    <li><a href="/iws/reports/blanket-bonds">Blanket bonds</a></li>
+</ul>
+
+        </li>
+
+            <li class="">
+                <h3 class="">
+                    <span></span>
+                    Account services
+                </h3>
+                <ul>
+        <li><a href="/iws/admin/user-administration/manage-new-users">Manage new users</a></li>
+            <li><a href="/iws/admin/user-administration/change-user-role">Change user role</a></li>
+        <li><a href="/iws/admin/user-administration/change-user-status">Change user status</a></li>
+            <li><a href="/iws/admin/entry-or-exit-point">New ports or border crossings</a></li>
+            <li><a href="/iws/admin/delete-notification">Delete a notification</a></li>
+</ul>
+
+            </li>
+
+    </ul>
+</div>        </aside>
+    <div class="column-two-thirds">
+        
+
+<h1 class="heading-large">
+    <span class="heading-secondary">Monday 24th April</span>
+    Your homepage
+</h1>
+
+<form action="/iws/admin" method="post"><div class='error-summary-valid' data-valmsg-summary='true'>
+                        <ul class='error-summary-list'>
+                            <li style='display:none'></li>
+                        </ul>
+                    </div><input name="__RequestVerificationToken" type="hidden" value="d_HKi3KguJufS-iXVP8_8n1cXbY1YwYadKQlhcgNwzm5E7-tHhBe1Y0GfsZhktL8CHBY-DSn4-yv8zP3TI3zl_-UhvMuM6P3IMwSBPGsDdDshG04fg1dZ2DzHzd8DXWlieTV5aiNf7JNUxgE9bfFIg2" />    <h2 class="heading-medium">Search for a notification</h2>
+    <div id="search-container" class="form-group">
+        
+        <input class="form-control" id="SearchTerm" name="SearchTerm" placeholder="Enter&#32;notification&#32;number&#32;or&#32;organisation&#32;name" title="Search&#32;term" type="text" value="" />
+        <input type="submit" class="button" value="Go"/>
+        <a class="" href="/iws/admin/advanced-search">Advanced search</a>
+    </div>
+</form>
+<hr class="section-bottom" />
+
+
+
+
+<h2 class="heading-medium">Export notifications</h2>
+
+    <p>Your search returned 613 export notification(s)</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Notification</th>
+                <th>Status</th>
+                <th>Company name</th>
+                <th>Waste</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>
+                        <a href="/iws/admin-export-assessment/4074e233-ca29-4dc9-bf0d-a5e200b44a1b">GB&#160;0001&#160;006075</a>
+                    </td>
+                    <td>Objected</td>
+                    <td>Waste People</td>
+                    <td>Wood</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/iws/admin-export-assessment/b6b8bf25-c7e7-4264-8e9e-a75300b87dd4">GB&#160;0001&#160;006293</a>
+                    </td>
+                    <td>Consented</td>
+                    <td>Associated Waste Mangament Limited</td>
+                    <td>RDF</td>
+                    <td><a href="#">Shipment Summary</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/iws/admin-export-assessment/82012052-780b-467f-a411-a752009d9d04">GB&#160;0001&#160;006292</a>
+                    </td>
+                    <td>Transmitted</td>
+                    <td>Countryside Recycling Ltd</td>
+                    <td>RDF</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/iws/admin-export-assessment/82012052-780b-467f-a411-a752009d9d04">GB&#160;0001&#160;006292</a>
+                    </td>
+                    <td>Consented</td>
+                    <td>Waste People</td>
+                    <td>Other</td>
+                    <td></td>
+                </tr>
+        </tbody>
+    </table>
+
+    </div>
+</div>
+</main>
+
+{% endblock %}
