@@ -1,35 +1,22 @@
-// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
-// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
-@import 'govuk-elements';
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// Import GOV.UK Frontend
+@import "node_modules/govuk-frontend/all";
 
 // Take a look at in app/assets/sass/patterns/ to see which files are imported.
 @import 'patterns/check-your-answers';
-@import 'patterns/unbranded';
+@import "patterns/task-list";
+@import "patterns/related-items";
 
-// Related items
-// (These styles will be moved to GOV.UK elements, duplicating here for now.)
-.govuk-related-items {
-  margin-top: $gutter;
-  border-top: 10px solid $govuk-blue;
-  padding-top: 5px;
-
-  .heading-medium {
-    margin-top: 0.3em;
-    margin-bottom: 0.5em
-  }
-
-  li {
-    margin-bottom: 10px;
-    list-style-type: none;
-  }
-}
+// Components that aren't in Frontend
+@import "components/cookie-banner";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
-
-
-
-
+// Import GOV.UK Frontend Toolkit to get old versions of prototypes to work
+@import "govuk-frontend-toolkit";
+@import "node_modules/govuk-elements-sass/public/sass/elements";
 
 // IWS Application.scss
 

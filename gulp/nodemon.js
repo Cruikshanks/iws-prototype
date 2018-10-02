@@ -4,16 +4,18 @@
   uses nodemon to run a server, watches for javascript and json changes
 */
 
-var fs = require('fs')
-var path = require('path')
-var gulp = require('gulp')
-var nodemon = require('gulp-nodemon')
-var config = require('./config.json')
+const fs = require('fs')
+const path = require('path')
+
+const gulp = require('gulp')
+const nodemon = require('gulp-nodemon')
+
+const config = require('./config.json')
 
 gulp.task('server', function () {
   nodemon({
+    watch: ['.env', '**/*.js', '**/*.json'],
     script: 'server.js',
-    ext: 'js, json',
     ignore: [config.paths.public + '*',
       config.paths.assets + '*',
       config.paths.nodeModules + '*']
