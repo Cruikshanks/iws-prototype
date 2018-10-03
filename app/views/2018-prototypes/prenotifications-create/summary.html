@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+    <div class="phase-banner">
+        <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a>
+                will help us to improve it.</span></p>
+    </div>
+    <div class="top-content-box font-xsmall">
+        <div id="homepage-link-container">
+            <a href="/">Go to your homepage</a>
+        </div>
+        <div id="top-content-box-container">
+            <ul>
+                <li>
+                    <div class="text-secondary">
+                        Signed in as: <span class="username-format">Gonzalo Girasol</span>
+                    </div>
+                </li>
+                <li>
+                    <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+                        <input name="__RequestVerificationToken" type="hidden" value="5ITA6utFzCJyl5PxoKltH2c7_VPJm05n3adKkGHsNcigQAhdC_Xx5vmyA18yRf5apDNvTy5h1UABIMxxYuPwtSygtIUGKhS1ewqjMH117rVSpAg1xFhhxmyvB_wzGjb2-7EXRKdOfeBII3B4FA4xMg2">
+                        <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <header class="hgroup">
+                <h1 class="heading-large">Submit your prenotification(s)</h1>
+            </header>
+            <script>
+                function autotab(current, to) {
+                    if (current.getAttribute &&
+                        current.value.length == current.getAttribute("maxlength")) {
+                        to.focus()
+                    }
+                }
+            </script>
+            <p>You've created IWS movement documents for 1 shipments, totalling 1 tonnes (t).</p>
+
+            <div class="form-group">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Shipment number(s)</th>
+                            <th>Quantity</th>
+                            <th>Packaging type(s)</th>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>1 t</td>
+                            <td>Box</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>To complete your prenotification(s), you now need to:</p>
+
+            <div class="form-group">
+                <ol class="list-number">
+                    <li>
+                        <a href="#">Download</a> your IWS movement document(s)
+                    </li>
+                    <li>Print the documents</li>
+                    <li>Complete sections 7 and 8</li>
+                    <li>Sign the completed documents</li>
+                    <li>Upload your signed documents</li>
+                </ol>
+            </div>
+
+            <p>
+                You can <a href="#">upload your signed documents</a> now, or do it later by visiting your <a href="#">notification
+                    options</a> page.
+            </p>
+            <p>
+                <a href="details">Create a new prenotification(s) for this notification</a>
+            </p>
+            <div class="form-group">
+                <a class="button" href="#">Continue</a>
+            </div>
+            <a href="/feedback">What do you think of this service?</a>
+        </div>
+        <aside class="column-third form-status" id="form-menu" style="margin-top:30px;">
+            <p><span>GB 0001 123456</span></p>
+            <ul class="summary-list">
+                <li><span class="grey-text">Total number of shipments:</span> 10</li>
+                <li><span class="grey-text">Number of shipments used:</span> 10</li>
+                <li><span class="grey-text">Active loads permitted:</span> 8</li>
+                <li><span class="grey-text">Current active loads:</span> 2</li>
+                <li><span class="grey-text">Total quantity received:</span> 10 t</li>
+                <li><span class="grey-text">Total quantity remaining:</span> 10 t</li>
+            </ul>
+        </aside>
+    </div>
+</main>
+{% endblock %}
