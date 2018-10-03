@@ -145,15 +145,27 @@ function select2Init() {
 
         $("#carriersTable").each(function () {
           var tds = '<tr>';
-          jQuery.each($('tr:last td', this), function () {
-            tds += '<td>' + $(this).html() + '</td>';
-          });
+          tds += '<td colspan="2">' + data.text + '</td>';
+          tds += '<td><button class="link-submit" type="submit" name="remove">Remove</button></td>'
           tds += '</tr>';
+
           if ($('tbody', this).length > 0) {
+            var firstRow = $('tbody tr:first', this)
+            if (firstRow.length === 1 && firstRow[0].childElementCount === 1) {
+              firstRow.remove();
+            }
+
             $('tbody', this).append(tds);
           } else {
+            var firstRow = $('tr:first', this)
+            if (firstRow.length === 1 && firstRow[0].childElementCount === 1) {
+              firstRow.remove();
+            }
+
             $(this).append(tds);
           }
+        }).on("click", ":button", function (e) {
+          $(this).closest("tr").remove();
         });
       });
     })
