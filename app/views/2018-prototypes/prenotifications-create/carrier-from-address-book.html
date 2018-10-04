@@ -36,7 +36,7 @@ GOV.UK prototype kit
     <div class="grid-row">
         <div class="column-two-thirds">
             <header class="hgroup">
-                <h1 class="heading-large">Add carriers from your address book</h1>
+                <h1 class="heading-large">Add carriers from your intended carrier list</h1>
             </header>
             <script>
                 function autotab(current, to) {
@@ -47,49 +47,49 @@ GOV.UK prototype kit
                 }
             </script>
 
-            <p>You can add several carriers from your address book using the list below.</p>
+            <p>
+                You can add multiple carriers from you intended carrier list below.
+                Please add them in the order they will carry the waste during the journey.
+            </p>
 
+            <div class='error-summary-valid' data-valmsg-summary='true'>
+                <ul class='error-summary-list'>
+                    <li style='display:none'></li>
+                </ul>
+            </div>
 
-            
-                <div class='error-summary-valid' data-valmsg-summary='true'>
-                    <ul class='error-summary-list'>
-                        <li style='display:none'></li>
-                    </ul>
-                </div>
+            <div class="form-group-compound">
+                <select class="" data-select-box="true" id="SelectedCarrier" name="SelectedCarrier" tabindex="-1" title="carrier list">
+                    <option value=""></option>
+                    <option value="0">Transport Limited, 1, Woking, United Kingdom</option>
+                    <option value="1">Fast Track Corp, 2, Road, Woking, , United Kingdom</option>
+                    <option value="3">Civica Carriers, 3, Station, Woking, , United Kingdom</option>
+                </select>
+                <button id="Add" tabindex="2" class="button-secondary">Add carrier</button>
+            </div>
 
-                <div class="form-group-compound">
-                    <select class="" data-select-box="true" id="SelectedCarrier" name="SelectedCarrier" tabindex="-1"
-                        title="carrier list">
-                        <option value=""></option>
-                        <option value="0">Transport Limited, 1, Woking, United Kingdom</option>
-                        <option value="1">Fast Track Corp, 2, Road, Woking, , United Kingdom</option>
-                        <option value="3">Civica Carriers, 3, Station, Woking, , United Kingdom</option>
-                    </select>
-                    <button id="Add" tabindex="2" class="button-secondary">Add carrier</button>
-                </div>
+            <h2 class="heading-medium">Your chosen carriers</h2>
 
-                <h2 class="heading-medium">Your chosen carriers</h2>
+            <div class="form-group">
+                <table title="Carriers" id="carriersTable">
+                    <thead>
+                        <tr>
+                            <th>Carrier</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3">Awaiting carriers...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-                <div class="form-group">
-                    <table title="Carriers" id="carriersTable">
-                        <thead>
-                            <tr>
-                                <th>Carrier</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="3">Awaiting carriers...</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="form-group">
-                    <a class="button" href="summary">Save and continue</a>
-                </div>
+            <div class="form-group">
+                <a class="button" href="summary">Save and continue</a>
+            </div>
             <a href="/">Go to notification options</a>
         </div>
         <aside class="column-third form-status" id="form-menu" style="margin-top:30px;">

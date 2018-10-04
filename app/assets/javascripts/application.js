@@ -144,28 +144,23 @@ function select2Init() {
         var data = selectBox.select2('data');
 
         $("#carriersTable").each(function () {
-          var tds = '<tr>';
-          tds += '<td colspan="2">' + data.text + '</td>';
-          tds += '<td><button class="link-submit" type="submit" name="remove">Remove</button></td>'
-          tds += '</tr>';
+          var tbody = $('tbody', this).length > 0 ? $('tbody', this) : $(this);
+          var firstRow = $('tbody', this).length > 0 ? $('tbody tr:first', this) : $('tr:first', this);
 
-          if ($('tbody', this).length > 0) {
-            var firstRow = $('tbody tr:first', this)
-            if (firstRow.length === 1 && firstRow[0].childElementCount === 1) {
-              firstRow.remove();
-            }
-
-            $('tbody', this).append(tds);
-          } else {
-            var firstRow = $('tr:first', this)
-            if (firstRow.length === 1 && firstRow[0].childElementCount === 1) {
-              firstRow.remove();
-            }
-
-            $(this).append(tds);
+          if (firstRow.length === 1 && firstRow[0].childElementCount === 1) {
+            firstRow.remove();
           }
+
+          var tds = '<tr>';
+          tds += '<td>' + getOrdinal((tbody[0].childElementCount + 1)) + '</td>';
+          tds += '<td>' + data.text + '</td>';
+          tds += '<td><button class="link-submit" type="submit" name="remove">Remove</button></td>'
+          tds += '</tr>';          
+
+          tbody.append(tds);
         }).on("click", ":button", function (e) {
-          $(this).closest("tr").remove();
+          $(this).closest("tr").remove(); 
+          updateCarrierOrders();         
         });
       });
     })
@@ -173,6 +168,18 @@ function select2Init() {
   $("select[data-select-allow-clear='true']").select2({
       allowClear: true
   });
+}
+
+function updateCarrierOrders() {
+  $("#carriersTable > tbody > tr").each(function (rowIndex, tr) {
+    tr.firstChild.innerHTML = getOrdinal(rowIndex + 1);
+  });
+}
+
+function getOrdinal(n) {
+  var s = ["th", "st", "nd", "rd"];
+  var v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
 }
 
 $(document).ready(function() {
