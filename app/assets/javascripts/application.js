@@ -197,6 +197,13 @@ $(document).ready(function() {
 
   select2Init();
 
+  $("#carriersTable > tbody").sortable({
+    axis: "y",
+    update: function(event, ui) {
+      updateCarrierOrders();
+    }
+  });
+  $("#carriersTable").disableSelection();
 });
 
 
