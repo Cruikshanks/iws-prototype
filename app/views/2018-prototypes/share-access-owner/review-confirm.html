@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+  <div class="phase-banner">
+    <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+  </div>
+  <div class="top-content-box font-xsmall">
+    <div id="homepage-link-container">
+      <a href="/iws/applicant/home">Go to your homepage</a>
+    </div>
+    <div id="top-content-box-container">
+      <ul>
+        <li>
+          <div class="text-secondary">
+            Signed in as: <span class="username-format">Phil Baird</span>
+          </div>
+        </li>
+        <li>
+          <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+            <input name="__RequestVerificationToken" type="hidden" value="X_xtra_5BoFGvZOpbRTM92GKVWxh9kFGIJIcQd1Ea9jAMweUsTPMSAb9vEbWt_CaGxynmwYSWVCc02OQBqmWL8aRcWqkL9HeP6qP1yPBmeJ-zXvn_GJI5b8Y4-GeO_qvm11oBCB-kpYO5SiGcN_XLA2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-large">Are you sure you want to remove this user's access?</h1>
+
+  <p>You are about to remove johnsmith@waste.com from this notification. This will remove their ability to view or edit this notification.</p>
+
+
+      <p id="get-started" class="get-started group">
+          <a class="button" data-action="Start" data-category="Export&#32;notification" data-track="element" href="review-confirmation">Continue</a>
+      </p>
+</div>
+
+
+</div>
+<div class="form-group">
+    <a href="review-access">Cancel</a>
+</div>
+</main>
+{% endblock %}

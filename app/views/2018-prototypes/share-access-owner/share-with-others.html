@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+  <div class="phase-banner">
+    <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+  </div>
+  <div class="top-content-box font-xsmall">
+    <div id="homepage-link-container">
+      <a href="/iws/applicant/home">Go to your homepage</a>
+    </div>
+    <div id="top-content-box-container">
+      <ul>
+        <li>
+          <div class="text-secondary">
+            Signed in as: <span class="username-format">Phil Baird</span>
+          </div>
+        </li>
+        <li>
+          <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+            <input name="__RequestVerificationToken" type="hidden" value="X_xtra_5BoFGvZOpbRTM92GKVWxh9kFGIJIcQd1Ea9jAMweUsTPMSAb9vEbWt_CaGxynmwYSWVCc02OQBqmWL8aRcWqkL9HeP6qP1yPBmeJ-zXvn_GJI5b8Y4-GeO_qvm11oBCB-kpYO5SiGcN_XLA2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-large">Share this notification with other users</h1>
+        <p>
+      It is your responsiblity as the owner to advise the user you want to share this notification with; what they can, and can't do on this notification once shared.
+        </p>
+
+
+  <p>Enter the e-mail addresses of other users you want to share this notification with.
+  </p>
+  <p class="bold-small">This is the email address that was used to register their account and they enter when logging into the service. If they are not registered to use IWS Online, they will need to do this first.</p>
+
+  <p class="form-group">
+  <input class="form-control-wide" id="EnterEmail" name="EnterEmail" placeholder="Enter&#32;email&#32;addresses" title="Enter&#32;email" type="text" value=""  />
+</p>
+      <p id="get-started" class="get-started group">
+          <a class="button" data-action="Start" data-category="Export&#32;notification" data-track="element" href="share-confirm">Continue</a>
+      </p>
+</div>
+
+
+</div>
+<div class="form-group">
+    <a href="notification-no-consent">Go to notification options</a>
+</div>
+
+</main>
+{% endblock %}
