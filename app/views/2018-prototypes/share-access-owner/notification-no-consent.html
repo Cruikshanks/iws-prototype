@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+
+GOV.UK prototype kit
+
+{% endblock %}
+
+{% block content %}
+
+<main id="content">
+  <div class="phase-banner">
+    <p><strong class="phase-tag">BETA</strong> <span>This is a new service - your <a href="/iws/feedback">feedback</a> will help us to improve it.</span></p>
+  </div>
+  <div class="top-content-box font-xsmall">
+    <div id="homepage-link-container">
+      <a href="/iws/applicant/home">Go to your homepage</a>
+    </div>
+    <div id="top-content-box-container">
+      <ul>
+        <li>
+          <div class="text-secondary">
+            Signed in as: <span class="username-format">Phil Baird</span>
+          </div>
+        </li>
+        <li>
+          <form action="/iws/account/log-off" id="logoutForm" method="post" name="logoutForm">
+            <input name="__RequestVerificationToken" type="hidden" value="X_xtra_5BoFGvZOpbRTM92GKVWxh9kFGIJIcQd1Ea9jAMweUsTPMSAb9vEbWt_CaGxynmwYSWVCc02OQBqmWL8aRcWqkL9HeP6qP1yPBmeJ-zXvn_GJI5b8Y4-GeO_qvm11oBCB-kpYO5SiGcN_XLA2"> <button class="link-submit" id="link-sign-out" type="submit">Sign out</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="shipping-home">
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-large">Notification options</h1>
+        <p>
+      This notification can not be submitted yet, as it is incomplete. You can submit it for approval once you complete it.
+        </p>
+        <p id="get-started" class="get-started group">
+            <a class="button" data-action="Start" data-category="Export&#32;notification" data-track="element" href="/iws/new-notification/competent-authority">Continue with this notification</a>
+        </p>
+      </div>
+
+
+    </div>
+    <div class="grid-row">
+      <div class="column-half">
+        <h2 class="heading-medium">Current notification: <span class="iws-highlight">GB 0001 006282</span></h2>
+        <div class="nav-bloc">
+          <nav>
+            <a href="/iws/notification-application/6895b0dc-f709-4d05-9408-a5d100aef604">View notification</a>
+            <a href="share-with-others">Share notification with other users</a>
+            <a href="review-access">Review user access levels</a>
+            <a href="/iws/notification-application/6895b0dc-f709-4d05-9408-a5d100aef604">Assign notification to another user</a>
+            <a href="/iws/notification-application/6895b0dc-f709-4d05-9408-a5d100aef604/what-to-do-next/print">Download notification</a>
+            <a href="/iws/notification-application/6895b0dc-f709-4d05-9408-a5d100aef604/what-to-do-next/postage-label">Print postage label</a>
+            <a href="/iws/notification-application/6895b0dc-f709-4d05-9408-a5d100aef604/what-to-do-next/financial-guarantee">Complete the financial guarantee</a>
+            <a href="/iws/notification-application/6895b0dc-f709-4d05-9408-a5d100aef604/what-to-do-next/payment">Costs and payment information</a>
+            <a href="/iws/notification-application/6895b0dc-f709-4d05-9408-a5d100aef604/annex">Upload annexes and extra information</a>
+            <a href="/iws/notification-application/6895b0dc-f709-4d05-9408-a5d100aef604/key-dates">View the key dates</a>
+          </nav>
+        </div>
+      </div>
+      <div class="column-half">
+        <h2 class="heading-medium">New notification</h2>
+        <div class="nav-bloc">
+          <nav>
+            <a data-action="Start" data-category="Export&#32;notification" data-track="element" href="/iws/new-notification/competent-authority">Start a new notification</a> <a data-action="Copy" data-category="Export&#32;notification" data-track="element" href="/iws/new-notification/competent-authority?cfp=1">Create a new notification based on a previous one</a> <a data-action="Supporting information" data-category="Export notification" data-track="element" href="https://www.gov.uk/importing-and-exporting-waste" id="supportingInfo-link" rel="external" target="_blank" title="View supporting information on GOV.UK in new tab">View supporting information</a> <span class="visuallyhidden">This link opens in a new browser tab</span>
+          </nav>
+        </div>
+      </div>
+    </div>
+</div>
+<hr>
+<div class="grid-row">
+<div class="column-two-thirds bold-small">You can start creating shipments once your notification has been consented and your financial guarantee is approved.</div>
+</div>
+</main>
+{% endblock %}
