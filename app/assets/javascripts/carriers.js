@@ -55,12 +55,13 @@ function carriersListSelect2Init() {
                 var tds = '<tr>';
                 tds += '<td>' + getOrdinal(tbody[0].childElementCount + 1) + '</td>';
                 tds += '<td>' + data.text + '</td>';
+                tds += '<td style="display: grid;"><button class="link-submit" name="up"><i class="up"></i></button><button class="link-submit" name="down"><i class="down"></i></button></td>';
                 tds += '<td><button class="link-submit" type="submit" name="remove">Remove</button></td>'
                 tds += '</tr>';
 
                 tbody.append(tds);
                 updateCarrierOrder();
-            }).on("click", ":button", function (e) {
+            }).on("click", ":button[name='remove']", function (e) {
                 $(this).closest("tr").remove();
                 updateCarrierOrder();
             });
@@ -71,6 +72,24 @@ function carriersListSelect2Init() {
         allowClear: true
     });
 }
+
+$(carriersTableId).on("click", ":button[name='up']", function (e) {
+    var thisRow = $(this).closest('tr');
+    var prevRow = thisRow.prev();
+    if (prevRow.length) {
+        prevRow.before(thisRow);
+    }
+    updateCarrierOrder();
+});
+
+$(carriersTableId).on("click", ":button[name='down']", function (e) {
+    var thisRow = $(this).closest('tr');
+    var nextRow = thisRow.next();
+    if (nextRow.length) {
+        nextRow.after(thisRow);
+    }
+    updateCarrierOrder();
+});
 
 function updateCarrierOrder() {
     $(carriersTableId + " > tbody > tr").each(function (rowIndex, tr) {
