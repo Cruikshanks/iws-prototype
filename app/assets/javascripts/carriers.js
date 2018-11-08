@@ -53,12 +53,13 @@ function carriersListSelect2Init() {
                 }
 
                 var tds = '<tr>';
-                tds += '<td>' + (tbody[0].childElementCount + 1) + '</td>';
+                tds += '<td>' + getOrdinal(tbody[0].childElementCount + 1) + '</td>';
                 tds += '<td>' + data.text + '</td>';
                 tds += '<td><button class="link-submit" type="submit" name="remove">Remove</button></td>'
                 tds += '</tr>';
 
                 tbody.append(tds);
+                updateCarrierOrder();
             }).on("click", ":button", function (e) {
                 $(this).closest("tr").remove();
                 updateCarrierOrder();
@@ -73,7 +74,13 @@ function carriersListSelect2Init() {
 
 function updateCarrierOrder() {
     $(carriersTableId + " > tbody > tr").each(function (rowIndex, tr) {
-        tr.firstChild.innerHTML = rowIndex + 1;
+        var orderLabel = getOrdinal(rowIndex + 1);
+        var rowCount = tr.parentNode.childElementCount;
+        if (rowCount > 2 && rowCount === rowIndex + 1)
+        {
+            orderLabel = "Last";
+        }
+        tr.firstChild.innerHTML = orderLabel;
     });
 }
 
