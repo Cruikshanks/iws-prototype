@@ -53,13 +53,15 @@ function carriersListSelect2Init() {
                 }
 
                 var tds = '<tr>';
-                tds += '<td>' + (tbody[0].childElementCount + 1) + '</td>';
+                tds += '<td>' + getOrdinal(tbody[0].childElementCount + 1) + '</td>';
                 tds += '<td>' + data.text + '</td>';
+                tds += '<td style="display: grid;"><button class="link-submit" name="up"><i class="up"></i></button><button class="link-submit" name="down"><i class="down"></i></button></td>';
                 tds += '<td><button class="link-submit" type="submit" name="remove">Remove</button></td>'
                 tds += '</tr>';
 
                 tbody.append(tds);
-            }).on("click", ":button", function (e) {
+                updateCarrierOrder();
+            }).on("click", ":button[name='remove']", function (e) {
                 $(this).closest("tr").remove();
                 updateCarrierOrder();
             });
@@ -71,9 +73,33 @@ function carriersListSelect2Init() {
     });
 }
 
+$(carriersTableId).on("click", ":button[name='up']", function (e) {
+    var thisRow = $(this).closest('tr');
+    var prevRow = thisRow.prev();
+    if (prevRow.length) {
+        prevRow.before(thisRow);
+    }
+    updateCarrierOrder();
+});
+
+$(carriersTableId).on("click", ":button[name='down']", function (e) {
+    var thisRow = $(this).closest('tr');
+    var nextRow = thisRow.next();
+    if (nextRow.length) {
+        nextRow.after(thisRow);
+    }
+    updateCarrierOrder();
+});
+
 function updateCarrierOrder() {
     $(carriersTableId + " > tbody > tr").each(function (rowIndex, tr) {
-        tr.firstChild.innerHTML = rowIndex + 1;
+        var orderLabel = getOrdinal(rowIndex + 1);
+        var rowCount = tr.parentNode.childElementCount;
+        if (rowCount > 2 && rowCount === rowIndex + 1)
+        {
+            orderLabel = "Last";
+        }
+        tr.firstChild.innerHTML = orderLabel;
     });
 }
 
