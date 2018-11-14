@@ -35,11 +35,26 @@ GOV.UK prototype kit
         <div class="column-full">
 <header>
     <h1 class="heading-large">Your address book</h1>
-    <p class="subtitle">Manage your address book</p>
+    <p class="subtitle">View and manage your address book.</p>
 </header>
 <div class="form-group">
   <a class="button" data-action="Start" data-category="Export&#32;notification" data-track="element" href="add-address">Add address</a>
+</div>
 
+<h2 class="heading-small">Search for an organisation's address within the current tab</h2>
+<div class="grid-row">
+  <div class="column-two-thirds">
+    <form action="address-not-found" method="post">
+
+      <p class="form-hint">Enter the organisation name below, for example Enivironment Agency</p>
+
+      <div id="search-container" class="form-group">
+        <input class="form-control" id="SearchTerm" name="SearchTerm" placeholder="Enter&#32;organisation&#32;name"
+          title="Search&#32;term" type="text" value="" />
+        <button name="button" value="search" class="button" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <nav class="tabbed-nav">
